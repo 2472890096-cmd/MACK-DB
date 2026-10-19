@@ -1,0 +1,23 @@
+panel	category	level	value
+A	Zi-Pi only	species	1
+A	EPI only	species	1
+A	DKI only	species	1
+A	Zi-Pi + EPI only	species	1
+A	Zi-Pi + DKI only	species	1
+A	EPI + DKI only	species	1
+A	All three methods	species	3
+C	Broad >=2 methods	species	5
+C	Broad All three methods	species	2
+D	Strict >=2 methods	species	5
+D	Strict All three methods	species	1
+B	Zi-Pi only	genus	0
+B	EPI only	genus	0
+B	DKI only	genus	0
+B	Zi-Pi + EPI only	genus	0
+B	Zi-Pi + DKI only	genus	0
+B	EPI + DKI only	genus	0
+B	All three methods	genus	1
+C	Broad >=2 methods	genus	1
+C	Broad All three methods	genus	1
+D	Strict >=2 methods	genus	1
+D	Strict All three methods	genus	0

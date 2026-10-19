@@ -1,0 +1,5 @@
+name	bioproject	environment	ks_score	rank_in_project
+Synthetic_genus_0	PRJTOYHIGH	synthetic_env	0.8	1
+Synthetic_genus_0	PRJTOYZERO	synthetic_env	0.0	1
+Synthetic_genus_1	PRJTOYZERO	synthetic_env	0.0	2
+Synthetic_genus_2	PRJTOYZERO	synthetic_env	0.0	3

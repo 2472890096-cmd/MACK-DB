@@ -1,0 +1,9 @@
+# Data boundary for the first private commit
+
+Included:84 accepted scripts, minimal local helpers/configuration, synthetic test generators and24 tiny synthetic input/output snapshots, three accepted Figure3 scope lists and three aggregate final-reference TSVs. The aggregate main22 table is also retained at its existing analysis/figures/figure3/expected path. No data reuse license is automatically granted.
+
+The70 v0.2 frozen files were reviewed individually by content/schema, provenance, SHA, size, sensitivity and authorization evidence. Six scope/aggregate files are included because this task explicitly retains analysis ranges and necessary accepted summaries. Two historical aggregate assertion tables are unnecessary without the real inputs;62 row-level research/provenance files remain pending upload authorization. All64 are excluded from this commit and individually ignored. Details: docs/FIGURE3_INPUT_AVAILABILITY.tsv. The source v0.2 package is unchanged.
+
+The real six-table candidate snapshots,61-row R replacement, project–taxon support tables, project–environment mappings and per-environment lists are not uploaded merely because their scientific results were accepted or because GitHub is Private. The unchanged Figure3 script still requires them for full real-data execution. Do not substitute an old DKI snapshot or fabricate data. After separate authorization, supply the complete validated input package under ignored data/; PIPELINE.md documents the exact required layout and command.
+
+Real abundance/Sketch/reference databases, checkpoints, large predictions, external-author networks, patient/sample metadata, production databases/backups and authentication configurations are absent. The tiny committed synthetic DKI arrays are explicitly marked synthetic. Upstream inputs and optional supplementary source/data gaps remain in DEPENDENCY_RESOLUTION.tsv.

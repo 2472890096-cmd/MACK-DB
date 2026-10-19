@@ -1,0 +1,25 @@
+args<-commandArgs(trailingOnly=TRUE);root<-args[1];out<-args[2];dir.create(out,recursive=TRUE,showWarnings=FALSE)
+suppressPackageStartupMessages(library(dplyr))
+core<-file.path(root,'pipeline/dki/calculate_structural_keystoneness_rk4_fast.R')
+e<-new.env(parent=globalenv());p<-parse(core)
+# Load original function definitions only, then invoke the real process_project on synthetic saved predictions.
+for(x in p)if(is.call(x)&&identical(x[[1]],as.name('<-'))&&is.call(x[[3]])&&identical(x[[3]][[1]],as.name('function')))eval(x,e)
+e$data_base_dir<-file.path(out,'data_base');e$pred_base_dir<-file.path(out,'pred_base');e$force<-FALSE
+project<-'PRJTOYDKI';data<-file.path(e$data_base_dir,project,'data');pred<-file.path(e$pred_base_dir,project,'results');dir.create(data,recursive=TRUE);dir.create(pred,recursive=TRUE)
+wr<-function(x,p)write.table(x,p,sep=',',quote=FALSE,row.names=FALSE,col.names=FALSE,na='NaN')
+wr(matrix(rep(c(.2,.4,.4),4),nrow=3),file.path(data,'Ptrain.csv'))
+wr(matrix(rep(c(0,.5,.5),6),nrow=3),file.path(data,'Ptest.csv'))
+wr(rep(0,6),file.path(data,'species_id.csv'));wr(c(0,1,2,3,0,0),file.path(data,'sample_id.csv'))
+wr(rbind(c(.4,.6,0),c(.4,.6,0),c(.4,.6,0),c(1,0,0)),file.path(pred,'qtrn.csv'))
+wr(rbind(c(0,.8,.2),c(0,.8,.2),c(0,.6,.4),c(0,.8,.2),c(0,0,0),c(0,-1,NaN)),file.path(pred,'qtst.csv'))
+s<-e$process_project(project);stopifnot(s$status=='DONE',s$n_valid==3,s$n_invalid==3)
+d<-read.csv(file.path(pred,'Keystoneness_structural.csv'));su<-read.csv(file.path(pred,'Keystoneness_structural_summary.csv'))
+stopifnot(max(abs(d$BC_pred[1:3]-c(.2,.2,.4)))<=1e-15,max(abs(d$Ks_pred[1:3]-c(.16,.16,.32)))<=1e-15,all(is.na(d$Ks_pred[4:6])),abs(su$median_Ks_pred-.16)<=1e-15,abs(su$mean_Ks_pred-mean(c(.16,.16,.32)))<=1e-15)
+stopifnot(grepl('q_null_zero_after_removal',d$invalid_reason[4]),grepl('qtst_zero_row',d$invalid_reason[5]))
+qfull<-c(.4,.6,0);qt<-c(0,.8,.2);old<-sum(abs(qfull-qt))/sum(qfull+qt)*.8
+stopifnot(abs(old-.32)<=1e-15,abs(old-d$Ks_pred[1])>.1)
+stopifnot(inherits(try(e$detect_index_base_and_adjust(99,3,'bad'),silent=TRUE),'try-error'))
+# Clamp nonfinite/negative values exactly as the accepted loader does.
+wr(matrix(c(Inf,-1,2),nrow=1),file.path(out,'invalid_values.csv'));stopifnot(identical(as.numeric(e$read_matrix_csv(file.path(out,'invalid_values.csv'))),c(0,0,2)))
+write.table(s,file.path(out,'DKI_SCORER_STATUS.tsv'),sep='\t',quote=FALSE,row.names=FALSE)
+cat('PASS DKI real R process_project: focal removal/renormalization, BC, median, invalid reasons; legacy full-qtrn counterexample rejected\n')

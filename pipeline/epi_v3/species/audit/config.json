@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-09-22T18:55:44+08:00",
+  "production_root": ".",
+  "core_script": "../core/get_keystone_EPI_single_safe_qecdf_v3_fast.R",
+  "core_sha256": "98d832663fea152e0d63c481106ff24fb5faca4e34ce332d0187814cbead5cc2",
+  "rscript": "Rscript",
+  "mode": "prevalence",
+  "prevalence_min": 0.25,
+  "prevalence_max": 0.75,
+  "network_quantile": 0.1,
+  "candidate_projects": 1578,
+  "valid_projects": 1577,
+  "excluded_projects": 1,
+  "le5000_projects": 1576,
+  "gt5000_projects": 1,
+  "stage1_workers": 8,
+  "stage2_workers": 1,
+  "per_project_timeout": null,
+  "input_validation": "Actual matrix parse, dimensions, identifiers, finite/nonnegative numeric values and SHA256"
+}

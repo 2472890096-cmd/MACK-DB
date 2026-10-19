@@ -1,0 +1,5 @@
+name	z	p	taxa_roles
+boundary	2.5	0.62	Peripheral nodes
+connector	2.5	0.62001	Connectors
+module	2.50001	0.62	Module hubs
+network	2.50001	0.62001	Network hubs

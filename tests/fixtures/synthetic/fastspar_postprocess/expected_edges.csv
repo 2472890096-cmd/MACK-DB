@@ -1,0 +1,4 @@
+from,to,corr,pvalue
+A,B,0.3,1e-04
+A,C,-0.3,0
+B,D,0.7,5e-05

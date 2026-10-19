@@ -1,0 +1,45 @@
+scope	panel	category	taxonomic_level	old_mixed_value	unified_R_value	difference	unit
+1570	A	Zi-Pi only	species	4578	4577	-1	environment_taxon_records
+1570	A	EPI only	species	3603	3602	-1	environment_taxon_records
+1570	A	DKI only	species	4771	4777	6	environment_taxon_records
+1570	A	Zi-Pi + EPI only	species	878	879	1	environment_taxon_records
+1570	A	Zi-Pi + DKI only	species	1138	1139	1	environment_taxon_records
+1570	A	EPI + DKI only	species	355	356	1	environment_taxon_records
+1570	A	All three methods	species	435	434	-1	environment_taxon_records
+1570	C	Broad >=2 methods	species	2490	2491	1	unique_taxa
+1570	C	Broad All three methods	species	417	416	-1	unique_taxa
+1570	D	Strict >=2 methods	species	972	970	-2	unique_taxa
+1570	D	Strict All three methods	species	25	25	0	unique_taxa
+1570	B	Zi-Pi only	genus	2108	2108	0	environment_taxon_records
+1570	B	EPI only	genus	1260	1260	0	environment_taxon_records
+1570	B	DKI only	genus	1824	1824	0	environment_taxon_records
+1570	B	Zi-Pi + EPI only	genus	330	330	0	environment_taxon_records
+1570	B	Zi-Pi + DKI only	genus	621	621	0	environment_taxon_records
+1570	B	EPI + DKI only	genus	161	161	0	environment_taxon_records
+1570	B	All three methods	genus	273	273	0	environment_taxon_records
+1570	C	Broad >=2 methods	genus	982	982	0	unique_taxa
+1570	C	Broad All three methods	genus	243	243	0	unique_taxa
+1570	D	Strict >=2 methods	genus	399	399	0	unique_taxa
+1570	D	Strict All three methods	genus	19	19	0	unique_taxa
+1568	A	Zi-Pi only	species	4566	4565	-1	environment_taxon_records
+1568	A	EPI only	species	3605	3604	-1	environment_taxon_records
+1568	A	DKI only	species	4760	4766	6	environment_taxon_records
+1568	A	Zi-Pi + EPI only	species	876	877	1	environment_taxon_records
+1568	A	Zi-Pi + DKI only	species	1137	1138	1	environment_taxon_records
+1568	A	EPI + DKI only	species	355	356	1	environment_taxon_records
+1568	A	All three methods	species	435	434	-1	environment_taxon_records
+1568	C	Broad >=2 methods	species	2487	2488	1	unique_taxa
+1568	C	Broad All three methods	species	417	416	-1	unique_taxa
+1568	D	Strict >=2 methods	species	971	969	-2	unique_taxa
+1568	D	Strict All three methods	species	25	25	0	unique_taxa
+1568	B	Zi-Pi only	genus	2104	2104	0	environment_taxon_records
+1568	B	EPI only	genus	1260	1260	0	environment_taxon_records
+1568	B	DKI only	genus	1812	1812	0	environment_taxon_records
+1568	B	Zi-Pi + EPI only	genus	331	331	0	environment_taxon_records
+1568	B	Zi-Pi + DKI only	genus	621	621	0	environment_taxon_records
+1568	B	EPI + DKI only	genus	161	161	0	environment_taxon_records
+1568	B	All three methods	genus	272	272	0	environment_taxon_records
+1568	C	Broad >=2 methods	genus	982	982	0	unique_taxa
+1568	C	Broad All three methods	genus	242	242	0	unique_taxa
+1568	D	Strict >=2 methods	genus	399	399	0	unique_taxa
+1568	D	Strict All three methods	genus	19	19	0	unique_taxa
