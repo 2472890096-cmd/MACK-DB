@@ -1,0 +1,13 @@
+test	status	scope	elapsed_seconds	evidence
+PROFILE	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	2.155	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+EPI_CORE	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	2.723	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+EPI_WORKERS	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	4.656	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+EPI_2OF3	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	0.023	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+ZIPI_ROLES	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	4.920	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+DKI_R_SCORING	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	3.434	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+DKI_SELECTION	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	0.016	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+FIGURE3_SETS	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	0.001	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+FASTSPAR_POSTPROCESS	PASS	ORIGINAL_SMALL_SCIENTIFIC_GROUP	3.856	Actual local stdout/stderr retained by authors; original assertions/fixtures unchanged
+UPSTREAM_SAFETY_12_CASES	PASS	SYNTHETIC_IO_AND_PROCESS_SAFETY		tests/test_single_run_workflow.py; separate from scientific real-input acceptance
+REAL_CACHED_INPUT_RELOCATED_CLI	PASS	ERR14036375_ONLY	25.715	examples/real_fastq/ERR14036375/portable_wrapper_regression.json
+HISTORICAL_SRA_STREAM	NOT_VERIFIED	SOURCE_REVIEW_AND_NONEXECUTING_PLAN_ONLY		Complete AWS download/cleanup wrapper not located; no SRA/AWS execution

@@ -4,7 +4,7 @@
 
 | Stage | Required scientific configuration | Evidence and caveat |
 |---|---|---|
-| Query | MetaKSSD `composite -r markerDB -q sampleSketch` | FROZEN_SOURCE 054; no reconstruction of original FASTQ→Sketch CLI |
+| Sketch / Query | Fixed realERR14036375: MetaKSSD2.21, pinnedL3K11/ID1481063132/22mer/nominal1/4096, `dist -A -p1 -m2`, `composite -r markerDB -q sampleSketch` | ACTUAL_SINGLE_RUN_20261021; exact key/count and Query matching; full original historical argv remains limited |
 | Profile | `sharekmer=12`, keep X3>=12; X5<=5 uses `[0,.02,.08,.69,1.57,2.49,...]` lookup; X5>5 subtract3; percentage round4 | unchanged099 + EXECUTED_SYNTHETIC; 12 is shared-marker cutoff, not k-mer length |
 | Species matrix | f starts .1, +.1 until <=2000 taxa or f>=1; worker cutoff `round(n*f)` | 053+101, algorithm unchanged; dictionary/ID ordering across historical Python versions is not newly validated |
 | Counts | input abundance percentages ×1,000,000, no new rounding/read-count interpretation | unchanged092 |
@@ -19,7 +19,7 @@
 | DKI model | max-epochs1000, patience80, lr.005,batch32,relu,auto bottleneck,normalize-z true,time-mode endpoint,rk4 step.05,CPU,seed20260629 | retained104/105 override defaults; core defaults3000/200 must not replace production caller; no training in task |
 | DKI R score | focal removed from qtrn and remaining predicted baseline normalized (`q_null`), BC(q_null,qtst)×(1−focal original abundance); median over valid cases | version MACKDB_DKI_R_20261012_v1; all090 function expressions unchanged; actual90+080 execution; old full-qtrn counterexample .32 vs accepted .16 |
 | DKI candidates | full valid taxon background; sampleSD; K=min(N,max(3,ceil(.01N))); descending score then name; score >= mean+2SD among TopK | unchanged076 selection functions; zero-valued valid scores follow >= semantics, unlike EPI `>` |
-| Figure3 | species/genus independent; seven mutually exclusive Broad combinations; Strict same project; >=2 includes All3; unique names across contexts | unchanged083.calc; synthetic sets + independent set operations tested |
+| Figure3 | species/genus independent; seven mutually exclusive Broad combinations; Strict same project; >=2 includes All3; unique names across contexts | unchanged concordance_release.calc; synthetic sets + independent set operations tested |
 
 Figure 3 accepted frozen main scope is1571, sensitivity1570/1568; PRJEB51353 is outside these scopes. The 22-value reference SHA is listed in the original supporting manifest. Accepted main values:
 
@@ -32,4 +32,6 @@ These 22 numbers are preserved accepted references; this task did **not** recomp
 
 ## v0.2 frozen-input validation
 
-Figure 3 final main22 and both sensitivity22 sets were actually recomputed from frozen candidate records and independently cross-checked. Strict All3 remains25 species/19 genera. This extends numerical input validation only; all scientific parameters and the 84 reviewed scripts remain unchanged. That full-data v0.2 evidence is held locally; this private snapshot includes scope/aggregate references and the unchanged statistics code, not row-level inputs.
+Figure 3 final main22 and both sensitivity22 sets were actually recomputed from frozen candidate records and independently cross-checked. Strict All3 remains25 species/19 genera. This extends numerical input validation only; all scientific parameters remain unchanged; original84 bytes are preserved in provenance, with the current retained set separately manifested. That full-data v0.2 evidence is held locally; this candidate includes scope/aggregate references and the unchanged statistics code, not row-level inputs.
+
+The [real single-Run pins](examples/real_fastq/ERR14036375/reference_pins.json) add observed input/reference/binary hashes; they do not change the Profile core, EPI/DKI versions, association cutoffs or any manuscript result. The optional historicalSRAstream plan is not an executed alternative. All other parameter evidence retains its originally labelled scope.

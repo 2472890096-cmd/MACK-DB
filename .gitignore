@@ -25,6 +25,12 @@ id_ed25519*
 *.ckpt
 *.fastq*
 *.fq*
+*.sra
+*.sra.*
+**/*_sketch/
+**/cofiles.stat
+**/combco.*
+**/*markerdb*/
 *.bam
 *.cram
 *.sqlite*
@@ -132,3 +138,8 @@ analysis/external_validation/**/cache/
 /config/database.*
 /config/mysql.*
 /config/aws.*
+
+# Stage2 real example: private input paths, biological data and generated runs.
+/examples/real_bioproject/PRJEB81106/*.local.json
+/examples/real_bioproject/PRJEB81106/data/
+/examples/real_bioproject/PRJEB81106/work/

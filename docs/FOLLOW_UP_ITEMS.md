@@ -1,9 +1,8 @@
-# Follow-up tasks after the private snapshot
+# Remaining release work
 
-- Author choice of root license and confirmation of contribution/institution rights; separate research-data reuse/upload authorization. Preserve upstream DKI MIT and external LGPL/GPL notices.
-- Authorize and deposit full Figure3 row-level input package with persistent identifiers and terms; no fabricated deposition DOI.
-- Provision external FastSpar/fastCCLasso/MetaKSSD and real inputs in an isolated environment before full inference; no install was performed here.
-- Bind final S3 literature assembly, S7/S8 generators, website source, Figure2 assembly and canonical genus abundance generation to final manuscript files.
-- Resolve final MicrobiomeNet/Stage5B adoption and optional external source/data gaps.
-
-These are later publication/end-to-end reproduction tasks. They do not block the bounded private code commit with explicitly held inputs. They do block overstating this snapshot as a complete public reproduction release.
+1. Confirm each of the14 proposed final-result source files individually; then verify direct dependencies, data access, portable IO and original SHA guards before migration. See PENDING_FINAL_STATISTICS_CODE.tsv.
+2. Obtain approved reviewer-accessible frozen research inputs for concordance, published network mapping, source exclusion, null statistics, recurrence and final S8/S9. Do not replace missing algorithms with invented analysis.
+3. Use the completed PRJEB81106 archived33-Run matrix example and separate verified ERR14036375 pairedFASTQ example. Provide authorized real inputs separately; no new scientific acceptance or neural training is requested to finish the code documentation.
+4. Use the author-adopted original species-name-token genus grouping; do not reopen genus scanning or whole-cohort recalculation. Preserve known converter identity and historical-execution limits. The one-Run pairedFASTQ route already passed with pinned references.
+5. Keep final S3 literature evidence as authored curation. Supplementary MethodsS7/S8 concern recurrence and sequential recovery; Supplementary Tables stop at S6. Complete-project Guo/Wallen comparison is adopted in S9; five-subgroup historical code is not its replacement.
+6. Decide project LICENSE, code version/tag/archive identifier, supporting-data deposition, and separate website source/security/license review. No release/tag/push/upload or visibility change was made in phase1.

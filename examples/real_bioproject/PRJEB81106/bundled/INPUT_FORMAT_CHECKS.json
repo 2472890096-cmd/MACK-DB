@@ -1,0 +1,61 @@
+{
+  "project": "PRJEB81106",
+  "checks_only_no_scientific_recalculation": true,
+  "runs": [
+    "ERR14036294",
+    "ERR14036295",
+    "ERR14036301",
+    "ERR14036302",
+    "ERR14036315",
+    "ERR14036316",
+    "ERR14036323",
+    "ERR14036328",
+    "ERR14036329",
+    "ERR14036336",
+    "ERR14036337",
+    "ERR14036339",
+    "ERR14036342",
+    "ERR14036350",
+    "ERR14036354",
+    "ERR14036356",
+    "ERR14036357",
+    "ERR14036363",
+    "ERR14036365",
+    "ERR14036366",
+    "ERR14036370",
+    "ERR14036375",
+    "ERR14036376",
+    "ERR14036381",
+    "ERR14036383",
+    "ERR14036384",
+    "ERR14036388",
+    "ERR14036389",
+    "ERR14036395",
+    "ERR14036397",
+    "ERR14036398",
+    "ERR14036402",
+    "ERR14036404"
+  ],
+  "run_count": 33,
+  "run_column_mapping_matches_order": true,
+  "levels": {
+    "species": {
+      "taxa": 53,
+      "samples": 33,
+      "sequential_taxon_mapping": true,
+      "finite_nonnegative_values": true,
+      "unique_labels": true,
+      "byte_identical_to_source": true,
+      "normalization_or_transpose_performed": false
+    },
+    "genus": {
+      "taxa": 38,
+      "samples": 33,
+      "sequential_taxon_mapping": true,
+      "finite_nonnegative_values": true,
+      "unique_labels": true,
+      "byte_identical_to_source": true,
+      "normalization_or_transpose_performed": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# Proposed fresh environment, not a solver-tested lockfile.
+# Python 3.11 satisfies hashlib.file_digest used by the real-matrix entry.
+name: mackdb-matrix-python
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - pip

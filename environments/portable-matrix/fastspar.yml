@@ -1,0 +1,10 @@
+# Proposed isolated tool environment; no installation was executed here.
+name: mackdb-fastspar-1.0.0
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - fastspar=1.0.0
+  - parallel
+  - bash
+  - coreutils

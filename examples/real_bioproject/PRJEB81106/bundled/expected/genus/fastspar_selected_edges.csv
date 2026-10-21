@@ -1,0 +1,4 @@
+from,to,corr,pvalue
+Pseudomonas,Chlamydia,0.686,1e-04
+Staphylococcus,Otoolea,-0.5503,1e-04
+Staphylococcus,Gallintestinimicrobium,-0.5713,1e-04

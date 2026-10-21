@@ -1,0 +1,30 @@
+{
+  "project": "PRJEB81106",
+  "files": {
+    "runs": {
+      "path": "../../prjeb81106/archived_runs.txt",
+      "sha256": "3a15f0c790681e6b47227a20be2de4ccf8d5b10eed0cbd24831bbb665e48835b",
+      "source_class": "INDEPENDENT_REPRODUCTION_INPUT"
+    },
+    "species_abundance": {
+      "path": "data/PRJEB81106/species_abundance/PRJEB81106_abundance.matrix",
+      "sha256": "aaa91056a204962d0cdbf120adfb8759a38ced4e42de37e10cf3f35eee9be7c9",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "species_mapping": {
+      "path": "data/PRJEB81106/species_mapping/PRJEB81106_species.matrix",
+      "sha256": "91f37e5ed785d1a8d814be21e4d0a2c1ffc1b1aaa12e198c1249afd86ba98940",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "species_fastspar_correlation": {
+      "path": "data/PRJEB81106/species_fastspar_correlation/PRJEB81106_correlation.tsv",
+      "sha256": "81c7c122b6079095f1de9bb1f9d40c3edbb0b2ba16170d43e74d9342636d2194",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_fastspar_pvalues": {
+      "path": "data/PRJEB81106/species_fastspar_pvalues/PRJEB81106_pvalues.tsv",
+      "sha256": "3c27135bb26fb5d5abdfe39a62385bc2a3b52a61149735212741e7372382ca38",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    }
+  }
+}

@@ -1,12 +1,12 @@
 # External dependencies: acquisition, configuration and evidence
 
-No software was installed/upgraded, no external scientific program was run and no AWS connection was made. The instructions below are for a future isolated reviewer environment. Source and license pages were checked on 2026-10-17. A documented install route is not a clean-install PASS.
+The original dependency inventory installed/upgraded no software or contacted AWS; source/license pages were checked on2026-10-17. Since then, bounded real-input validations exercised existing external tools, including the2026-10-21 single-Run MetaKSSD route below. The acquisition instructions are still for a future isolated reviewer environment: a documented install route is not a clean-install PASS. No software is installed/upgraded by the example.
 
 ## Version evidence
 
 | Component | Confirmed historical production | Independent reproduction | Current local evidence |
 |---|---|---|---|
-| MetaKSSD | Exact production runtime version not recovered | 2.21, three-project archive | Local checkout c56806aed7b29b218c88c341dc6472545e39d8bb; src/metakssd.c reports 2.21; executable on PATH; not executed this round |
+| MetaKSSD | Exact production runtime version not recovered | 2.21, three-project archive and fresh ERR14036375 FASTQ validation | Source context c56806aed7b29b218c88c341dc6472545e39d8bb; actual2.21binary SHA and reference pins in examples/real_fastq/ERR14036375/reference_pins.json; binary differs from Git-tracked executable |
 | FastSpar, bootstrap, pvalues | Do not infer a uniform production version | 1.0.0, three-project archive | Not found on current PATH; official v1.0.0 release exists |
 | fastCCLasso | Logs identify official RCode/fastCCLasso.R and kmax20/nboot100 | Same actual code definition is the accepted provenance | Current local unmodified core SHA256 41004c99db932346c651447ef561d7965fddee0dc3252aad63ac6681b57a8638, checkout 7833b61b02723a34e307e6325ab9b48564debcf3; checkout date/commit is not a historical run snapshot |
 | Zi-Pi R / igraph / microeco | R4.5.3, igraph2.1.4, microeco2.0.0 printed in formal project logs | Archived reproduction environment separately recorded | r_network metadata query gives the same versions |
@@ -29,7 +29,7 @@ export METAKSSD_BIN="$PWD/external/MetaKSSD/bin/metakssd"
 "$METAKSSD_BIN" --version
 ```
 
-The pin identifies the current inspected 2.21 source, not a recovered production binary. Verify the executable version and archive its SHA before use. The official README links [GTDB R226 MarkerDB](https://zenodo.org/records/16317275); database/sample Sketch inputs are separate and not bundled. Follow PIPELINE.md for the existing composite query and MACK-DB Profile sharekmer12; do not replace its Profile stage with the upstream generic default18.
+The source pin is inspected2.21context, not a proven compilation identity or recovered production binary. Verify the executable version and record its SHA. The [single-Run config](config/single_run.example.json) defaults to the actual accepted binary SHA; a newly compiled2.21binary must use its explicitly reviewed local SHA and is reported as a different build, with output acceptance established only by real reference comparison. The official README links [GTDB R226 MarkerDB](https://zenodo.org/records/16317275); obtain it and L3K11 separately, then match **each extracted file** to [reference pins](examples/real_fastq/ERR14036375/reference_pins.json). Reuse matching local files; no new reference download/build is required by this integration. Do not claim an arbitrary downloaded archive matches merely because its folder has the same name. Follow the [real one-Run guide](examples/real_fastq/ERR14036375/README.md) for exact commands and MACK-DB Profile sharekmer12; upstream generic default18 is not the accepted normalization.
 
 ## FastSpar 1.0.0
 

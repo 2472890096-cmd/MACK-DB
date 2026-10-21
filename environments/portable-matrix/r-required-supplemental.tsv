@@ -1,0 +1,9 @@
+Package	Version	Priority	Depends	Imports	LinkingTo	Repository	RemoteType	RemoteUsername	RemoteRepo	RemoteSha	conda_owner	evidence
+ape	5.8-1		R (>= 3.2.0)	nlme, lattice, graphics, methods, stats, utils, parallel, Rcpp (>= 0.12.0), digest	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+chorddiag	0.1.3		R (>= 3.2.0)	htmlwidgets (>= 0.4), RColorBrewer (>= 1.1-2)			github	mattflor	chorddiag	1688d72cd93071abb373e054190363bdfb3af2af		CURRENT_OBSERVED_METADATA_20261021
+ggrepel	0.9.7		R (>= 4.5.0), ggplot2 (>= 3.5.2)	grid, Rcpp, rlang (>= 1.1.6), S7, scales (>= 1.4.0), withr (>= 3.0.2)	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+microeco	2.0.0		R (>= 3.5.0)	R6, stats, ape, vegan, rlang, data.table, magrittr, dplyr, tibble, scales, grid, ggplot2 (>= 3.5.0), RColorBrewer, reshape2, igraph (>= 2.0.0), lifecycle		CRAN						CURRENT_OBSERVED_METADATA_20261021
+permute	0.9-10		R (>= 3.6.0)	stats		CRAN						CURRENT_OBSERVED_METADATA_20261021
+plyr	1.8.9		R (>= 3.1.0)	Rcpp (>= 0.11.0)	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+reshape2	1.4.5		R (>= 3.1)	plyr (>= 1.8.1), Rcpp, stringr	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+vegan	2.7-5		permute (>= 0.9-0), R (>= 4.1.0)	MASS, cluster, lattice, mgcv		CRAN						CURRENT_OBSERVED_METADATA_20261021

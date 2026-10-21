@@ -1,0 +1,20 @@
+{
+  "project": "PRJEB81106",
+  "files": {
+    "runs": {
+      "path": "../../prjeb81106/archived_runs.txt",
+      "sha256": "3a15f0c790681e6b47227a20be2de4ccf8d5b10eed0cbd24831bbb665e48835b",
+      "source_class": "INDEPENDENT_REPRODUCTION_INPUT"
+    },
+    "genus_abundance": {
+      "path": "data/PRJEB81106/genus_abundance/PRJEB81106_abundance.matrix",
+      "sha256": "c2c729c900d186ed57717ef9129f8096eded6f0130c89d56acefe7d7a1581813",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "genus_mapping": {
+      "path": "data/PRJEB81106/genus_mapping/PRJEB81106_genus.matrix",
+      "sha256": "d192cef57471c1fb069eb7e3e4e7ca182f89b1e8f624b5b4420f46190d7828bb",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    }
+  }
+}

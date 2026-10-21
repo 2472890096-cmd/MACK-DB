@@ -1,0 +1,13 @@
+# Optional training dependencies only; not needed for scoring replay.
+# Solver availability, installation and training were not tested in this release task.
+name: mackdb-dki-training
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.19
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - scipy=1.15.3
+  - pip
+# Install torch==2.7.1 first, then torchdiffeq==0.2.5 as documented in README.
+# Do not run this model interpreter as the Python>=3.11 matrix orchestrator.

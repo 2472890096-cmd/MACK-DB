@@ -1,0 +1,48 @@
+{
+  "status": "PASS_REAL_FASTQ_TO_PROFILE_WITH_ARCHIVED_REFERENCE_MATCH",
+  "scope": "One fresh ENA paired-end Run, not all33 or all795",
+  "date": "2026-10-21",
+  "source_evidence_artifact": "execution_ERR14036375_20261021/evidence/FINAL_OUTPUT_COMPARISON.json",
+  "source_evidence_sha256": "ccef23df4c47b60f488efdbd152e9a8bbf3e0086891b6448d9f25fa8120279d0",
+  "pairs": 1367526,
+  "reads": 2735052,
+  "bases": 208338748,
+  "sketch_keys": 31236,
+  "sketch_key_count_exact_match": true,
+  "serialized_sketch_byte_identity_required": false,
+  "query_taxa": 12,
+  "query_numeric_exact_match": true,
+  "profile_species": 5,
+  "profile_byte_identical": true,
+  "profile_max_abs_diff": 0,
+  "science_steps_executed_once": true,
+  "MetaKSSD_version": "2.21",
+  "sharekmer": 12,
+  "threads": 1,
+  "memory_G": 2,
+  "time_v": [
+    {
+      "stage": "sketch",
+      "wall_seconds": 4.621634946204722,
+      "max_rss_kib": "592520"
+    },
+    {
+      "stage": "query",
+      "wall_seconds": 3.420129582285881,
+      "max_rss_kib": "331780"
+    },
+    {
+      "stage": "profile",
+      "wall_seconds": 1.817652203142643,
+      "max_rss_kib": "157380"
+    }
+  ],
+  "limitations": [
+    "Complete original per-Run historical argv/binary not recovered",
+    "33Run matrix acceptance is separate",
+    "Genus suffix aggregation risk frozen pending author/supervisor",
+    "New cNODE2 training not verified",
+    "Raw FASTQ/SRA/Sketch/MarkerDB not bundled",
+    "Data sharing of larger historical matrices/predictions not granted"
+  ]
+}

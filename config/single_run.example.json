@@ -1,0 +1,11 @@
+{
+  "run_accession": "ERR14036375",
+  "fastq_r1": "../data/ERR14036375/ERR14036375_1.fastq.gz",
+  "fastq_r2": "../data/ERR14036375/ERR14036375_2.fastq.gz",
+  "metakssd_bin": "metakssd",
+  "metakssd_sha256": "b122b110be1a59fe657366a9a022e43bb38377da8578d061e0248cdca7535377",
+  "shuffle": "../external/MetaKSSD/shuf_files/L3K11.shuf",
+  "markerdb_dir": "../external/GTDBr226_genomes_L3K11_sketch_markerdb",
+  "rscript": "Rscript",
+  "scratch_dir": "/tmp"
+}

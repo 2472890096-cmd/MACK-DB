@@ -9,28 +9,18 @@ owner	dependency_type	dependency	status	evidence_or_action
 032	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/01_sample_rescue/rescue_io.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 033	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/01_sample_rescue/rescue_io.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 034	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/01_sample_rescue/rescue_io.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-043	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/01_sample_rescue/rescue_io.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 044	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/02_prepare_fastspar_input/prepare_inputs.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 053	RETAINED_REPOSITORY_CODE	pipeline/abundance/shape_sparcc_format.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-061	RETAINED_REPOSITORY_CODE	pipeline/associations/fastcclasso/run_fastcclasso_parallel.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-064	RETAINED_REPOSITORY_CODE	pipeline/associations/fastcclasso/run_fastcclasso_parallel_genus.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 065	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 067	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/species_production_workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 067	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/capture_v3.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 069	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/species/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 069	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-070	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/genus_workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 071	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/species_production_workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 072	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 072	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/timed_rscript.sh	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-078	RETAINED_REPOSITORY_CODE	pipeline/zipi/FastSpar_signed_spinglass_network.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-079	RETAINED_REPOSITORY_CODE	pipeline/zipi/FastSpar_signed_spinglass_network.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 080	RETAINED_REPOSITORY_CODE	pipeline/dki/calculate_structural_keystoneness_rk4_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-081	RETAINED_REPOSITORY_CODE	pipeline/dki/prepare_dki_keys_for_mysql.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 084	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-104	RETAINED_REPOSITORY_CODE	pipeline/dki/DKI_formula_fixed.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-105	RETAINED_REPOSITORY_CODE	pipeline/dki/DKI_formula_fixed.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-107	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/species/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 108	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/species/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 109	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 069	REPOSITORY_IO_OR_CODE	pipeline/epi_v3/species/audit/config.json	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
@@ -38,7 +28,6 @@ owner	dependency_type	dependency	status	evidence_or_action
 072	REPOSITORY_IO_OR_CODE	pipeline/epi_v3/genus/audit/config.json	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
 109	REPOSITORY_IO_OR_CODE	pipeline/epi_v3/species/audit/config.json	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
 080	REPOSITORY_IO_OR_CODE	pipeline/dki/calculate_structural_keystoneness_rk4_fast.R	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
-081	REPOSITORY_IO_OR_CODE	pipeline/dki/prepare_dki_keys_for_mysql.py	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
 010	REPOSITORY_IO_OR_CODE	analysis/external_validation/shared_protocol/chen_wallen_null_models_final_v1.py	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
 053	ENTRY_PORTABILITY	pipeline/metakssd_profile/historical_linked_wrappers/batch_matrix.sh	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 054	ENTRY_PORTABILITY	pipeline/metakssd_profile/historical_linked_wrappers/query.sh	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
@@ -58,7 +47,7 @@ owner	dependency_type	dependency	status	evidence_or_action
 076	ENTRY_PORTABILITY	pipeline/dki/prepare_dki_keys_for_mysql.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 077	ENTRY_PORTABILITY	pipeline/zipi/prepare_signed_keys_for_mysql.py	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 080	ENTRY_PORTABILITY	pipeline/dki/r_scoring_revision/score_R_streaming.R	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
-083	ENTRY_PORTABILITY	analysis/figures/figure3/figure3_release.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
+083	ENTRY_PORTABILITY	analysis/keystone_concordance/concordance_release.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 089	ENTRY_PORTABILITY	pipeline/dki/DKI_formula_fixed.py	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 090	ENTRY_PORTABILITY	pipeline/dki/calculate_structural_keystoneness_rk4_fast.R	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 091	ENTRY_PORTABILITY	pipeline/associations/fastspar/corr_inter.R	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
@@ -84,9 +73,7 @@ owner	dependency_type	dependency	status	evidence_or_action
 002;003	EXTERNAL_INPUT_OR_SOFTWARE	rescue_external_coabundance_taxonomy_v2.py; gtdb_r226_genome_level_mapping_rescue_v1.py	BLOCKED_FOR_FULL_EXECUTION	Direct upstream source dependencies absent from fixed84; do not fabricate or retrieve outside authorized input
 012;014	EXTERNAL_INPUT_OR_SOFTWARE	chen_postrescue_source_exclusion_overlap_v45.py; 9_14_codex/chen_wallen_combined_overlap_v1.py	BLOCKED_FOR_FULL_EXECUTION	Frozen provenance/source membership parsing requires nonselected upstream sources; absence prevents full supplementary analysis
 001-024	EXTERNAL_INPUT_OR_SOFTWARE	External networks / taxonomy resources / frozen intermediate manifests	BLOCKED_FOR_FULL_EXECUTION	Data not supplied; old manifests can pin source hashes/absolute paths and require explicit reviewed mapping, not silent bypass
-032-051	EXTERNAL_INPUT_OR_SOFTWARE	Stage5B exact sample inputs / frozen caches / final adoption	BLOCKED_FOR_FULL_EXECUTION	Not default main analysis; data and manuscript binding unresolved
-081	EXTERNAL_INPUT_OR_SOFTWARE	Prior DKI release audit records and saved score summaries	BLOCKED_FOR_FULL_EXECUTION	Historical scientific validation only; current main R scorer does not depend on these full archives
-103	EXTERNAL_INPUT_OR_SOFTWARE	Accepted original SVG	BLOCKED_FOR_FULL_EXECUTION	Renderer input not bundled; no Figure3 drawing performed
+032-051	EXTERNAL_INPUT_OR_SOFTWARE	Stage5B exact sample inputs / frozen caches / final adoption	ADOPTED_FINAL_S9_INPUTS_AND_FINAL_CODE_PENDING	FinalS9 usescompleteGuo/Wallenprojects. Oldexact-subgroup inputs/functionsremainprovenance. Newfinalsourcesheldbyauthorper-file-rightsdecision.
 086;088	EXTERNAL_INPUT_OR_SOFTWARE	Three-project saved diagnostics and111-sample Sketch references	BLOCKED_FOR_FULL_EXECUTION	Real-data fixture redistribution not approved; synthetic suite substitutes only for small unit tests
 runtime	PYTHON_PACKAGE	numpy	AVAILABLE	2.1.3
 runtime	PYTHON_PACKAGE	pandas	AVAILABLE	2.2.3
@@ -98,3 +85,7 @@ runtime	PYTHON_PACKAGE	torch	MISSING_IN_DEFAULT_PYTHON	MISSING_IN_THIS_PYTHON; t
 runtime	PYTHON_PACKAGE	torchdiffeq	MISSING_IN_DEFAULT_PYTHON	MISSING_IN_THIS_PYTHON; torch/torchdiffeq available in separately probed cnode environment, not needed for R-scoring tests
 089	ALTERNATE_MODEL_ENVIRONMENT	Python3.10.19/torch2.7.1/torchdiffeq0.2.5	AVAILABLE_NOT_TRAINED	Dependency metadata and --help checked only; original model code unchanged
 R	OPTIONAL_PROBE	future.apply	NOT_REQUIRED	Missing optional probe result; reviewed fastCCLasso wrappers use parallel, not future.apply
+pipeline/metakssd_profile/run_single_run.py	RETAINED_REPOSITORY_CODE	pipeline/metakssd_profile/profile.R	PRESENT_UNCHANGED_PINNED_CORE	Actual portable cached-input CLI PASS; original scientific profile SHA99db1243 unchanged
+tests/test_single_run_workflow.py	RETAINED_REPOSITORY_CODE	pipeline/metakssd_profile/run_single_run.py	PRESENT	12 bounded synthetic IO/safety cases; not a real input acceptance claim
+pipeline/metakssd_profile/run_single_run.py	BUNDLED_SMALL_REFERENCE	examples/real_fastq/ERR14036375/reference_pins.json	PRESENT	Actual input/tool/reference pins plus sorted key/count digest; no bulk biological artifacts
+pipeline/metakssd_profile/run_single_run.py	EXTERNAL_SOFTWARE_AND_DATA	Configured MetaKSSD2.21 + L3K11/R226 + gzip/zcat/time + Rtidyverse/optparse	EXTERNAL_REQUIRED_NOT_VENDORED	Preflight is read-only; cached files used locally; no installation/download by runner

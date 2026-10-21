@@ -1,0 +1,20 @@
+{
+  "project": "PRJEB81106",
+  "files": {
+    "runs": {
+      "path": "../../prjeb81106/archived_runs.txt",
+      "sha256": "3a15f0c790681e6b47227a20be2de4ccf8d5b10eed0cbd24831bbb665e48835b",
+      "source_class": "INDEPENDENT_REPRODUCTION_INPUT"
+    },
+    "species_abundance": {
+      "path": "data/PRJEB81106/species_abundance/PRJEB81106_abundance.matrix",
+      "sha256": "aaa91056a204962d0cdbf120adfb8759a38ced4e42de37e10cf3f35eee9be7c9",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "species_mapping": {
+      "path": "data/PRJEB81106/species_mapping/PRJEB81106_species.matrix",
+      "sha256": "91f37e5ed785d1a8d814be21e4d0a2c1ffc1b1aaa12e198c1249afd86ba98940",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    }
+  }
+}

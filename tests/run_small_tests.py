@@ -79,7 +79,7 @@ def main():
   assert sets['PRJTOYZERO']=={'Synthetic_genus_0','Synthetic_genus_1','Synthetic_genus_2'},sets
   log.write('PASS real DKI selection: full-background sample SD, TopK3, >= threshold and lexical ties; zero-score taxa are valid, not empty inputs\n')
  def test_figure3(out):
-  m=load('analysis/figures/figure3/figure3_release.py','test_figure3');rec={(l,method):set() for l in ['species','genus'] for method in m.methods}
+  m=load('analysis/keystone_concordance/concordance_release.py','test_figure3');rec={(l,method):set() for l in ['species','genus'] for method in m.methods}
   scope={'P0','P1','P2','P3'};envs={'P1':'E1','P2':'E1','P3':'E2','PX':'E3'}
   assignments=[('P1','A','Z'),('P1','B','E'),('P1','C','D'),('P1','D','ZE'),('P1','E','ZD'),('P1','F','ED'),('P1','G','ZED'),('P1','H','Z'),('P2','H','ED'),('P3','G','ZED'),('PX','I','ZED')]
   for p,n,ms in assignments:

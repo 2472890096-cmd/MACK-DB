@@ -1,0 +1,2 @@
+source_filename	sha256	candidate_status	role
+SpeciesAbundanceMatrix_TO_GenusAbundanceMatrix.py	dcc828b84119f8a6ac842bec27a2a4e675c2e99a485b655d3edac9eab7ebd790	INCLUDED_BYTE_IDENTICAL_IN_CURRENT82_SCRIPTS	Author-adopted species-name-token genus aggregation; no replacement implementation

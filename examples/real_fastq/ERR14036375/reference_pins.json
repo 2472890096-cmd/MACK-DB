@@ -1,0 +1,48 @@
+{
+  "run_accession": "ERR14036375",
+  "study_accession": "PRJEB81106",
+  "sample_accession": "SAMEA117479971",
+  "library_layout": "PAIRED",
+  "read_count": 2735052,
+  "base_count": 208338748,
+  "metakssd_version": "2.21",
+  "metakssd_sha256": "b122b110be1a59fe657366a9a022e43bb38377da8578d061e0248cdca7535377",
+  "source_context_commit": "c56806aed7b29b218c88c341dc6472545e39d8bb",
+  "binary_source_caveat": "Recorded executable differs from the Git-tracked binary; source commit is context, not a proven compilation identity.",
+  "shuffle_sha256": "b0b1942a745aa41938a9903f44cdee112274bb9a67819ed9e22538a3a596cc00",
+  "shuffle_id": 1481063132,
+  "markerdb_sha256": {
+    "cofiles.stat": "433dda73311d928c0c1df1c837883110493540f9cf43fc5e84dcb92e2576fe0d",
+    "combco.index.0": "a437b30a8f2fed3953dd7d248b8b821f114289a89617071a98fbb504799dcdff",
+    "combco.0": "31824aa6b4f54df772750721e90c611b27fdabe0b1db8be9cedf1b1593f22314"
+  },
+  "profile_core_sha256": "99db1243b612d98cf159744e668f6f1be8f1bc90546b59781eb85e553b300c86",
+  "expected_profile_sha256": "74e9e51d3fbd5b9c0f920e2364276b10020b3e69ca2408bfa6c427432c21aade",
+  "sorted_key_count_sha256": "a88d9c99e5bf7d560e9d54fa2d2bc71034794ecd4ae98a88993298b82eb4b091",
+  "sorted_key_count_encoding": "Ascending numeric key; each key uint32 little endian followed by uint16 little endian count, struct <IH, no padding. Digest is a comparison oracle, not a Sketch generator.",
+  "sketch_header": {
+    "shuf_id": 1481063132,
+    "koc": true,
+    "kmerlen": 22,
+    "dim_rd_len": 6,
+    "comp_num": 1,
+    "infile_num": 1,
+    "all_ctx_ct": 31236
+  },
+  "fastq": {
+    "R2": {
+      "filename": "ERR14036375_2.fastq.gz",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/075/ERR14036375/ERR14036375_2.fastq.gz",
+      "bytes": 71325061,
+      "md5": "13cd3fe6f4058059e2f9ac7f81714b19",
+      "sha256": "1e0fe61bb519461b9b1e1e5e6cea1a114631c26b599dba22f5bbb11fec6aa905"
+    },
+    "R1": {
+      "filename": "ERR14036375_1.fastq.gz",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR140/075/ERR14036375/ERR14036375_1.fastq.gz",
+      "bytes": 68661372,
+      "md5": "f80a3e2e7acd28fb47c90bdd7e3783e1",
+      "sha256": "a4dc2a29d01196c09337eeb2bb84a18b5d8a0a5d84716d4ae661deed75eb04f4"
+    }
+  }
+}

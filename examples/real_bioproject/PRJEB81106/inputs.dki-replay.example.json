@@ -1,0 +1,50 @@
+{
+  "project": "PRJEB81106",
+  "files": {
+    "runs": {
+      "path": "../../prjeb81106/archived_runs.txt",
+      "sha256": "3a15f0c790681e6b47227a20be2de4ccf8d5b10eed0cbd24831bbb665e48835b",
+      "source_class": "INDEPENDENT_REPRODUCTION_INPUT"
+    },
+    "species_abundance": {
+      "path": "data/PRJEB81106/species_abundance/PRJEB81106_abundance.matrix",
+      "sha256": "aaa91056a204962d0cdbf120adfb8759a38ced4e42de37e10cf3f35eee9be7c9",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "species_mapping": {
+      "path": "data/PRJEB81106/species_mapping/PRJEB81106_species.matrix",
+      "sha256": "91f37e5ed785d1a8d814be21e4d0a2c1ffc1b1aaa12e198c1249afd86ba98940",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "species_dki_Ptrain": {
+      "path": "data/PRJEB81106/species_dki_Ptrain/Ptrain.csv",
+      "sha256": "39e69062a6207ee0710631845fa806b4682b62819ca5093709eebd04c502977d",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_Ptest": {
+      "path": "data/PRJEB81106/species_dki_Ptest/Ptest.csv",
+      "sha256": "6c7628b6b783d7c5f903eed12c2b86e281e25c94b24af87e6b27957a100f3e9b",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_species_id": {
+      "path": "data/PRJEB81106/species_dki_species_id/species_id.csv",
+      "sha256": "f812c4ca1c19efb3e7ab4829424bdfac8917f0dd42d0d2d396fca6fac5b1c97f",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_sample_id": {
+      "path": "data/PRJEB81106/species_dki_sample_id/sample_id.csv",
+      "sha256": "e97d6310976a9712becfa724d187808e341de1fda51db0f8f8680d98e4c25742",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_qtrn": {
+      "path": "data/PRJEB81106/species_dki_qtrn/qtrn.csv",
+      "sha256": "4786e426c9ba2b8fbfe8d82fd16d20320690eabca891b913c115096d5e9a9476",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_qtst": {
+      "path": "data/PRJEB81106/species_dki_qtst/qtst.csv",
+      "sha256": "8972ecab7322108f7eb7633be5d3ebbe7b42f62d25a7325a309d9a9c3ee95926",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    }
+  }
+}

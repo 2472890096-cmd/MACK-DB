@@ -1,0 +1,197 @@
+Package	Version	Priority	Depends	Imports	LinkingTo	Repository	RemoteType	RemoteUsername	RemoteRepo	RemoteSha	conda_owner	evidence
+ape	5.8-1		R (>= 3.2.0)	nlme, lattice, graphics, methods, stats, utils, parallel, Rcpp (>= 0.12.0), digest	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+askpass	1.2.1			sys (>= 2.1)		CRAN					r-askpass	CURRENT_OBSERVED_METADATA_20261021
+assertthat	0.2.1			tools		CRAN					r-assertthat	CURRENT_OBSERVED_METADATA_20261021
+backports	1.5.0		R (>= 3.0.0)			CRAN					r-backports	CURRENT_OBSERVED_METADATA_20261021
+base	4.5.3	base									r-base	CURRENT_OBSERVED_METADATA_20261021
+base64enc	0.1-6		R (>= 2.9.0)			CRAN					r-base64enc	CURRENT_OBSERVED_METADATA_20261021
+bit	4.6.0		R (>= 3.4.0)			CRAN					r-bit	CURRENT_OBSERVED_METADATA_20261021
+bit64	4.6.0-1		R (>= 3.4.0), bit (>= 4.0.0)	graphics, methods, stats, utils		CRAN					r-bit64	CURRENT_OBSERVED_METADATA_20261021
+blob	1.3.0			methods, rlang, vctrs (>= 0.2.1)		CRAN					r-blob	CURRENT_OBSERVED_METADATA_20261021
+brew	1.0-10					CRAN						CURRENT_OBSERVED_METADATA_20261021
+brio	1.1.5		R (>= 3.6)			CRAN						CURRENT_OBSERVED_METADATA_20261021
+broom	1.0.12		R (>= 4.1)	backports, cli, dplyr (>= 1.0.0), generics (>= 0.0.2), glue, lifecycle, purrr, rlang (>= 1.1.0), stringr, tibble (>= 3.0.0), tidyr (>= 1.0.0)		CRAN					r-broom	CURRENT_OBSERVED_METADATA_20261021
+bslib	0.10.0		R (>= 2.10)	base64enc, cachem, fastmap (>= 1.1.1), grDevices, htmltools (>= 0.5.8), jquerylib (>= 0.1.3), jsonlite, lifecycle, memoise (>= 2.0.1), mime, rlang, sass (>= 0.4.9)		CRAN					r-bslib	CURRENT_OBSERVED_METADATA_20261021
+cachem	1.1.0			rlang, fastmap (>= 1.2.0)		CRAN					r-cachem	CURRENT_OBSERVED_METADATA_20261021
+callr	3.7.6		R (>= 3.4)	processx (>= 3.6.1), R6, utils		CRAN					r-callr	CURRENT_OBSERVED_METADATA_20261021
+cellranger	1.1.0		R (>= 3.0.0)	rematch, tibble		CRAN					r-cellranger	CURRENT_OBSERVED_METADATA_20261021
+chorddiag	0.1.3		R (>= 3.2.0)	htmlwidgets (>= 0.4), RColorBrewer (>= 1.1-2)			github	mattflor	chorddiag	1688d72cd93071abb373e054190363bdfb3af2af		CURRENT_OBSERVED_METADATA_20261021
+cli	3.6.5		R (>= 3.4)	utils		CRAN					r-cli	CURRENT_OBSERVED_METADATA_20261021
+clipr	0.8.0			utils		CRAN					r-clipr	CURRENT_OBSERVED_METADATA_20261021
+cluster	2.1.8.2	recommended	R (>= 3.5.0)	graphics, grDevices, stats, utils		CRAN						CURRENT_OBSERVED_METADATA_20261021
+codetools	0.2-20	recommended	R (>= 2.1)			CRAN					r-codetools	CURRENT_OBSERVED_METADATA_20261021
+colorspace	2.1-2		R (>= 3.0.0), methods	graphics, grDevices, stats		CRAN					r-colorspace	CURRENT_OBSERVED_METADATA_20261021
+commonmark	2.0.0					CRAN						CURRENT_OBSERVED_METADATA_20261021
+compiler	4.5.3	base									r-base	CURRENT_OBSERVED_METADATA_20261021
+conflicted	1.2.0		R (>= 3.2)	cli (>= 3.4.0), memoise, rlang (>= 1.0.0)		CRAN					r-conflicted	CURRENT_OBSERVED_METADATA_20261021
+cpp11	0.5.3		R (>= 4.0.0)			CRAN					r-cpp11	CURRENT_OBSERVED_METADATA_20261021
+crayon	1.5.3			grDevices, methods, utils		CRAN					r-crayon	CURRENT_OBSERVED_METADATA_20261021
+credentials	2.0.3			openssl (>= 1.3), sys (>= 2.1), curl, jsonlite, askpass		CRAN						CURRENT_OBSERVED_METADATA_20261021
+curl	7.0.0		R (>= 3.0.0)			CRAN					r-curl	CURRENT_OBSERVED_METADATA_20261021
+data.table	1.17.8		R (>= 3.3.0)	methods		CRAN					r-data.table	CURRENT_OBSERVED_METADATA_20261021
+data.tree	1.2.0		R (>= 3.5)	R6, stringi, methods		CRAN					r-data.tree	CURRENT_OBSERVED_METADATA_20261021
+datasets	4.5.3	base									r-base	CURRENT_OBSERVED_METADATA_20261021
+DBI	1.3.0		methods, R (>= 3.0.0)			CRAN					r-dbi	CURRENT_OBSERVED_METADATA_20261021
+dbplyr	2.5.2		R (>= 3.6)	blob (>= 1.2.0), cli (>= 3.6.1), DBI (>= 1.1.3), dplyr (>= 1.1.2), glue (>= 1.6.2), lifecycle (>= 1.0.3), magrittr, methods, pillar (>= 1.9.0), purrr (>= 1.0.1), R6 (>= 2.2.2), rlang (>= 1.1.1), tibble (>= 3.2.1), tidyr (>= 1.3.0), tidyselect (>= 1.2.1), utils, vctrs (>= 0.6.3), withr (>= 2.5.0)		CRAN					r-dbplyr	CURRENT_OBSERVED_METADATA_20261021
+desc	1.4.3		R (>= 3.4)	cli, R6, utils		CRAN						CURRENT_OBSERVED_METADATA_20261021
+devtools	2.4.6		R (>= 4.1), usethis (>= 3.2.1)	cli (>= 3.6.5), desc (>= 1.4.3), ellipsis (>= 0.3.2), fs (>= 1.6.6), lifecycle (>= 1.0.4), memoise (>= 2.0.1), miniUI (>= 0.1.2), pkgbuild (>= 1.4.8), pkgdown (>= 2.1.3), pkgload (>= 1.4.1), profvis (>= 0.4.0), rcmdcheck (>= 1.4.0), remotes (>= 2.5.0), rlang (>= 1.1.6), roxygen2 (>= 7.3.3), rversions (>= 2.1.2), sessioninfo (>= 1.2.3), stats, testthat (>= 3.2.3), tools, urlchecker (>= 1.0.1), utils, withr (>= 3.0.2)		CRAN						CURRENT_OBSERVED_METADATA_20261021
+DiagrammeR	1.0.11		R (>= 3.2)	dplyr (>= 1.0.7), glue (>= 1.5.0), htmltools (>= 0.5.2), htmlwidgets (>= 1.5), igraph (>= 1.4.0), magrittr (>= 1.5), purrr (>= 0.3.4), RColorBrewer (>= 1.1-2), readr (>= 2.1.1), rlang (>= 1.1.0), cli, rstudioapi (>= 0.7), scales (>= 1.1), stringr (>= 1.4), tibble (>= 3.1), tidyr (>= 1.1), viridisLite (>= 0.4.2), visNetwork (>= 2.1.0)		CRAN					r-diagrammer	CURRENT_OBSERVED_METADATA_20261021
+diffobj	0.3.6		R (>= 3.1.0)	crayon (>= 1.3.2), tools, methods, utils, stats		CRAN						CURRENT_OBSERVED_METADATA_20261021
+digest	0.6.39		R (>= 3.3.0)	utils		CRAN					r-digest	CURRENT_OBSERVED_METADATA_20261021
+doParallel	1.0.17		R (>= 2.14.0), foreach (>= 1.2.0), iterators (>= 1.0.0), parallel, utils			CRAN					r-doparallel	CURRENT_OBSERVED_METADATA_20261021
+downlit	0.4.5		R (>= 4.0.0)	brio, desc, digest, evaluate, fansi, memoise, rlang, vctrs, withr, yaml		CRAN						CURRENT_OBSERVED_METADATA_20261021
+downloader	0.4.1			utils, digest		CRAN					r-downloader	CURRENT_OBSERVED_METADATA_20261021
+dplyr	1.2.0		R (>= 4.1.0)	cli (>= 3.6.2), generics, glue (>= 1.3.2), lifecycle (>= 1.0.5), magrittr (>= 1.5), methods, pillar (>= 1.9.0), R6, rlang (>= 1.1.7), tibble (>= 3.2.0), tidyselect (>= 1.2.0), utils, vctrs (>= 0.7.1)		CRAN					r-dplyr	CURRENT_OBSERVED_METADATA_20261021
+dtplyr	1.3.3		R (>= 4.0)	cli (>= 3.4.0), data.table (>= 1.13.0), dplyr (>= 1.1.0), glue, lifecycle, rlang (>= 1.0.4), tibble, tidyselect (>= 1.2.0), vctrs (>= 0.4.1)		CRAN					r-dtplyr	CURRENT_OBSERVED_METADATA_20261021
+ellipsis	0.3.2		R (>= 3.2)	rlang (>= 0.3.0)		CRAN					r-ellipsis	CURRENT_OBSERVED_METADATA_20261021
+evaluate	1.0.5		R (>= 3.6.0)			CRAN					r-evaluate	CURRENT_OBSERVED_METADATA_20261021
+fansi	1.0.7		R (>= 3.1.0)	grDevices, utils		CRAN					r-fansi	CURRENT_OBSERVED_METADATA_20261021
+farver	2.1.2					CRAN					r-farver	CURRENT_OBSERVED_METADATA_20261021
+fastmap	1.2.0					CRAN					r-fastmap	CURRENT_OBSERVED_METADATA_20261021
+fontawesome	0.5.3		R (>= 3.3.0)	rlang (>= 1.0.6), htmltools (>= 0.5.1.1)		CRAN					r-fontawesome	CURRENT_OBSERVED_METADATA_20261021
+forcats	1.0.1		R (>= 4.1)	cli (>= 3.4.0), glue, lifecycle, magrittr, rlang (>= 1.0.0), tibble		CRAN					r-forcats	CURRENT_OBSERVED_METADATA_20261021
+foreach	1.5.2		R (>= 2.5.0)	codetools, utils, iterators		CRAN					r-foreach	CURRENT_OBSERVED_METADATA_20261021
+formatR	1.14		R (>= 3.2.3)			CRAN					r-formatr	CURRENT_OBSERVED_METADATA_20261021
+fs	1.6.6		R (>= 3.6)	methods		CRAN					r-fs	CURRENT_OBSERVED_METADATA_20261021
+futile.logger	1.4.9		R (>= 3.0.0)	utils, lambda.r (>= 1.1.0), futile.options		CRAN					r-futile.logger	CURRENT_OBSERVED_METADATA_20261021
+futile.options	1.0.1		R (>= 2.8.0)			CRAN					r-futile.options	CURRENT_OBSERVED_METADATA_20261021
+gargle	1.6.1		R (>= 4.1)	cli (>= 3.0.1), fs (>= 1.3.1), glue (>= 1.3.0), httr (>= 1.4.5), jsonlite, lifecycle (>= 0.2.0), openssl, rappdirs, rlang (>= 1.1.0), stats, utils, withr		CRAN					r-gargle	CURRENT_OBSERVED_METADATA_20261021
+generics	0.1.4		R (>= 3.6)	methods		CRAN					r-generics	CURRENT_OBSERVED_METADATA_20261021
+gert	2.3.1			askpass, credentials (>= 1.2.1), openssl (>= 2.0.3), rstudioapi (>= 0.11), sys, zip (>= 2.1.0)		CRAN						CURRENT_OBSERVED_METADATA_20261021
+getopt	1.20.4			stats		CRAN					r-getopt	CURRENT_OBSERVED_METADATA_20261021
+ggplot2	4.0.2		R (>= 4.1)	cli, grDevices, grid, gtable (>= 0.3.6), isoband, lifecycle (> 1.0.1), rlang (>= 1.1.0), S7, scales (>= 1.4.0), stats, vctrs (>= 0.6.0), withr (>= 2.5.0)		CRAN					r-ggplot2	CURRENT_OBSERVED_METADATA_20261021
+ggrepel	0.9.7		R (>= 4.5.0), ggplot2 (>= 3.5.2)	grid, Rcpp, rlang (>= 1.1.6), S7, scales (>= 1.4.0), withr (>= 3.0.2)	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+gh	1.5.0		R (>= 4.1)	cli (>= 3.0.1), gitcreds, glue, httr2 (>= 1.0.6), ini, jsonlite, lifecycle, rlang (>= 1.0.0)		CRAN						CURRENT_OBSERVED_METADATA_20261021
+gitcreds	0.1.2		R (>= 3.4)			CRAN						CURRENT_OBSERVED_METADATA_20261021
+glue	1.8.0		R (>= 3.6)	methods		CRAN					r-glue	CURRENT_OBSERVED_METADATA_20261021
+googledrive	2.1.2		R (>= 4.1)	cli (>= 3.0.0), gargle (>= 1.6.0), glue (>= 1.4.2), httr, jsonlite, lifecycle, magrittr, pillar (>= 1.9.0), purrr (>= 1.0.1), rlang (>= 1.0.2), tibble (>= 2.0.0), utils, uuid, vctrs (>= 0.3.0), withr		CRAN					r-googledrive	CURRENT_OBSERVED_METADATA_20261021
+googlesheets4	1.1.2		R (>= 3.6)	cellranger, cli (>= 3.0.0), curl, gargle (>= 1.6.0), glue (>= 1.3.0), googledrive (>= 2.1.0), httr, ids, lifecycle, magrittr, methods, purrr, rematch2, rlang (>= 1.0.2), tibble (>= 2.1.1), utils, vctrs (>= 0.2.3), withr		CRAN					r-googlesheets4	CURRENT_OBSERVED_METADATA_20261021
+graphics	4.5.3	base		grDevices							r-base	CURRENT_OBSERVED_METADATA_20261021
+grDevices	4.5.3	base									r-base	CURRENT_OBSERVED_METADATA_20261021
+grid	4.5.3	base		grDevices, utils							r-base	CURRENT_OBSERVED_METADATA_20261021
+gridExtra	2.3			gtable, grid, grDevices, graphics, utils		CRAN					r-gridextra	CURRENT_OBSERVED_METADATA_20261021
+gtable	0.3.6		R (>= 4.0)	cli, glue, grid, lifecycle, rlang (>= 1.1.0), stats		CRAN					r-gtable	CURRENT_OBSERVED_METADATA_20261021
+haven	2.5.5		R (>= 3.6)	cli (>= 3.0.0), forcats (>= 0.2.0), hms, lifecycle, methods, readr (>= 0.1.0), rlang (>= 0.4.0), tibble, tidyselect, vctrs (>= 0.3.0)	cpp11	CRAN					r-haven	CURRENT_OBSERVED_METADATA_20261021
+highr	0.12		R (>= 3.3.0)	xfun (>= 0.18)		CRAN					r-highr	CURRENT_OBSERVED_METADATA_20261021
+hms	1.1.4			cli, lifecycle, methods, pkgconfig, rlang (>= 1.0.2), vctrs (>= 0.3.8)		CRAN					r-hms	CURRENT_OBSERVED_METADATA_20261021
+htmltools	0.5.9		R (>= 2.14.1)	base64enc, digest, fastmap (>= 1.1.0), grDevices, rlang (>= 1.0.0), utils		CRAN					r-htmltools	CURRENT_OBSERVED_METADATA_20261021
+htmlwidgets	1.6.4			grDevices, htmltools (>= 0.5.7), jsonlite (>= 0.9.16), knitr (>= 1.8), rmarkdown, yaml		CRAN					r-htmlwidgets	CURRENT_OBSERVED_METADATA_20261021
+httpuv	1.6.16		R (>= 2.15.1)	later (>= 0.8.0), promises, R6, Rcpp (>= 1.0.7), utils	later, Rcpp	CRAN					r-httpuv	CURRENT_OBSERVED_METADATA_20261021
+httr	1.4.8		R (>= 3.6)	curl (>= 5.1.0), jsonlite, mime, openssl (>= 0.8), R6		CRAN					r-httr	CURRENT_OBSERVED_METADATA_20261021
+httr2	1.2.2		R (>= 4.1)	cli (>= 3.0.0), curl (>= 6.4.0), glue, lifecycle, magrittr, openssl, R6, rappdirs, rlang (>= 1.1.0), vctrs (>= 0.6.3), withr		CRAN						CURRENT_OBSERVED_METADATA_20261021
+ids	1.0.1			openssl, uuid		CRAN					r-ids	CURRENT_OBSERVED_METADATA_20261021
+igraph	2.1.4		methods, R (>= 3.5.0)	cli, graphics, grDevices, lifecycle, magrittr, Matrix, pkgconfig (>= 2.0.0), rlang, stats, utils, vctrs	cpp11 (>= 0.5.0)	CRAN					r-igraph	CURRENT_OBSERVED_METADATA_20261021
+influenceR	0.1.5		R (>= 3.2.0)	igraph (>= 1.0.1), Matrix (>= 1.1-4), methods, utils		CRAN					r-influencer	CURRENT_OBSERVED_METADATA_20261021
+ini	0.3.1					CRAN						CURRENT_OBSERVED_METADATA_20261021
+isoband	0.3.0			cli, grid, rlang, utils	cpp11	CRAN					r-isoband	CURRENT_OBSERVED_METADATA_20261021
+iterators	1.0.14		R (>= 2.5.0), utils			CRAN					r-iterators	CURRENT_OBSERVED_METADATA_20261021
+jquerylib	0.1.4			htmltools		CRAN					r-jquerylib	CURRENT_OBSERVED_METADATA_20261021
+jsonlite	2.0.0		methods			CRAN					r-jsonlite	CURRENT_OBSERVED_METADATA_20261021
+knitr	1.51		R (>= 3.6.0)	evaluate (>= 0.15), highr (>= 0.11), methods, tools, xfun (>= 0.52), yaml (>= 2.1.19)		CRAN					r-knitr	CURRENT_OBSERVED_METADATA_20261021
+labeling	0.4.3			stats, graphics		CRAN					r-labeling	CURRENT_OBSERVED_METADATA_20261021
+lambda.r	1.2.4		R (>= 3.0.0)	formatR		CRAN					r-lambda.r	CURRENT_OBSERVED_METADATA_20261021
+later	1.4.8		R (>= 3.5)	Rcpp (>= 1.0.10), rlang	Rcpp	CRAN					r-later	CURRENT_OBSERVED_METADATA_20261021
+lattice	0.22-9	recommended	R (>= 4.0.0)	grid, grDevices, graphics, stats, utils		CRAN					r-lattice	CURRENT_OBSERVED_METADATA_20261021
+lifecycle	1.0.5		R (>= 3.6)	cli (>= 3.4.0), rlang (>= 1.1.0)		CRAN					r-lifecycle	CURRENT_OBSERVED_METADATA_20261021
+lubridate	1.9.5		methods, R (>= 3.2)	generics, timechange (>= 0.4.0)		CRAN					r-lubridate	CURRENT_OBSERVED_METADATA_20261021
+magrittr	2.0.4		R (>= 3.4.0)			CRAN					r-magrittr	CURRENT_OBSERVED_METADATA_20261021
+MASS	7.3-65	recommended	R (>= 4.4.0), grDevices, graphics, stats, utils	methods		CRAN						CURRENT_OBSERVED_METADATA_20261021
+Matrix	1.7-4	recommended	R (>= 4.4), methods	grDevices, graphics, grid, lattice, stats, utils		CRAN					r-matrix	CURRENT_OBSERVED_METADATA_20261021
+memoise	2.0.1			rlang (>= 0.4.10), cachem		CRAN					r-memoise	CURRENT_OBSERVED_METADATA_20261021
+methods	4.5.3	base		utils, stats							r-base	CURRENT_OBSERVED_METADATA_20261021
+mgcv	1.9-4	recommended	R (>= 4.4.0), nlme (>= 3.1-64)	methods, stats, graphics, Matrix, splines, utils		CRAN						CURRENT_OBSERVED_METADATA_20261021
+microeco	2.0.0		R (>= 3.5.0)	R6, stats, ape, vegan, rlang, data.table, magrittr, dplyr, tibble, scales, grid, ggplot2 (>= 3.5.0), RColorBrewer, reshape2, igraph (>= 2.0.0), lifecycle		CRAN						CURRENT_OBSERVED_METADATA_20261021
+mime	0.13			tools		CRAN					r-mime	CURRENT_OBSERVED_METADATA_20261021
+miniUI	0.1.2			shiny (>= 0.13), htmltools (>= 0.3), utils		CRAN						CURRENT_OBSERVED_METADATA_20261021
+modelr	0.1.11		R (>= 3.2)	broom, magrittr, purrr (>= 0.2.2), rlang (>= 1.0.6), tibble, tidyr (>= 0.8.0), tidyselect, vctrs		CRAN					r-modelr	CURRENT_OBSERVED_METADATA_20261021
+munsell	0.5.1			colorspace, methods		CRAN					r-munsell	CURRENT_OBSERVED_METADATA_20261021
+networkD3	0.4.1		R (>= 3.0.0)	data.tree, htmlwidgets (>= 0.3.2), igraph, jsonlite, magrittr		CRAN					r-networkd3	CURRENT_OBSERVED_METADATA_20261021
+nlme	3.1-168	recommended	R (>= 3.6.0)	graphics, stats, utils, lattice		CRAN						CURRENT_OBSERVED_METADATA_20261021
+openssl	2.3.5			askpass		CRAN					r-openssl	CURRENT_OBSERVED_METADATA_20261021
+optparse	1.7.5		R (>= 3.6.0)	methods, getopt (>= 1.20.2)		CRAN					r-optparse	CURRENT_OBSERVED_METADATA_20261021
+otel	0.2.0		R (>= 3.6.0)			CRAN					r-otel	CURRENT_OBSERVED_METADATA_20261021
+parallel	4.5.3	base		tools, compiler							r-base	CURRENT_OBSERVED_METADATA_20261021
+permute	0.9-10		R (>= 3.6.0)	stats		CRAN						CURRENT_OBSERVED_METADATA_20261021
+pillar	1.11.1			cli (>= 2.3.0), glue, lifecycle, rlang (>= 1.0.2), utf8 (>= 1.1.0), utils, vctrs (>= 0.5.0)		CRAN					r-pillar	CURRENT_OBSERVED_METADATA_20261021
+pkgbuild	1.4.8		R (>= 3.5)	callr (>= 3.2.0), cli (>= 3.4.0), desc, processx, R6		CRAN						CURRENT_OBSERVED_METADATA_20261021
+pkgconfig	2.0.3			utils		CRAN					r-pkgconfig	CURRENT_OBSERVED_METADATA_20261021
+pkgdown	2.2.0		R (>= 4.1)	bslib (>= 0.5.1), callr (>= 3.7.3), cli (>= 3.6.1), desc (>= 1.4.0), downlit (>= 0.4.4), fontawesome, fs (>= 1.4.0), httr2 (>= 1.0.2), jsonlite, lifecycle, openssl, purrr (>= 1.0.0), ragg (>= 1.4.0), rlang (>= 1.1.4), rmarkdown (>= 2.27), tibble, whisker, withr (>= 2.4.3), xml2 (>= 1.3.1), yaml (>= 2.3.9)		CRAN						CURRENT_OBSERVED_METADATA_20261021
+pkgload	1.5.0		R (>= 3.4.0)	cli (>= 3.3.0), desc, fs, glue, lifecycle, methods, pkgbuild, processx, rlang (>= 1.1.1), rprojroot, utils		CRAN						CURRENT_OBSERVED_METADATA_20261021
+plyr	1.8.9		R (>= 3.1.0)	Rcpp (>= 0.11.0)	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+praise	1.0.0					CRAN						CURRENT_OBSERVED_METADATA_20261021
+prettyunits	1.2.0		R(>= 2.10)			CRAN					r-prettyunits	CURRENT_OBSERVED_METADATA_20261021
+processx	3.8.6		R (>= 3.4.0)	ps (>= 1.2.0), R6, utils		CRAN					r-processx	CURRENT_OBSERVED_METADATA_20261021
+profvis	0.4.0		R (>= 4.0)	htmlwidgets (>= 0.3.2), rlang (>= 1.1.0), vctrs		CRAN						CURRENT_OBSERVED_METADATA_20261021
+progress	1.2.3		R (>= 3.6)	crayon, hms, prettyunits, R6		CRAN					r-progress	CURRENT_OBSERVED_METADATA_20261021
+promises	1.5.0		R (>= 4.1.0)	fastmap (>= 1.1.0), later, lifecycle, magrittr (>= 1.5), otel (>= 0.2.0), R6, rlang		CRAN					r-promises	CURRENT_OBSERVED_METADATA_20261021
+ps	1.9.1		R (>= 3.4)	utils		CRAN					r-ps	CURRENT_OBSERVED_METADATA_20261021
+purrr	1.2.1		R (>= 4.1)	cli (>= 3.6.1), lifecycle (>= 1.0.3), magrittr (>= 1.5.0), rlang (>= 1.1.1), vctrs (>= 0.6.3)	cli	CRAN					r-purrr	CURRENT_OBSERVED_METADATA_20261021
+R6	2.6.1		R (>= 3.6)			CRAN					r-r6	CURRENT_OBSERVED_METADATA_20261021
+ragg	1.5.1			systemfonts (>= 1.0.3), textshaping (>= 0.3.0)	systemfonts, textshaping	CRAN					r-ragg	CURRENT_OBSERVED_METADATA_20261021
+rappdirs	0.3.4		R (>= 4.1)			CRAN					r-rappdirs	CURRENT_OBSERVED_METADATA_20261021
+rcmdcheck	1.4.0			callr (>= 3.1.1.9000), cli (>= 3.0.0), curl, desc (>= 1.2.0), digest, pkgbuild, prettyunits, R6, rprojroot, sessioninfo (>= 1.1.1), utils, withr, xopen		CRAN						CURRENT_OBSERVED_METADATA_20261021
+RColorBrewer	1.1-3		R (>= 2.0.0)			CRAN					r-rcolorbrewer	CURRENT_OBSERVED_METADATA_20261021
+Rcpp	1.1.1		R (>= 3.5.0)	methods, utils		CRAN					r-rcpp	CURRENT_OBSERVED_METADATA_20261021
+readr	2.2.0		R (>= 4.1)	cli, clipr, crayon, glue, hms (>= 0.4.1), lifecycle, methods, R6, rlang, tibble, utils, vroom (>= 1.7.0), withr	cpp11, tzdb (>= 0.1.1)	CRAN					r-readr	CURRENT_OBSERVED_METADATA_20261021
+readxl	1.4.5		R (>= 3.6)	cellranger, tibble (>= 2.0.1), utils	cpp11 (>= 0.4.0), progress	CRAN					r-readxl	CURRENT_OBSERVED_METADATA_20261021
+rematch	2.0.0					CRAN					r-rematch	CURRENT_OBSERVED_METADATA_20261021
+rematch2	2.1.2			tibble		CRAN					r-rematch2	CURRENT_OBSERVED_METADATA_20261021
+remotes	2.5.0		R (>= 3.0.0)	methods, stats, tools, utils		CRAN						CURRENT_OBSERVED_METADATA_20261021
+reprex	2.1.1		R (>= 3.6)	callr (>= 3.6.0), cli (>= 3.2.0), clipr (>= 0.4.0), fs, glue, knitr (>= 1.23), lifecycle, rlang (>= 1.0.0), rmarkdown, rstudioapi, utils, withr (>= 2.3.0)		CRAN					r-reprex	CURRENT_OBSERVED_METADATA_20261021
+reshape2	1.4.5		R (>= 3.1)	plyr (>= 1.8.1), Rcpp, stringr	Rcpp	CRAN						CURRENT_OBSERVED_METADATA_20261021
+rgexf	0.16.3			XML, igraph, grDevices, utils, servr		CRAN					r-rgexf	CURRENT_OBSERVED_METADATA_20261021
+rlang	1.1.7		R (>= 4.0.0)	utils		CRAN					r-rlang	CURRENT_OBSERVED_METADATA_20261021
+rmarkdown	2.30		R (>= 3.0)	bslib (>= 0.2.5.1), evaluate (>= 0.13), fontawesome (>= 0.5.0), htmltools (>= 0.5.1), jquerylib, jsonlite, knitr (>= 1.43), methods, tinytex (>= 0.31), tools, utils, xfun (>= 0.36), yaml (>= 2.1.19)		CRAN					r-rmarkdown	CURRENT_OBSERVED_METADATA_20261021
+roxygen2	7.3.3		R (>= 3.6)	brew, cli (>= 3.3.0), commonmark, desc (>= 1.2.0), knitr, methods, pkgload (>= 1.0.2), purrr (>= 1.0.0), R6 (>= 2.1.2), rlang (>= 1.0.6), stringi, stringr (>= 1.0.0), utils, withr, xml2	cpp11	CRAN						CURRENT_OBSERVED_METADATA_20261021
+rprojroot	2.1.1		R (>= 3.0.0)			CRAN						CURRENT_OBSERVED_METADATA_20261021
+rstudioapi	0.18.0					CRAN					r-rstudioapi	CURRENT_OBSERVED_METADATA_20261021
+rversions	3.0.0			curl		CRAN						CURRENT_OBSERVED_METADATA_20261021
+rvest	1.0.5		R (>= 4.1)	cli, glue, httr (>= 0.5), lifecycle (>= 1.0.3), magrittr, rlang (>= 1.1.0), selectr, tibble, xml2 (>= 1.4.0)		CRAN					r-rvest	CURRENT_OBSERVED_METADATA_20261021
+S7	0.2.1		R (>= 3.5.0)	utils		CRAN					r-s7	CURRENT_OBSERVED_METADATA_20261021
+sass	0.4.10			fs (>= 1.2.4), rlang (>= 0.4.10), htmltools (>= 0.5.1), R6, rappdirs		CRAN					r-sass	CURRENT_OBSERVED_METADATA_20261021
+scales	1.4.0		R (>= 4.1)	cli, farver (>= 2.0.3), glue, labeling, lifecycle, R6, RColorBrewer, rlang (>= 1.1.0), viridisLite		CRAN					r-scales	CURRENT_OBSERVED_METADATA_20261021
+selectr	0.5-1		R (>= 3.0)	methods, stringr, R6		CRAN					r-selectr	CURRENT_OBSERVED_METADATA_20261021
+servr	0.32		R (>= 3.0.0)	mime (>= 0.2), httpuv (>= 1.5.2), xfun (>= 0.48), jsonlite		CRAN					r-servr	CURRENT_OBSERVED_METADATA_20261021
+sessioninfo	1.2.3		R (>= 3.4)	cli (>= 3.1.0), tools, utils		CRAN						CURRENT_OBSERVED_METADATA_20261021
+shiny	1.13.0		methods, R (>= 3.1.2)	bslib (>= 0.6.0), cachem (>= 1.1.0), cli, commonmark (>= 2.0.0), fastmap (>= 1.1.1), fontawesome (>= 0.4.0), glue (>= 1.3.2), grDevices, htmltools (>= 0.5.4), httpuv (>= 1.5.2), jsonlite (>= 0.9.16), later (>= 1.0.0), lifecycle (>= 0.2.0), mime (>= 0.3), otel, promises (>= 1.5.0), R6 (>= 2.0), rlang (>= 0.4.10), sourcetools, tools, utils, withr, xtable		CRAN						CURRENT_OBSERVED_METADATA_20261021
+sourcetools	0.1.7-1		R (>= 3.0.2)			CRAN						CURRENT_OBSERVED_METADATA_20261021
+splines	4.5.3	base		graphics, stats							r-base	CURRENT_OBSERVED_METADATA_20261021
+stats	4.5.3	base		utils, grDevices, graphics							r-base	CURRENT_OBSERVED_METADATA_20261021
+stats4	4.5.3	base		graphics, methods, stats							r-base	CURRENT_OBSERVED_METADATA_20261021
+stringi	1.8.7		R (>= 3.4)	tools, utils, stats		CRAN					r-stringi	CURRENT_OBSERVED_METADATA_20261021
+stringr	1.6.0		R (>= 4.1.0)	cli, glue (>= 1.6.1), lifecycle (>= 1.0.3), magrittr, rlang (>= 1.0.0), stringi (>= 1.5.3), vctrs (>= 0.4.0)		CRAN					r-stringr	CURRENT_OBSERVED_METADATA_20261021
+sys	3.4.3					CRAN					r-sys	CURRENT_OBSERVED_METADATA_20261021
+systemfonts	1.3.2		R (>= 3.2.0)	base64enc, grid, jsonlite, lifecycle, tools, utils	cpp11 (>= 0.2.1)	CRAN					r-systemfonts	CURRENT_OBSERVED_METADATA_20261021
+tcltk	4.5.3	base		utils							r-base	CURRENT_OBSERVED_METADATA_20261021
+testthat	3.3.2		R (>= 4.1.0)	brio (>= 1.1.5), callr (>= 3.7.6), cli (>= 3.6.5), desc (>= 1.4.3), evaluate (>= 1.0.4), jsonlite (>= 2.0.0), lifecycle (>= 1.0.4), magrittr (>= 2.0.3), methods, pkgload (>= 1.4.0), praise (>= 1.0.0), processx (>= 3.8.6), ps (>= 1.9.1), R6 (>= 2.6.1), rlang (>= 1.1.6), utils, waldo (>= 0.6.2), withr (>= 3.0.2)		CRAN						CURRENT_OBSERVED_METADATA_20261021
+textshaping	1.0.5		R (>= 3.2.0)	lifecycle, stats, stringi, systemfonts (>= 1.3.0), utils	cpp11 (>= 0.2.1), systemfonts (>= 1.0.0)	CRAN					r-textshaping	CURRENT_OBSERVED_METADATA_20261021
+tibble	3.3.1		R (>= 3.4.0)	cli, lifecycle (>= 1.0.0), magrittr, methods, pillar (>= 1.8.1), pkgconfig, rlang (>= 1.0.2), utils, vctrs (>= 0.5.0)		CRAN					r-tibble	CURRENT_OBSERVED_METADATA_20261021
+tidyr	1.3.2		R (>= 4.1.0)	cli (>= 3.4.1), dplyr (>= 1.1.0), glue, lifecycle (>= 1.0.3), magrittr, purrr (>= 1.0.1), rlang (>= 1.1.1), stringr (>= 1.5.0), tibble (>= 2.1.1), tidyselect (>= 1.2.1), utils, vctrs (>= 0.5.2)	cpp11 (>= 0.4.0)	CRAN					r-tidyr	CURRENT_OBSERVED_METADATA_20261021
+tidyselect	1.2.1		R (>= 3.4)	cli (>= 3.3.0), glue (>= 1.3.0), lifecycle (>= 1.0.3), rlang (>= 1.0.4), vctrs (>= 0.5.2), withr		CRAN					r-tidyselect	CURRENT_OBSERVED_METADATA_20261021
+tidyverse	2.0.0		R (>= 3.3)	broom (>= 1.0.3), conflicted (>= 1.2.0), cli (>= 3.6.0), dbplyr (>= 2.3.0), dplyr (>= 1.1.0), dtplyr (>= 1.2.2), forcats (>= 1.0.0), ggplot2 (>= 3.4.1), googledrive (>= 2.0.0), googlesheets4 (>= 1.0.1), haven (>= 2.5.1), hms (>= 1.1.2), httr (>= 1.4.4), jsonlite (>= 1.8.4), lubridate (>= 1.9.2), magrittr (>= 2.0.3), modelr (>= 0.1.10), pillar (>= 1.8.1), purrr (>= 1.0.1), ragg (>= 1.2.5), readr (>= 2.1.4), readxl (>= 1.4.2), reprex (>= 2.0.2), rlang (>= 1.0.6), rstudioapi (>= 0.14), rvest (>= 1.0.3), stringr (>= 1.5.0), tibble (>= 3.1.8), tidyr (>= 1.3.0), xml2 (>= 1.3.3)		CRAN					r-tidyverse	CURRENT_OBSERVED_METADATA_20261021
+timechange	0.4.0		R (>= 3.3)		cpp11 (>= 0.2.7)	CRAN					r-timechange	CURRENT_OBSERVED_METADATA_20261021
+tinytex	0.58			xfun (>= 0.48)		CRAN					r-tinytex	CURRENT_OBSERVED_METADATA_20261021
+tools	4.5.3	base									r-base	CURRENT_OBSERVED_METADATA_20261021
+tzdb	0.5.0		R (>= 4.0.0)		cpp11 (>= 0.5.2)	CRAN					r-tzdb	CURRENT_OBSERVED_METADATA_20261021
+urlchecker	1.0.1		R (>= 3.3)	cli, curl, tools, xml2		CRAN						CURRENT_OBSERVED_METADATA_20261021
+usethis	3.2.1		R (>= 4.1)	cli (>= 3.0.1), clipr (>= 0.3.0), crayon, curl (>= 2.7), desc (>= 1.4.2), fs (>= 1.3.0), gert (>= 1.4.1), gh (>= 1.2.1), glue (>= 1.3.0), jsonlite, lifecycle (>= 1.0.0), purrr, rappdirs, rlang (>= 1.1.0), rprojroot (>= 2.1.1), rstudioapi, stats, tools, utils, whisker, withr (>= 2.3.0), yaml		CRAN						CURRENT_OBSERVED_METADATA_20261021
+utf8	1.2.6		R (>= 2.10)			CRAN					r-utf8	CURRENT_OBSERVED_METADATA_20261021
+utils	4.5.3	base									r-base	CURRENT_OBSERVED_METADATA_20261021
+uuid	1.2-2		R (>= 2.9.0)			CRAN					r-uuid	CURRENT_OBSERVED_METADATA_20261021
+vctrs	0.7.1		R (>= 4.0.0)	cli (>= 3.4.0), glue, lifecycle (>= 1.0.3), rlang (>= 1.1.7)		CRAN					r-vctrs	CURRENT_OBSERVED_METADATA_20261021
+vegan	2.7-5		permute (>= 0.9-0), R (>= 4.1.0)	MASS, cluster, lattice, mgcv		CRAN						CURRENT_OBSERVED_METADATA_20261021
+VennDiagram	1.8.2		R (>= 3.5.0), grid (>= 2.14.1), futile.logger	methods		CRAN					r-venndiagram	CURRENT_OBSERVED_METADATA_20261021
+viridis	0.6.5		R (>= 2.10), viridisLite (>= 0.4.0)	ggplot2 (>= 1.0.1), gridExtra		CRAN					r-viridis	CURRENT_OBSERVED_METADATA_20261021
+viridisLite	0.4.3		R (>= 2.10)			CRAN					r-viridislite	CURRENT_OBSERVED_METADATA_20261021
+visNetwork	2.1.4		R (>= 3.0)	htmlwidgets, htmltools, jsonlite, magrittr, utils, methods, grDevices, stats		CRAN					r-visnetwork	CURRENT_OBSERVED_METADATA_20261021
+vroom	1.7.0		R (>= 4.1)	bit64, cli (>= 3.2.0), crayon, glue, hms, lifecycle (>= 1.0.3), methods, rlang (>= 1.1.0), stats, tibble (>= 2.0.0), tidyselect, tzdb (>= 0.1.1), vctrs (>= 0.2.0), withr	cpp11 (>= 0.2.0), progress (>= 1.2.3), tzdb (>= 0.1.1)	CRAN					r-vroom	CURRENT_OBSERVED_METADATA_20261021
+waldo	0.6.2		R (>= 4.0)	cli, diffobj (>= 0.3.4), glue, methods, rlang (>= 1.1.0)		CRAN						CURRENT_OBSERVED_METADATA_20261021
+whisker	0.4.1					CRAN						CURRENT_OBSERVED_METADATA_20261021
+withr	3.0.2		R (>= 3.6.0)	graphics, grDevices		CRAN					r-withr	CURRENT_OBSERVED_METADATA_20261021
+xfun	0.56		R (>= 3.2.0)	grDevices, stats, tools		CRAN					r-xfun	CURRENT_OBSERVED_METADATA_20261021
+XML	3.99-0.22		R (>= 4.0.0), methods, utils			CRAN					r-xml	CURRENT_OBSERVED_METADATA_20261021
+xml2	1.5.2		R (>= 3.6.0)	cli, methods, rlang (>= 1.1.0)		CRAN					r-xml2	CURRENT_OBSERVED_METADATA_20261021
+xopen	1.0.1		R (>= 3.1)	processx		CRAN						CURRENT_OBSERVED_METADATA_20261021
+xtable	1.8-8		R (>= 2.10.0)	stats, utils, methods		CRAN						CURRENT_OBSERVED_METADATA_20261021
+yaml	2.3.12					CRAN					r-yaml	CURRENT_OBSERVED_METADATA_20261021
+zip	2.3.3					CRAN						CURRENT_OBSERVED_METADATA_20261021

@@ -1,0 +1,369 @@
+{
+  "project": "PRJEB81106",
+  "cohort": "33_ARCHIVED_RUNS_ONLY",
+  "provenance": "Stage2 FINAL_ACCEPTANCE_RESULTS.tsv",
+  "results": [
+    {
+      "stage": "validate",
+      "level": "species",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 0.115,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {}
+    },
+    {
+      "stage": "validate",
+      "level": "genus",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 0.116,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {}
+    },
+    {
+      "stage": "count",
+      "level": "species",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 0.366,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "shape": [
+          53,
+          33
+        ],
+        "same_finite_pattern": true,
+        "max_abs_difference": 3.725290298461914e-09,
+        "numeric_exact": false,
+        "archive_sha_equal": true
+      }
+    },
+    {
+      "stage": "count",
+      "level": "genus",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 0.366,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "shape": [
+          38,
+          33
+        ],
+        "same_finite_pattern": true,
+        "max_abs_difference": 3.725290298461914e-09,
+        "numeric_exact": false
+      }
+    },
+    {
+      "stage": "dki-input",
+      "level": "species",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 1.768,
+      "parameter_scope": "PERTURBATION_INPUT_GENERATION_ONLY_NO_MODEL",
+      "checks": {
+        "Ptrain": {
+          "shape": [
+            53,
+            33
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "Ptest": {
+          "shape": [
+            53,
+            359
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "species_id": {
+          "shape": [
+            359,
+            1
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "sample_id": {
+          "shape": [
+            359,
+            1
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        }
+      }
+    },
+    {
+      "stage": "dki-input",
+      "level": "genus",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 0.666,
+      "parameter_scope": "PERTURBATION_INPUT_GENERATION_ONLY_NO_MODEL",
+      "checks": {
+        "Ptrain": {
+          "shape": [
+            38,
+            33
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "Ptest": {
+          "shape": [
+            38,
+            274
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "species_id": {
+          "shape": [
+            274,
+            1
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "sample_id": {
+          "shape": [
+            274,
+            1
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        }
+      }
+    },
+    {
+      "stage": "epi",
+      "level": "species",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 1.668,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "summary": {
+          "project": "PRJEB81106",
+          "mode": "prevalence",
+          "species_total": "53",
+          "sample_total": "33",
+          "species_scored": "3",
+          "D1_key_count": "0",
+          "D2_key_count": "0",
+          "Q_key_count": "0"
+        },
+        "key_counts": {
+          "D1": 0,
+          "D2": 0,
+          "Q": 0
+        },
+        "final_count": 0,
+        "formal_keys_match": true
+      }
+    },
+    {
+      "stage": "epi",
+      "level": "genus",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 1.618,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "summary": {
+          "project": "PRJEB81106",
+          "mode": "prevalence",
+          "species_total": "38",
+          "sample_total": "33",
+          "species_scored": "2",
+          "D1_key_count": "0",
+          "D2_key_count": "0",
+          "Q_key_count": "0"
+        },
+        "key_counts": {
+          "D1": 0,
+          "D2": 0,
+          "Q": 0
+        },
+        "final_count": 0,
+        "formal_keys_match": true
+      }
+    },
+    {
+      "stage": "fastcclasso",
+      "level": "species",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 1.618,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "cor": {
+          "shape": [
+            53,
+            53
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "pv": {
+          "shape": [
+            53,
+            53
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "project_status": {
+          "project": "PRJEB81106",
+          "status": "pass",
+          "error": "",
+          "elapsed_seconds": "0.983",
+          "n_samples": "33",
+          "n_taxa": "53",
+          "selected_edges": "0",
+          "finite_pair_fraction": "0.566037735849057",
+          "lambda_best": "1.73427947197387",
+          "full_zero_variance_taxa": "0",
+          "max_cv_test_zero_variance_taxa": "0",
+          "max_cv_train_zero_variance_taxa": "0"
+        }
+      }
+    },
+    {
+      "stage": "fastcclasso",
+      "level": "genus",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 1.267,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "cor": {
+          "shape": [
+            38,
+            38
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "pv": {
+          "shape": [
+            38,
+            38
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "project_status": {
+          "project": "PRJEB81106",
+          "status": "pass",
+          "error": "",
+          "elapsed_seconds": "0.689",
+          "n_samples": "33",
+          "n_taxa": "38",
+          "selected_edges": "0",
+          "finite_pair_fraction": "0.392603129445235",
+          "lambda_best": "2.21988146171044",
+          "full_zero_variance_taxa": "0",
+          "max_cv_test_zero_variance_taxa": "0",
+          "max_cv_train_zero_variance_taxa": "0"
+        }
+      }
+    },
+    {
+      "stage": "fastspar",
+      "level": "species",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 75.366,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "correlation": {
+          "shape": [
+            53,
+            53
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "covariance": {
+          "shape": [
+            53,
+            53
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "pvalues": {
+          "shape": [
+            53,
+            53
+          ],
+          "same_finite_pattern": true,
+          "max_abs_difference": 0.0,
+          "numeric_exact": true
+        },
+        "selected_edges": 25,
+        "positive": 6,
+        "negative": 19
+      }
+    },
+    {
+      "stage": "zipi",
+      "level": "species",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 10.432,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "nodes": 6,
+        "edges": 4,
+        "max_z_p_diff": 0.0,
+        "roles_and_names_match": true,
+        "candidates": 0,
+        "validation_correction": "Read actual archived z/p column names; no scientific rerun"
+      }
+    },
+    {
+      "stage": "fastspar",
+      "level": "genus",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 60.185,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "selected_edges": 3,
+        "all_matrices_match_production": true,
+        "correlation_max_abs_diff": 0.0,
+        "covariance_max_abs_diff": 0.0,
+        "pvalues_max_abs_diff": 0.0,
+        "reference_scope": "Production reference, not an old independentgenusreproduction"
+      }
+    },
+    {
+      "stage": "zipi",
+      "level": "genus",
+      "archived_status": "PASS",
+      "historical_elapsed_seconds": 5.024,
+      "parameter_scope": "FORMAL_PARAMETERS",
+      "checks": {
+        "nodes": 0,
+        "edges": 0,
+        "max_z_p_diff": 0.0,
+        "roles_and_names_match": true,
+        "candidates": 0,
+        "validation_correction": "Reference zero-node output confirmed"
+      }
+    }
+  ],
+  "dki_training": {
+    "status": "NOT_VERIFIED_BY_THIS_BUNDLE",
+    "saved_predictions_or_checkpoint_bundled": false,
+    "note": "Generate perturbations and train/predict separately. Historical scoring replay is not fresh-training acceptance and no fixed new-training candidates are asserted."
+  }
+}

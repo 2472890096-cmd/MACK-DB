@@ -1,0 +1,130 @@
+{
+  "project": "PRJEB81106",
+  "files": {
+    "runs": {
+      "path": "../../prjeb81106/archived_runs.txt",
+      "sha256": "3a15f0c790681e6b47227a20be2de4ccf8d5b10eed0cbd24831bbb665e48835b",
+      "source_class": "INDEPENDENT_REPRODUCTION_INPUT"
+    },
+    "sample_mapping": {
+      "path": "data/PRJEB81106/sample_mapping/PRJEB81106_sample_mapping.tsv",
+      "sha256": "cdaf3d1a3c5ec9e1e227515e37392107a45ab2912a35c74e7c1b17d1cff22942",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_abundance": {
+      "path": "data/PRJEB81106/species_abundance/PRJEB81106_abundance.matrix",
+      "sha256": "aaa91056a204962d0cdbf120adfb8759a38ced4e42de37e10cf3f35eee9be7c9",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "species_mapping": {
+      "path": "data/PRJEB81106/species_mapping/PRJEB81106_species.matrix",
+      "sha256": "91f37e5ed785d1a8d814be21e4d0a2c1ffc1b1aaa12e198c1249afd86ba98940",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "species_dki_Ptrain": {
+      "path": "data/PRJEB81106/species_dki_Ptrain/Ptrain.csv",
+      "sha256": "39e69062a6207ee0710631845fa806b4682b62819ca5093709eebd04c502977d",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_Ptest": {
+      "path": "data/PRJEB81106/species_dki_Ptest/Ptest.csv",
+      "sha256": "6c7628b6b783d7c5f903eed12c2b86e281e25c94b24af87e6b27957a100f3e9b",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_species_id": {
+      "path": "data/PRJEB81106/species_dki_species_id/species_id.csv",
+      "sha256": "f812c4ca1c19efb3e7ab4829424bdfac8917f0dd42d0d2d396fca6fac5b1c97f",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_sample_id": {
+      "path": "data/PRJEB81106/species_dki_sample_id/sample_id.csv",
+      "sha256": "e97d6310976a9712becfa724d187808e341de1fda51db0f8f8680d98e4c25742",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_qtrn": {
+      "path": "data/PRJEB81106/species_dki_qtrn/qtrn.csv",
+      "sha256": "4786e426c9ba2b8fbfe8d82fd16d20320690eabca891b913c115096d5e9a9476",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_dki_qtst": {
+      "path": "data/PRJEB81106/species_dki_qtst/qtst.csv",
+      "sha256": "8972ecab7322108f7eb7633be5d3ebbe7b42f62d25a7325a309d9a9c3ee95926",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "genus_abundance": {
+      "path": "data/PRJEB81106/genus_abundance/PRJEB81106_abundance.matrix",
+      "sha256": "c2c729c900d186ed57717ef9129f8096eded6f0130c89d56acefe7d7a1581813",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "genus_mapping": {
+      "path": "data/PRJEB81106/genus_mapping/PRJEB81106_genus.matrix",
+      "sha256": "d192cef57471c1fb069eb7e3e4e7ca182f89b1e8f624b5b4420f46190d7828bb",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "genus_dki_Ptrain": {
+      "path": "data/PRJEB81106/genus_dki_Ptrain/Ptrain.csv",
+      "sha256": "f37a467ebf2bec251347f69f49d2b3e9230589dd16396a2d68591d28bd272fb4",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "genus_dki_Ptest": {
+      "path": "data/PRJEB81106/genus_dki_Ptest/Ptest.csv",
+      "sha256": "6a083f329af898304cec2af2a28562cb7f83499e3a23cc1cbec9afa529071790",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "genus_dki_species_id": {
+      "path": "data/PRJEB81106/genus_dki_species_id/species_id.csv",
+      "sha256": "3a6aff04bc1f4ea29511dd36f02e8612351d5c29e5d65e13eaf41a164cabcf5f",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "genus_dki_sample_id": {
+      "path": "data/PRJEB81106/genus_dki_sample_id/sample_id.csv",
+      "sha256": "923e59c262d1c4cb883b180ecd1c6d151c74d27af11587a0a334730a4a7740af",
+      "source_class": "HISTORICAL_PRODUCTION_INPUT"
+    },
+    "genus_dki_qtrn": {
+      "path": "data/PRJEB81106/genus_dki_qtrn/qtrn.csv",
+      "sha256": "a2e857b3b3a8ba4fbf1c36015bef7db31f693b6bba8eb100c41aebef53ba1e0e",
+      "source_class": "HISTORICAL_PRODUCTION_RESULT"
+    },
+    "genus_dki_qtst": {
+      "path": "data/PRJEB81106/genus_dki_qtst/qtst.csv",
+      "sha256": "3e6df9459f5e12ee5c1a24ce6e654763848caa7c464a1eb268d23469859f10b5",
+      "source_class": "HISTORICAL_PRODUCTION_RESULT"
+    },
+    "species_count_reference": {
+      "path": "data/PRJEB81106/species_count_reference/PRJEB81106_count.matrix",
+      "sha256": "8f2004d1db6e8dc63ab02fd4d74c1d9b6aa57286ca3ec6e71afd4b2ac449ddad",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_fastspar_correlation": {
+      "path": "data/PRJEB81106/species_fastspar_correlation/PRJEB81106_correlation.tsv",
+      "sha256": "81c7c122b6079095f1de9bb1f9d40c3edbb0b2ba16170d43e74d9342636d2194",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_fastspar_covariance": {
+      "path": "data/PRJEB81106/species_fastspar_covariance/PRJEB81106_covariance.tsv",
+      "sha256": "a410c01e9e653956c8c7c79c369ef8326a87de152392e0c31188d09aaaf63201",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_fastspar_pvalues": {
+      "path": "data/PRJEB81106/species_fastspar_pvalues/PRJEB81106_pvalues.tsv",
+      "sha256": "3c27135bb26fb5d5abdfe39a62385bc2a3b52a61149735212741e7372382ca38",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "species_edge_reference": {
+      "path": "data/PRJEB81106/species_edge_reference/PRJEB81106_corr_pvalue.csv",
+      "sha256": "2811bc16b640a97c5a00a0a615449aa44990800ad4f381cba1c2269e93d24588",
+      "source_class": "INDEPENDENT_REPRODUCTION_RESULT"
+    },
+    "genus_fastspar_correlation": {
+      "path": "data/PRJEB81106/genus_fastspar_correlation/PRJEB81106_correlation.tsv",
+      "sha256": "4454c32a4ae4a2f4f51aa3c8b7546d589598eb03f0e414892bcff6ec8d8ecf60",
+      "source_class": "HISTORICAL_PRODUCTION_RESULT"
+    },
+    "genus_fastspar_pvalues": {
+      "path": "data/PRJEB81106/genus_fastspar_pvalues/PRJEB81106_pvalues.tsv",
+      "sha256": "61f86ed2c2257d5536cb6ef189826beb9e173b42b999a2e56f9a051fadb524b7",
+      "source_class": "HISTORICAL_PRODUCTION_RESULT"
+    }
+  }
+}

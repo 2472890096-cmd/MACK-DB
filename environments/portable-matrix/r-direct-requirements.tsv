@@ -1,0 +1,15 @@
+package	version	use	evidence
+vegan	2.7-5	EPI v3 distance	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+microeco	2.0.0	Zi-Pi roles	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+igraph	2.1.4	Zi-Pi signed spinglass and graphs	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+tidyverse	2.0.0	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+optparse	1.7.5	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+dplyr	1.2.0	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+data.table	1.17.8	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+htmlwidgets	1.6.4	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+networkD3	0.4.1	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+gridExtra	2.3	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+ggrepel	0.9.7	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+RColorBrewer	1.1-3	retained matrix workflow direct/imported plot dependency	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+VennDiagram	1.8.2	FastSpar intersection output	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE
+chorddiag	0.1.3	Zi-Pi plot output	CURRENT_OBSERVED_PLUS_ARCHIVED_VERSION_EVIDENCE

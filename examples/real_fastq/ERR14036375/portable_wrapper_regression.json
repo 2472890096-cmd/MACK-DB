@@ -1,0 +1,66 @@
+{
+  "status": "PASS_REAL_FASTQ_TO_PROFILE_REFERENCE_MATCH",
+  "date": "2026-10-21",
+  "source": "Actual portable wrapper executed in an isolated relocated copy using cached verified FASTQs; no download",
+  "wrapper_sha256": "5c170b5f188ca32a1d1f3707cf4b661d097e5f8e4229b9d981652b5ee2ac0e14",
+  "profile_core_sha256": "99db1243b612d98cf159744e668f6f1be8f1bc90546b59781eb85e553b300c86",
+  "source_directory_with_spaces_tested": true,
+  "output_directory_with_spaces_tested": true,
+  "invoked_from_outside_repository": true,
+  "independent_output_verify": "PASS",
+  "owned_scratch_removed_after_success": true,
+  "original_input_files_retained": true,
+  "metakssd_build_matches_recorded_sha": true,
+  "sketch_keys": 31236,
+  "sketch_key_count_exact_match": true,
+  "query_taxa": 12,
+  "profile_byte_identical": true,
+  "pair_validation": {
+    "status": "PASS",
+    "mate_records": [
+      1367526,
+      1367526
+    ],
+    "mate_bases": [
+      103802883,
+      104535865
+    ],
+    "max_read_lengths": [
+      77,
+      77
+    ],
+    "wall_seconds": 11.684708081185818,
+    "gzip_trailers_validated": true,
+    "paired_record_ids_match": true
+  },
+  "measured_external_stages": [
+    {
+      "stage": "decompress",
+      "exit_code": 0,
+      "wall_seconds": 4.27127,
+      "max_rss_kib": 1692
+    },
+    {
+      "stage": "sketch",
+      "exit_code": 0,
+      "wall_seconds": 4.571572,
+      "max_rss_kib": 592420
+    },
+    {
+      "stage": "query",
+      "exit_code": 0,
+      "wall_seconds": 3.419924,
+      "max_rss_kib": 331896
+    },
+    {
+      "stage": "profile",
+      "exit_code": 0,
+      "wall_seconds": 1.767569,
+      "max_rss_kib": 157544
+    }
+  ],
+  "tested_on_second_Linux_host": false,
+  "optional_sra_status": "NOT_VERIFIED_PLAN_ONLY",
+  "model_training": "NOT_EXECUTED",
+  "other32Runs": "NOT_DOWNLOADED_NOT_EXECUTED"
+}

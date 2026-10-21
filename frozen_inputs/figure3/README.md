@@ -15,7 +15,7 @@ This subset is **not a self-contained real-data reproduction package**. Do not s
 
 ## Final statistics and input contract
 
-The unchanged [figure3_release.py](../../analysis/figures/figure3/figure3_release.py) checks the historical baseline and replaces the Species DKI candidates for PRJEB80533, PRJNA1345363, PRJNA1357645 and PRJEB72274 with all 61 accepted unified-R candidates. Other method inputs remain unchanged. The baseline must be the reviewed pre-replacement snapshot; passing an already-replaced snapshot as that baseline violates the program's assertions.
+The unchanged [figure3_release.py](../../analysis/keystone_concordance/concordance_release.py) checks the historical baseline and replaces the Species DKI candidates for PRJEB80533, PRJNA1345363, PRJNA1357645 and PRJEB72274 with all 61 accepted unified-R candidates. Other method inputs remain unchanged. The baseline must be the reviewed pre-replacement snapshot; passing an already-replaced snapshot as that baseline violates the program's assertions.
 
 The full command and required directory layout are documented in the [Figure 3 section of PIPELINE.md](../../PIPELINE.md#figure3--final-code-retained-real-inputs-held). Real-data execution requires all of the following separately authorized inputs:
 

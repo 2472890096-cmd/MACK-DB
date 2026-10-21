@@ -1,0 +1,10 @@
+test	status	elapsed_seconds	log	detail	test_type
+PROFILE	PASS	2.094	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+EPI_CORE	PASS	2.598	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+EPI_WORKERS	PASS	4.692	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+EPI_2OF3	PASS	0.050	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+ZIPI_ROLES	PASS	4.958	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+DKI_R_SCORING	PASS	3.407	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+DKI_SELECTION	PASS	0.020	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+FIGURE3_SETS	PASS	0.004	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST
+FASTSPAR_POSTPROCESS	PASS	3.860	Local full execution logs retained outside publication files; see TESTING.md		ACTUAL_SMALL_SCIENTIFIC_OR_ENTRY_TEST

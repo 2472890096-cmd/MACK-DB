@@ -1,0 +1,7 @@
+{
+  "fastspar": "fastspar",
+  "fastspar_bootstrap": "fastspar_bootstrap",
+  "fastspar_pvalues": "fastspar_pvalues",
+  "parallel": "parallel",
+  "fastcclasso_core": "../external/fastCCLasso/RCode/fastCCLasso.R"
+}

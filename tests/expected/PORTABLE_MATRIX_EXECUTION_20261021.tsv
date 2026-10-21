@@ -1,0 +1,17 @@
+level	stage	status	elapsed_seconds	evidence	scope
+species	prepare	PASS	0.001116	33 samples; 53 taxa	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+species	fastspar	PASS	74.339324	25 selected edges; all 3 numeric matrix comparisons recorded	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+species	fastcclasso	PASS	1.482306	nboot=100,kmax=20; project status pass	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+species	zipi	PASS	7.033292	6 nodes; 0 candidates	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+species	epi	PASS	1.567469	D1/D2/Q complete; 0 candidates in each	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+species	dki-input	PASS	0.616055	Perturbations generated from complete matrix	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+species	dki-train	PASS	15.052432	New CPU training/prediction; stopped epoch 109; no archived predictions	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+species	dki-score	PASS	1.800515	New predictions; unified-R scoring; 3 candidates	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	prepare	PASS	0.519696	33 samples; 38 taxa	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	fastspar	PASS	60.307613	3 selected edges; all 3 numeric matrix comparisons recorded	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	fastcclasso	PASS	1.181755	nboot=100,kmax=20; project status pass	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	zipi	PASS	3.274900	0 nodes; 0 candidates	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	epi	PASS	1.518483	D1/D2/Q complete; 0 candidates in each	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	dki-input	PASS	0.565746	Perturbations generated from complete matrix	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	dki-train	PASS	11.446463	New CPU training/prediction; stopped epoch 128; no archived predictions	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX
+genus	dki-score	PASS	1.750142	New predictions; unified-R scoring; 3 candidates	SAME_SERVER_FORMAL_PARAMETERS_COMPLETE33RUN_MATRIX

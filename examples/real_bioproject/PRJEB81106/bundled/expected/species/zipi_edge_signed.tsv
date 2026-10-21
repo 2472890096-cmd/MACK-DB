@@ -1,0 +1,5 @@
+from	to	weight	correlation	sign	label	from_module	to_module	same_module
+Staphylococcus_aureus	Roseburia_inulinivorans	0.5332	-0.5332	negative	-	M3	M2	FALSE
+Staphylococcus_aureus	Blautia_A_wexlerae	0.5239	-0.5239	negative	-	M3	M2	FALSE
+Pseudomonas_E_viridiflava	Pseudomonas_aeruginosa	0.8707	0.8707	positive	+	M1	M1	TRUE
+Pseudomonas_aeruginosa	Bacillus_A_anthracis	0.6823	0.6823	positive	+	M1	M1	TRUE

@@ -1,0 +1,2 @@
+package	version	use	fallback
+rgexf	0.16.3	microeco GEXF export	unchanged Zi-Pi entry catches export errors and writes GraphML
