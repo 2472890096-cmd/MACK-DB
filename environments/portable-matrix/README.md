@@ -60,7 +60,7 @@ stopifnot(nzchar(lib), getRversion() == "4.5.3")
 pins <- c(permute="0.9-10", ape="5.8-1", plyr="1.8.9", reshape2="1.4.5", vegan="2.7-5", ggrepel="0.9.7", microeco="2.0.0")
 for (p in names(pins)) {
   remotes::install_version(p, version=pins[[p]], repos="https://cloud.r-project.org", lib=lib, dependencies=NA, upgrade="never")
-  stopifnot(as.character(utils::packageVersion(p)) == pins[[p]])
+  stopifnot(utils::packageVersion(p) == package_version(pins[[p]]))
 }
 remotes::install_github("mattflor/chorddiag@1688d72cd93071abb373e054190363bdfb3af2af", lib=lib, dependencies=NA, upgrade="never")
 stopifnot(as.character(utils::packageVersion("chorddiag")) == "0.1.3")
@@ -93,9 +93,12 @@ The earlier `run_stage.py --stage dki-replay` is a separate archived-prediction 
 
 Optional CPU environment preparation, **not executed here**:
 
+SciPy 1.15.3 is installed from official PyPI; the base Python, NumPy, pandas and pip dependencies are installed through Conda.
+
 ```bash
 conda env create --file environments/portable-matrix/dki-training-optional.yml
 conda activate mackdb-dki-training
+python -m pip install scipy==1.15.3 --index-url https://pypi.org/simple
 python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
 python -m pip install torchdiffeq==0.2.5
 python -c 'import torch,torchdiffeq; print(torch.__version__,torchdiffeq.__version__)'
