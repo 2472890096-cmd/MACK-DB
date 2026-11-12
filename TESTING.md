@@ -43,3 +43,14 @@ python examples/real_bioproject/PRJEB81106/run_workflow.py --steps all --output 
 ```
 
 Seven new I/O tests check independent branch planning, fresh-training dependency, bundle schema/hashes, altered-artifact refusal and nonfinite prediction rejection. They are separate from the unchanged nine scientific groups and twelve upstream safety cases. The real33Run example also actually ran all16stages at both ranks with formal parameters, including fresh training/prediction (15.05/11.45s) and unified-R selection (3candidates each). The [execution table](tests/expected/PORTABLE_MATRIX_EXECUTION_20261021.tsv) records real stage timings; complete local logs/results remain outside publication files. A subsequent code relocation and resume check tests path portability without another training run. These checks do not establish a fresh environment install on every server.
+
+## Paper-reproduction adapters
+
+The accepted9 scientific groups,12 upstream safety cases and7 matrix IO cases were rerun on12November2026 and passed. No existing expected result was changed. Additional bounded checks:
+
+```bash
+"$MACKDB_PAPER_PYTHON" analysis/paper_support/test_replay.py
+"$MACKDB_PAPER_PYTHON" analysis/paper_network_comparison/test_io_adapter.py
+```
+
+The5 support-adapter and6 comparison-adapter tests check source guards, summary boundaries, path rebasing, duplicate records and output refusal. Real-data statistical validation is separately recorded in [PAPER_REPRODUCTION](docs/PAPER_REPRODUCTION.md#recorded-validation). It includes Figure2E, Figure3, Figure4 and stored-null/support replay. Required unpublished inputs and held source access remain prerequisites; synthetic tests cannot supply them.

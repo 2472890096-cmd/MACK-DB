@@ -1,0 +1,6 @@
+analysis_set	literature_count	N	baseline_support_count_median	baseline_support_count_Q1	baseline_support_count_Q3	baseline_support_count_mean	baseline_support_count_min	baseline_support_count_max	source_excluded_support_count_median	source_excluded_support_count_Q1	source_excluded_support_count_Q3	source_excluded_support_count_mean	source_excluded_support_count_min	source_excluded_support_count_max
+primary	1	5114	10	4	26	25.662495111458739	2	595	10	4	26	25.628861947594839	2	594
+primary	2	749	35	15	86	64.739652870493998	2	548	35	15	85	64.503337783711615	2	546
+primary	3	144	117.5	46.75	190	139.58333333333334	3	551	117	46.75	190	138.8125	3	547
+primary	4	55	148	78	221.5	164.80000000000001	2	488	147	78	220	163.30909090909091	2	484
+primary	5	5	177	147	235	190.59999999999999	95	299	176	145	234	189.40000000000001	95	297

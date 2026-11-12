@@ -1,0 +1,41 @@
+panel	comparison_id	series	expected_value	numerator	denominator
+A	Chen	Cumulative shared pairs	2045	2045	2733
+A	Wallen	Cumulative shared pairs	3284	3284	4396
+A	Li	Cumulative shared pairs	3550	3550	4871
+A	Guo	Cumulative shared pairs	3712	3712	5142
+A	Lacruz	Cumulative shared pairs	4805	4805	6392
+A	Zhou	Cumulative shared pairs	6067	6067	11900
+B	Guo_Control	Species	0.0784313725490196	8	102
+B	Guo_Control	Genus groups	0.09302325581395349	8	86
+B	Guo_MECFS	Species	0.19540229885057472	17	87
+B	Guo_MECFS	Genus groups	0.2463768115942029	17	69
+B	Guo_Common	Species	0.23846153846153847	31	130
+B	Guo_Common	Genus groups	0.27722772277227725	28	101
+B	Wallen_PD	Species	0.4982658959537572	431	865
+B	Wallen_PD	Genus groups	0.5206286836935167	265	509
+B	Wallen_NHC	Species	0.5072340425531915	596	1175
+B	Wallen_NHC	Genus groups	0.5593984962406015	372	665
+C	Guo_aggregate_union	Published	201		
+C	Guo_aggregate_union	MACK-DB complete project	1003		
+C	Guo_aggregate_union	MACK-DB common species	73		
+C	Guo_aggregate_union	Shared	38		
+C	Wallen_union_published_matched	Published	1413		
+C	Wallen_union_published_matched	MACK-DB complete project	7525		
+C	Wallen_union_published_matched	MACK-DB common species	733		
+C	Wallen_union_published_matched	Shared	523		
+C	Wallen_union_mackdb_standard	Published	1413		
+C	Wallen_union_mackdb_standard	MACK-DB complete project	1246		
+C	Wallen_union_mackdb_standard	MACK-DB common species	201		
+C	Wallen_union_mackdb_standard	Shared	185		
+D	Guo_aggregate_union	Published	149		
+D	Guo_aggregate_union	MACK-DB complete project	615		
+D	Guo_aggregate_union	MACK-DB comparable set	57		
+D	Guo_aggregate_union	Shared	34		
+D	Wallen_union_published_matched	Published	796		
+D	Wallen_union_published_matched	MACK-DB complete project	3722		
+D	Wallen_union_published_matched	MACK-DB comparable set	440		
+D	Wallen_union_published_matched	Shared	307		
+D	Wallen_union_mackdb_standard	Published	796		
+D	Wallen_union_mackdb_standard	MACK-DB complete project	699		
+D	Wallen_union_mackdb_standard	MACK-DB comparable set	128		
+D	Wallen_union_mackdb_standard	Shared	118		

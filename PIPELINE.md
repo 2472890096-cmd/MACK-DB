@@ -222,28 +222,16 @@ python pipeline/dki/DKI_formula_fixed.py \
 
 Select the existing torch/torchdiffeq environment explicitly. The original default3000/200 does not describe the accepted production override1000/80.
 
-## Keystone method concordance — final statistics; real inputs held
+## Paper-wide analysis from processed inputs
 
-The synthetic Figure3 test is part of `python tests/run_small_tests.py`. The final unified-R real-data program is retained unchanged, but full real candidate data is not committed. Availability and SHA references are in docs/FIGURE3_INPUT_AVAILABILITY.tsv. Do not run the following until separately authorized inputs have been supplied under the ignored data/ directory:
+The [paper reproduction guide](docs/PAPER_REPRODUCTION.md) is the current command and numbering authority. It covers Figure2 associations; Figure3 concordance; Figure4 fixed-order, matched-subgroup and complete-project comparisons; FigureS1/Table1/S2 null summaries; and FigureS2/TableS4 recurrence/support. MethodS7 concerns support, and MethodS8 covers the project comparisons. Legacy source paths retain older figure/method labels.
 
-```bash
-python analysis/keystone_concordance/concordance_release.py \
-  --base-analysis data/figure3/base_analysis \
-  --scopes-dir frozen_inputs/figure3/scopes \
-  --r-candidates data/figure3/r_replacement/FOUR_PROJECT_R_CANDIDATES_FINAL.tsv \
-  --impact-audit data/figure3/impact_audit --output work/figure3
-```
+- `analysis/associations/` reuses the SHA-pinned original Figure2 statistics from four processed45-environment directories.
+- `analysis/keystone_concordance/concordance_release.py` accepts the **old** candidate snapshot and applies the accepted61-row correction. `from_final_candidates.py` accepts **already corrected** candidates, asserts the four-project identity and never reapplies it. Both reuse the accepted set calculations; neither re-identifies taxa.
+- `analysis/paper_network_comparison/` supports fixed-order Figure4A and the exact original B/C/D statistics with explicit paths. The full-project and genus producers remain separately supplied, SHA-pinned sources pending rights confirmation.
+- `analysis/paper_support/` summarizes the stored11×2×1,000 random outcomes and recomputes the support/rank tests from their actual processed inputs. Historical simulation entries remain available under `analysis/external_validation/` and require full inputs; no new simulations were run for this check.
 
-base_analysis must include inputs/key_{species,genus}{,_epi,_dki}.tsv plus FIGURE3_ALL_FOUR_SCOPES_22_VALUES.tsv; impact_audit must include FIGURE3_POTENTIAL_IMPACT.tsv. The accepted program checks the historical baseline, then replaces all four Species DKI projects with the61 accepted R candidates. Its intended final science is unified R, not mixed Lowmem. Do not pass already-replaced candidates as the historical baseline. Rendering is separate and was not run.
-
-## External validation and final manuscript analyses
-
-`docs/ANALYSIS_USAGE.tsv` binds retained analyses to the confirmed final manuscript. Supplementary MethodsS5/S7 use taxonomy, source-exclusion, null, recurrence and support-statistics code under analysis/external_validation. Supply actual external networks, taxonomy resources and frozen manifests through lib/mackdb_paths.py/config/paths.example.json. Missing inputs must stop an analysis; do not fabricate data or bypass SHA checks.
-
-The final manuscript adopts720-order sequential recovery (MethodsS8) and Guo/Wallen complete-project comparison (MethodsS9). Fourteen existing final-result/helper sources, including the final residual-denominator recalculator and full-project code, are held pending individual author rights confirmation; see docs/PENDING_FINAL_STATISTICS_CODE.tsv. This candidate does not advertise a runnable finalS8/S9 entry while those files/inputs are absent. Retained Stage5B identity preparation and rewire code supply provenance/dependencies and are not the final full-project main program.
-
-Figure2 numerical source is also identified but held. No missing final tableS7/S8 generator is asserted: the workbook containsTablesS1–S6; S7/S8 are Methods. TableS3 literature classifications are authored curation. The examples directory contains a bundled complete-project matrix runner and a separate accepted one-Run FASTQ runner. The old Stage2 archived-input/scoring-replay runner remains for historical compatibility. Fresh FASTQ processing for all 33 Runs is not claimed.
-
+Large inputs are separate [archive candidates](docs/paper/DATA_PACKAGES.md). Missing inputs must stop a run. The14-source rights record is not an instruction to restore every old analysis. TableS3 remains authored literature curation; no TableS7/S8 generator is required. See the [external validation guide](analysis/external_validation/README.md).
 
 ## PRJEB81106 complete-project matrix example
 

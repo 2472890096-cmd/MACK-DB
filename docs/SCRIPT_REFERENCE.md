@@ -160,3 +160,15 @@ PASS describes a bounded stated route, not all cohorts or every historical branc
 | [pipeline/zipi/FastSpar_signed_spinglass_network.R](../pipeline/zipi/FastSpar_signed_spinglass_network.R) | Build the filtered signed FastSpar network, optimize modules, calculate Zi/Pi and roles, then render | PASS |
 | [pipeline/zipi/extract_signed_zipi_keys_by_environment.py](../pipeline/zipi/extract_signed_zipi_keys_by_environment.py) | Extract Connector/Module hub/Network hub rows while preserving valid zero-candidate projects | NOT_VERIFIED |
 | [pipeline/zipi/prepare_signed_keys_for_mysql.py](../pipeline/zipi/prepare_signed_keys_for_mysql.py) | Export local named Zi-Pi candidate tables; performs no database write | NOT_VERIFIED |
+
+## Current paper-reproduction additions
+
+The original script index above documents the accepted scientific workflow. The current [versioned source manifest](RELEASE_SCRIPT_MANIFEST.tsv) also includes the new bounded paper adapters/tests listed below; no original scientific source was replaced. See [PAPER_REPRODUCTION](PAPER_REPRODUCTION.md).
+
+- [Environment statistics and renderer adapters](../analysis/associations/README.md):3 scripts.
+- [Final candidate snapshot adapter](../analysis/keystone_concordance/from_final_candidates.py):1 script; delegates the original concordance core.
+- [Fixed-order/project comparison adapters and checks](../analysis/paper_network_comparison/README.md):4 scripts.
+- [Null/support summary replay and safety tests](../analysis/paper_support/README.md):2 scripts.
+- [Read-only data-package verifier](../tools/verify_paper_inputs.py):1 script.
+
+These11 additions are orchestration, saved-result summary/validation and IO tests. They do not restore removed historical scripts, change EPI/DKI definitions or perform new network inference.
