@@ -5,12 +5,21 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from run_original_statistics import install_io_rebase, load_functions
+from run_original_statistics import PINS, default_source, digest, install_io_rebase, load_functions
 from validate_statistics import unique_index
 from fixed_order_recovery import archived_steps
 
 
 class AdapterTests(unittest.TestCase):
+    def test_bundled_sources_and_helpers_have_accepted_hashes(self):
+        root = Path(__file__).resolve().parents[2]
+        for mode in ["b", "c", "d"]:
+            source = default_source(mode)
+            self.assertTrue(source.is_relative_to(root))
+            self.assertEqual(digest(source), PINS[mode])
+            if mode != "b":
+                self.assertEqual(digest(source.with_name("common.py")), PINS[mode + "_common"])
+
     def test_duplicate_archived_position_is_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
             source = Path(folder) / "archive.tsv"

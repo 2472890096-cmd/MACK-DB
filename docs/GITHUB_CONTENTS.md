@@ -1,13 +1,29 @@
-# GitHub code payload
+# Repository organization
 
-The large supporting-data inventory was a separate archival plan, **not a GitHub upload list**. Do not copy its tens of thousands of files into this repository.
+The public code tree serves two routes: [run the real examples](../examples/README.md) and [recompute paper statistics](PAPER_REPRODUCTION.md). Helpers and tests are dependencies, not additional workflows a reader must run separately.
 
-Keep the 82 current scripts and their actual imports/helpers, README/INSTALL/PIPELINE/PARAMETERS/TESTING, concise module guides, nonsecret configuration templates, version/dependency information, third-party notices and small synthetic fixtures/expected outputs. Retain fixed1571/1570/1568 scopes and already approved tiny processed references. The [core guide](CORE_WORKFLOW.md) explains which files a user starts with; not every helper is a separate analysis.
+## Keep in GitHub
 
-Keep raw FASTQ/SRA, Sketches, MarkerDBs, whole-cohort abundance/network tables, prediction matrices, checkpoints, database dumps, credentials, caches, server logs and internal audit inventories **outside** the GitHub payload. Supply large research inputs separately when needed, with appropriate access and licensing; this does not require uploading all historical intermediate files.
+| Location | Required content |
+|---|---|
+| `pipeline/` | Accepted scientific implementations and their runtime wrappers |
+| `analysis/` | Actual statistical calculations, necessary validation and optional rendering adapters |
+| `examples/` | One complete-project matrix entry and one single-Run upstream entry, with small inputs/references |
+| `environments/`, `config/` | Dependencies, pinned external versions and portable configuration templates |
+| `lib/`, `tools/` | Imports, matrix adapters and integrity/input checks used by the entries |
+| `tests/` | Small scientific tests, synthetic fixtures and expected values |
+| `docs/`, `frozen_inputs/` | Detailed instructions, file hashes, accepted project scopes and small numeric references |
 
-The original genus converter is now included byte-identically. The 27-file PRJEB81106 bundle (161,081 bytes) includes only the complete small matrices/mappings and processed references, not raw reads or models. Fourteen other final-statistics sources remain held pending individual rights confirmation. Neither source identity nor local storage alone grants open-source publication rights.
+The required Figure2/4 originals are kept in `analysis/associations/original/` and `analysis/paper_network_comparison/original/`. Run their documented adapters; the original files retain historical paths and may perform IO when run directly.
 
-Finish code preparation by reviewing the core workflow and functions, retaining necessary dependencies and deciding the project LICENSE before public open-source release. Then, after explicit authorization, synchronize the reviewed candidate into the upload checkout and create the actual commit/tag/push. This documentation update performs none of those Git operations and changes no scientific code.
+The [versioned source manifest](RELEASE_SCRIPT_MANIFEST.tsv) lists active scripts. [The core guide](CORE_WORKFLOW.md) explains scientific call order. EPI compatibility copies and configurations remain because callers use them. Immutable source-provenance files required by the integrity guard remain under `docs/provenance/`; they are maintenance evidence, not user entry points.
 
-The accepted processed-sample scope is264,767; genus aggregation follows the author's original species-name token rule. No new cohort reconciliation, genus rescan or scientific acceptance campaign is required for this documentation task.
+## Keep outside GitHub
+
+Large processed association/candidate inputs belong in separately reviewed [data packages](paper/DATA_PACKAGES.md), with access instructions and SHA256 in GitHub. Raw FASTQ/SRA, Sketches, MarkerDBs, models/predictions, database backups, credentials, caches, server logs and redundant historical reports are not code payloads. Third-party or individually held files are not bundled without authorization.
+
+## Retired optional material
+
+The former `run_stage.py` replay entry, its private-input templates, superseded FASTQ/matrix plans and three unreferenced phase-one snapshots were removed from this candidate on16November2026 after checking callers. The current `run_workflow.py`, bundled data, scientific implementations, required provenance guards and paper-reproduction functions remain. Original bytes are preserved in Git history and a separate local backup. No scientific formula, threshold or accepted reference was changed.
+
+The README is the short starting page. Historical timing details, all-script inventories and per-panel evidence stay in the linked specialist guides.

@@ -2,7 +2,7 @@
 """Compare recomputed Figure 2 statistics with the fixed summary/plot values.
 
 This is numerical validation, not a plotting program. The original final
-renderer is supplied separately and hash checked solely to reuse its actual
+renderer is included unchanged in original/ and hash checked solely to reuse its actual
 selected_environments() function (the renderer main() is never called).
 """
 from __future__ import annotations
@@ -16,6 +16,7 @@ import math
 from pathlib import Path
 
 RENDERER_SHA256 = "50dda8e6c2169aa7fd864a8d68f230ac77535529d4b79201a09ff1929956c14a"
+DEFAULT_SELECTION_SOURCE = Path(__file__).resolve().parent / "original" / "plot_coabundance_panel_ABCDE_ARIAL.py"
 COUNTS = {"fastspar_edges", "cclasso_edges", "common_edges", "fastspar_only", "cclasso_only", "union_edges"}
 FIELDS = COUNTS | {"jaccard", "common_fraction_fastspar", "common_fraction_cclasso", "sign_agreement", "common_corr_spearman", "median_abs_corr_diff"}
 
@@ -42,7 +43,8 @@ def main():
     parser.add_argument("--summary", type=Path, required=True)
     parser.add_argument("--reference-summary", type=Path, required=True)
     parser.add_argument("--plot-values", type=Path, required=True)
-    parser.add_argument("--selection-source", type=Path, required=True)
+    parser.add_argument("--selection-source", type=Path, default=DEFAULT_SELECTION_SOURCE,
+                        help="Optional renderer override; the frozen SHA256 is still enforced")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--absolute-tolerance", type=float, default=1e-15)
     args = parser.parse_args()

@@ -1,13 +1,13 @@
 {
-  "release_id": "MACKDB_PAPER_REPRODUCIBILITY_20261112",
-  "script_count": 93,
-  "file_count": 259,
+  "release_id": "MACKDB_SIX_SCIENTIFIC_SOURCES_20261123",
+  "script_count": 98,
+  "file_count": 250,
   "original_commit": "32416a731605f64e56b9855105d17b5bf73c8b8d",
   "original_script_count": 93,
   "removed_default_script_count": 17,
-  "new_sources_migrated": 1,
-  "new_sources_held": 14,
-  "authorization": "Author-authorized paper-reproducibility branch commit/push only; main/Release unchanged; held sources/data not uploaded",
+  "new_sources_migrated": 7,
+  "new_sources_held": 11,
+  "authorization": "Author-approved inclusion of essential6 sources20261123; local preparation only in this task; no data/third-party-font publication",
   "retained_phase1_scripts": 76,
   "new_example_orchestrators": 3,
   "real_data_files_migrated": 25,
@@ -27,7 +27,11 @@
   "portable_matrix_io_tests": 7,
   "fresh_DKI_training_scope": "ONE33SAMPLE_PROJECT_BOTH_RANKS_CPU_ONCE; NO_FULL_COHORT",
   "prior_small_upstream_reference_files": 2,
-  "prior_release_id": "MACKDB_RC_PORTABLE_MATRIX_20261021",
+  "prior_release_id": "MACKDB_PAPER_REPRODUCIBILITY_NAVIGATION_20261116",
   "new_paper_adapters_and_tests": 11,
-  "paper_reproduction_scope": "Processed-input statistics and saved-simulation replay; no new whole-cohort inference"
+  "paper_reproduction_scope": "Processed-input statistics and saved-simulation replay; no new whole-cohort inference",
+  "retired_unused_legacy_example_scripts": 1,
+  "retired_optional_files": 15,
+  "paper_essential_sources_bundled": 6,
+  "author_accepted_annotation_variations": true
 }

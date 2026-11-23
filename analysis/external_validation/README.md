@@ -14,7 +14,7 @@ Use the current [paper reproduction guide](../../docs/PAPER_REPRODUCTION.md) for
 
 Current isolated checks have recalculated the saved null summaries, empirical P values and support/rank statistics. They do not validate fresh random graph generation, new taxonomy resolution, network inference or model training. Final artwork is a separate operation with external scripts/fonts and documented dependencies.
 
-Some original sources remain held after the author's12November2026 confirmation. See [current source access](../../docs/paper/SOURCE_ACCESS.tsv) and the historical [14-source record](../../docs/PENDING_FINAL_STATISTICS_CODE.tsv). No held file is redistributed or assigned a new license here. The processed data packages also have no published download identifier yet.
+The author authorized the six required Figure2/4 sources on23November2026. They are now bundled, SHA-pinned and selected by default; see [current source access](../../docs/paper/SOURCE_ACCESS.tsv). Other historical taxonomy/optional sources retain the decisions in the [14-source record](../../docs/PENDING_FINAL_STATISTICS_CODE.tsv). This migration grants no new third-party font license. The processed data packages also have no published download identifier yet.
 
 Many historical entries have no harmless `--help`; executing them can write outputs or launch thousands of simulations. Use the new bounded replay interfaces for current summary checking. To regenerate simulations, follow [the exact historical command/dependency boundary](../paper_support/README.md#rerunning-simulations), with separate output configuration, inputs and resource approval. Source exclusion requires Python3.13; the matrix example's Python version does not cover that whole historical path.
 

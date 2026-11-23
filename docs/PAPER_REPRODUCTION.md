@@ -6,7 +6,7 @@ Start from the **fixed processed inputs actually used for the paper**. Neither r
 
 ## Access and preparation
 
-[DATA_PACKAGES](paper/DATA_PACKAGES.md) lists local prepared archives, sizes, SHA256 and missing download identifiers. [The per-file manifest](paper/DATA_PACKAGE_MANIFEST.tsv) records logical paths and access holds. Obtain the approved data and any [held original sources](paper/SOURCE_ACCESS.tsv) before running the relevant commands. **There is no public URL for those packages yet.** A path on the author's server is not a download location. Sources/fonts are not hidden inside data packages.
+[DATA_PACKAGES](paper/DATA_PACKAGES.md) lists local prepared archives, sizes, SHA256 and missing download identifiers. [The per-file manifest](paper/DATA_PACKAGE_MANIFEST.tsv) records logical paths and access holds. Obtain the approved data before running the relevant commands. The six required Figure2/4 original sources are now bundled, as recorded in [SOURCE_ACCESS](paper/SOURCE_ACCESS.tsv), and selected by default by their adapters. Other historical/optional sources are separately identified. **There is no public URL for those packages yet.** A path on the author's server is not a download location. Sources/fonts are not hidden inside data packages.
 
 Use Python3.11+ with NumPy, pandas, SciPy, Matplotlib, Pillow, openpyxl and statsmodels for the relevant modules; the exact tested environment and module dependencies are documented alongside each entry. Set `MACKDB_PAPER_PYTHON` to that interpreter. The existing [environment instructions](../environments/portable-matrix/README.md) retain SciPy1.15.3 from PyPI, version-object R checks and the fixed fastCCLasso core. No installer ran during this task.
 
@@ -33,12 +33,12 @@ Every analysis uses a **new output directory**, stops on validation errors and r
 
 **Input:** all45 environments × species/genus × FastSpar/fastCCLasso,180 `*.info` files. Required columns include taxon endpoints, `aver_corr`, `aver_pv`, `proj_count`, `proj_ID`, `proj_corr`, `proj_pv` and `proj_sam`. These are processed associations with method-specific project support, not raw sequencing data.
 
-**Source:** the exact `plot_species_genus_coabundance_complete.py` is separately supplied and SHA-pinned. The adapter calls its unchanged statistical functions. Configure `FIGURE2_STATISTICS_SOURCE` and the final renderer `FIGURE2_SELECTION_SOURCE`; see [module instructions](../analysis/associations/README.md) for source hashes, dependencies and the complete verification/rendering commands.
+**Source:** the exact statistics and final-renderer/selection scripts are included under `analysis/associations/original/` and SHA-pinned. The adapters select them by repository-relative defaults and call unchanged functions; no external source path is needed. See [module instructions](../analysis/associations/README.md) for source hashes, dependencies and the complete verification/rendering commands.
 
 ```bash
-"$MACKDB_PAPER_PYTHON" analysis/associations/reproduce_environment_statistics.py   --statistics-source "$FIGURE2_STATISTICS_SOURCE"   --species-fastspar data/figure2/species/FastSpar/f2   --genus-fastspar data/figure2/genus/FastSpar/f2   --species-cclasso data/figure2/species/CCLasso/f2   --genus-cclasso data/figure2/genus/CCLasso/f2   --output work/paper/figure2-statistics
+"$MACKDB_PAPER_PYTHON" analysis/associations/reproduce_environment_statistics.py   --species-fastspar data/figure2/species/FastSpar/f2   --genus-fastspar data/figure2/genus/FastSpar/f2   --species-cclasso data/figure2/species/CCLasso/f2   --genus-cclasso data/figure2/genus/CCLasso/f2   --output work/paper/figure2-statistics
 
-"$MACKDB_PAPER_PYTHON" analysis/associations/verify_environment_statistics.py   --summary work/paper/figure2-statistics/environment_method_summary.tsv   --reference-summary data/figure2/reference/environment_method_summary.tsv   --plot-values data/figure2/reference/panel_plot_values.tsv   --selection-source "$FIGURE2_SELECTION_SOURCE"   --output work/paper/figure2-validation
+"$MACKDB_PAPER_PYTHON" analysis/associations/verify_environment_statistics.py   --summary work/paper/figure2-statistics/environment_method_summary.tsv   --reference-summary data/figure2/reference/environment_method_summary.tsv   --plot-values data/figure2/reference/panel_plot_values.tsv   --output work/paper/figure2-validation
 ```
 
 **Outputs:**90-row environment summary, support-count distribution, global totals, input hashes, and all numerical panel comparisons. A/B use the same top15 environments by **combined species+genus union**. C uses the combined-union selection; D/E select by combined common-pair counts and order by mean sign agreement. Selection is taken from the actual final renderer, not invented independently.
@@ -47,7 +47,9 @@ Every analysis uses a **new output directory**, stops on validation errors and r
 
 **Checks:** species(FastSpar,fastCCLasso,common,union)=(4661190,2287364,2059581,4888973); genus=(999851,646124,519093,1126882). Weighted Jaccard totals round to0.421/0.461. All90 rows reproduce byte-for-byte; all30 E points and all120 plot records match;13 missing rho values remain missing.
 
-**Drawing:** the separately supplied final renderer can be run through `analysis/associations/render_environment_figure.py --renderer-source ... --summary ... --font-dir ... --output ...`; the [full command](../analysis/associations/README.md#redraw-from-a-saved-summary) uses actual implemented arguments. Four Arial font files remain external. This task actually redrew Figure2 in isolation and regenerated its plot-value table byte-for-byte. Images/fonts are not committed.
+**Drawing:** the included renderer can be run through `analysis/associations/render_environment_figure.py --summary ... --font-dir ... --output ...`; the [full command](../analysis/associations/README.md#redraw-from-a-saved-summary) uses actual implemented arguments. Four Arial font files remain external. This task actually redrew Figure2 in isolation and regenerated its plot-value table byte-for-byte. Images/fonts are not committed.
+
+The author confirmed on23November2026 that the manuscript's Figure2 legend and `average r` label and Figure4B's revised axis title were manual presentation edits. The statistics and plotted data are unchanged. Bundled sources retain their original labels and SHA256; those presentation differences do not block scientific source use.
 
 ## Figure 3: candidate-method concordance
 
@@ -78,7 +80,7 @@ It calls the unchanged accepted `concordance_release.calc()`. The historical `co
 
 ## Figure 4: fixed-order and corresponding-project comparisons
 
-See [the runnable module guide](../analysis/paper_network_comparison/README.md) for the exact A/B/C/D commands, JSON template, original-source SHA pins, path rebasing, input layout and40-value validator. Existing source directories still say `Figure7`. No new FastSpar inference or simulations are launched by these entries.
+See [the runnable module guide](../analysis/paper_network_comparison/README.md) for the exact A/B/C/D commands, JSON template, bundled original-source SHA pins, path rebasing, input layout and40-value validator. Existing source directories still say `Figure7`. No new FastSpar inference or simulations are launched by these entries.
 
 | Panel | Processed starting input and entry | Check |
 |---|---|---|

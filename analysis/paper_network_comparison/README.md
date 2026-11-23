@@ -11,15 +11,22 @@ producer files remain unchanged.
 |---|---|---|
 | `fixed_order_recovery.py` | Six frozen publication pair sets, the original-database publication-pair support lookup, nine-source exclusion audit | All six fixed-order steps recomputed; 6,067/11,900 |
 | `run_original_statistics.py --mode b` | Five saved FastSpar matrix outputs, exact Run/taxon mappings, frozen literature workbooks and mapping decisions | Original tracked Stage5B functions executed; five species comparison summaries reproduced |
-| `run_original_statistics.py --mode c` | Existing complete-project matrices, published mapped networks and common analysis taxa | Original SHA-pinned external producer executed; complete-project species statistics reproduced |
-| `run_original_statistics.py --mode d` | Existing complete-side species edge sets and frozen species-label mapping | Original SHA-pinned external producer executed; genus-group statistics reproduced |
+| `run_original_statistics.py --mode c` | Existing complete-project matrices, published mapped networks and common analysis taxa | Original SHA-pinned producer executed; complete-project species statistics reproduced |
+| `run_original_statistics.py --mode d` | Existing complete-side species edge sets and frozen species-label mapping | Original SHA-pinned producer executed; genus-group statistics reproduced |
 | `validate_statistics.py` | Those four freshly computed outputs | All 40 final display values and their relevant numerators/denominators match, maximum difference 0 |
 
-The actual input archive and held C/D source files have **no public download
-identifier yet**. This checkout therefore supplies runnable entry points and
-small references, not a self-contained Figure 4 data distribution. The external
-sources retain a per-file publication-rights hold. Do not substitute new scripts
-with the same filename: source SHA256 is checked before execution.
+The accepted C/D producers and their separate `common.py` helpers are included
+byte-identically under `original/complete_project/` and `original/genus_groups/`.
+The author approved their integration on 23 November 2026 and confirmed that
+manual axis-label changes in the manuscript did not alter their calculations.
+The adapter selects these bundled sources by default and checks their original
+SHA256 before execution. `--source` remains an optional override accepting only
+the same pinned bytes.
+
+The actual input archive still has **no public download identifier**. Code is
+included, but the checkout is not a self-contained Figure 4 data distribution.
+Original source files retain historical path defaults/import-time IO; use the
+adapter below rather than running `original/*.py` files directly.
 
 ## Inputs and paths
 
@@ -63,11 +70,10 @@ directory for each command; an existing destination is rejected.
 
 ## Run statistics
 
-The commands below are executable interfaces. They require the separately
-provided real input data and, for C/D, the held original source plus its adjacent
-`common.py`. Set `$PAPER_DATA` to the unpacked
-`analysis_inputs/10_13_group_meeting_followup` directory and `$PAPER_SOURCES` to
-the separately authorized original source directory before running them.
+The commands below use the bundled accepted producers and their adjacent
+helpers. They still require the separately provided real input data. Set
+`PAPER_DATA` to the unpacked `analysis_inputs/10_13_group_meeting_followup`
+directory before running them.
 
 ```bash
 module=analysis/paper_network_comparison
@@ -82,10 +88,8 @@ cfg=config/paper_network_comparison.local.json
 "$MACKDB_PAPER_PYTHON" "$module/run_original_statistics.py" --mode b --config "$cfg" \
   --output work/paper/Figure4B
 "$MACKDB_PAPER_PYTHON" "$module/run_original_statistics.py" --mode c --config "$cfg" \
-  --source "$PAPER_SOURCES/complete_project/compare_networks.py" \
   --output work/paper/Figure4C
 "$MACKDB_PAPER_PYTHON" "$module/run_original_statistics.py" --mode d --config "$cfg" \
-  --source "$PAPER_SOURCES/genus_groups/genus_overlap.py" \
   --output work/paper/Figure4D
 
 "$MACKDB_PAPER_PYTHON" "$module/validate_statistics.py" \
@@ -169,7 +173,7 @@ averaging or additional sign-concordance condition is applied.
 On 2026-11-12, B/C/D were executed in isolated destinations using original
 scientific functions, then repeated against separately copied, relocated input
 roots with path rebasing. Both validations matched **40/40** final values with
-maximum absolute difference **0**. Six adapter safety tests also passed:
+maximum absolute difference **0**. The existing six adapter safety tests passed. A further source-location test now checks all three bundled producer paths and both C/D helper hashes:
 
 ```bash
 "$MACKDB_PAPER_PYTHON" analysis/paper_network_comparison/test_io_adapter.py
@@ -183,11 +187,15 @@ failed preparation logs are preserved externally. No scientific function,
 expected result or source input was changed to obtain PASS.
 
 This validates statistics from existing data. It does not assert that the
-unpublished input/source archive is already available to another user. The
+unpublished input archive is already available to another user. The
 final renderer, `plot_figure7_four_panels.py`, reads existing 52-row plotting
 input/metadata and emits 40 displayed entries. It still needs its original
 layout, protected reference files and Arial fonts, and has no portable CLI.
-It was **not executed** here. The small
+The original four-panel renderer was executed separately on 16 November 2026
+and reproduced the archived PNG byte-for-byte; it is not part of these six
+required source integrations. Its B-axis wording differs from the paper's
+manually edited title, which the author has confirmed is a presentation-only
+change. Neither calculation nor saved reference values were changed. The small
 [40-value reference](reference/Figure4_expected_values.tsv) contains aggregates
 only, without private source paths. It is a checking reference, not a
 replacement for statistical input data.
@@ -195,3 +203,16 @@ replacement for statistical input data.
 See the [paper reproduction guide](../../docs/PAPER_REPRODUCTION.md) for current
 download/permission gaps and the distinction between fresh statistics and TSV
 redrawing.
+
+## Source integration check
+
+On 23 November 2026 the four original C/D files were copied without byte changes.
+The adapter's default-source paths were then used for isolated C/D statistical
+replays against the already prepared relocated input roots. Original SHA guards,
+AST functions, thresholds and input hashes remain unchanged. This is a bounded
+path-integration check, not another network inference or model run.
+
+The 23 November default-source runs reproduced the complete-project 5-row summary
+and genus-group 20-row summary exactly against the relocated reference outputs.
+The combined 40-value check passed again with maximum absolute difference 0;
+no `--source` argument or external source path was used.

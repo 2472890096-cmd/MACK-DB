@@ -1,6 +1,6 @@
-# Script reference —82 entries
+# Workflow and script reference
 
-The [complete TSV](SCRIPT_REFERENCE.tsv) records every current Python/R/Shell entry, inputs/outputs, CLI, dependencies, source identity and execution scope. The default runnable entry is the [complete-project matrix example](../examples/real_bioproject/PRJEB81106/README.md); the [core guide](CORE_WORKFLOW.md) explains the scientific branches. Sources and source guard remain distinct from external installation recipes.
+The [complete TSV](SCRIPT_REFERENCE.tsv) records the accepted workflow entries, inputs/outputs, CLI, dependencies, source identity and execution scope. The default runnable entry is the [complete-project matrix example](../examples/real_bioproject/PRJEB81106/README.md); the [core guide](CORE_WORKFLOW.md) explains the scientific branches. Sources and source guard remain distinct from external installation recipes.
 
 PASS describes a bounded stated route, not all cohorts or every historical branch. External final-results modules may remain BLOCKED for held inputs/helpers. Do not run a frozen-path program with `--help` unless it actually declares that CLI; some historical modules enter main regardless.
 
@@ -61,9 +61,7 @@ PASS describes a bounded stated route, not all cohorts or every historical branc
 
 ## examples
 
-| Script | Function | Status |
-|---|---|---|
-| [examples/real_bioproject/PRJEB81106/run_stage.py](../examples/real_bioproject/PRJEB81106/run_stage.py) | Orchestrate fixed PRJEB81106 matrix branches with input hashes, new outputs,600s cap and archive-only genus gate | PASS |
+Use the [complete-project matrix runner](../examples/real_bioproject/PRJEB81106/run_workflow.py) or the [single-Run upstream guide](../examples/real_fastq/ERR14036375/README.md). See [examples](../examples/README.md) for the two input boundaries.
 
 ## external_validation
 
@@ -172,3 +170,14 @@ The original script index above documents the accepted scientific workflow. The 
 - [Read-only data-package verifier](../tools/verify_paper_inputs.py):1 script.
 
 These11 additions are orchestration, saved-result summary/validation and IO tests. They do not restore removed historical scripts, change EPI/DKI definitions or perform new network inference.
+
+## Included original paper sources
+
+The six required originals were included on23November2026 under author authorization, with original bytes and SHA256 unchanged. Use their adapters rather than executing historical module initializers.
+
+| Source | Default caller |
+|---|---|
+| [Figure2 statistics](../analysis/associations/original/plot_species_genus_coabundance_complete.py) | `analysis/associations/reproduce_environment_statistics.py` |
+| [Figure2 selection/renderer](../analysis/associations/original/plot_coabundance_panel_ABCDE_ARIAL.py) | `verify_environment_statistics.py`, `render_environment_figure.py` |
+| [Complete-project comparison](../analysis/paper_network_comparison/original/complete_project/compare_networks.py) and [helper](../analysis/paper_network_comparison/original/complete_project/common.py) | `run_original_statistics.py --mode c` |
+| [Genus grouping](../analysis/paper_network_comparison/original/genus_groups/genus_overlap.py) and [helper](../analysis/paper_network_comparison/original/genus_groups/common.py) | `run_original_statistics.py --mode d` |

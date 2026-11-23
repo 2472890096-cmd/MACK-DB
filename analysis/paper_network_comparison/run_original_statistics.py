@@ -3,7 +3,8 @@
 
 Scientific functions are compiled unchanged from SHA-pinned source files. Only
 module-level path/state initialization is supplied here. No inference, training,
-or null simulation is invoked. Held external sources are not redistributed.
+or null simulation is invoked. The accepted original sources are bundled under
+original/ and are checked against their unchanged SHA256 identities.
 """
 import argparse
 import ast
@@ -24,6 +25,16 @@ PINS = {
     "c_common": "aa33e14b18bb89e23626f352c0d0de7bf8aee520321d3a851237d9669366b10c",
     "d_common": "1a698efe6b84e5309a09bc251c1dd2d986b73a8c5fdddf611a182b74a43df2ce",
 }
+
+
+def default_source(mode):
+    """Resolve the bundled producer without using author-server paths."""
+    here = Path(__file__).resolve().parent
+    return {
+        "b": here.parents[1] / "analysis/external_validation/stage5B/04_network_comparison/logs/stage5b2_analysis.py",
+        "c": here / "original/complete_project/compare_networks.py",
+        "d": here / "original/genus_groups/genus_overlap.py",
+    }[mode]
 
 
 def digest(path):
@@ -116,7 +127,7 @@ def main():
     parser.add_argument("--config", type=Path, required=True,
                         help="JSON: base, project_inputs; optional genus_root")
     parser.add_argument("--source", type=Path,
-                        help="Pinned original producer; B defaults to the tracked producer")
+                        help="Optional override of the bundled SHA-pinned producer")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     cfg = resolve_config(args.config.resolve())
@@ -132,11 +143,7 @@ def main():
     ext = base / "9_16_external_validation"
     s6 = follow / "02_stage6B_project_network_comparison"
     genus = cfg.get("genus_root", follow / "figure7_group_genus_check_20261029")
-    repo = Path(__file__).resolve().parents[2]
-    default = repo / "analysis/external_validation/stage5B/04_network_comparison/logs/stage5b2_analysis.py"
-    if args.mode != "b" and args.source is None:
-        parser.error("C/D require the separately supplied SHA-pinned original source")
-    source = (args.source or default).resolve()
+    source = (args.source or default_source(args.mode)).resolve()
     # Check the producer before any output creation.
     if digest(source) != PINS[args.mode]:
         raise ValueError("Source SHA256 does not match the accepted producer")

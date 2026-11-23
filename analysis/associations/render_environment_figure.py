@@ -3,7 +3,7 @@
 
 Only output/font paths and the original --summary argument are configured.
 No statistics, thresholds, labels or selection functions are substituted.
-The held renderer and separately licensed Arial fonts are not bundled.
+The renderer is bundled unchanged; separately licensed Arial fonts are not bundled.
 """
 from __future__ import annotations
 
@@ -16,11 +16,13 @@ import time
 from pathlib import Path
 
 RENDERER_SHA256 = "50dda8e6c2169aa7fd864a8d68f230ac77535529d4b79201a09ff1929956c14a"
+DEFAULT_RENDERER_SOURCE = Path(__file__).resolve().parent / "original" / "plot_coabundance_panel_ABCDE_ARIAL.py"
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--renderer-source", type=Path, required=True)
+    parser.add_argument("--renderer-source", type=Path, default=DEFAULT_RENDERER_SOURCE,
+                        help="Optional source override; the frozen SHA256 is still enforced")
     parser.add_argument("--summary", type=Path, required=True)
     parser.add_argument("--font-dir", type=Path, required=True,
                         help="Separately obtained licensed Arial TTF directory")

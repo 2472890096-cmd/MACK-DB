@@ -29,8 +29,8 @@ python "$GENUS_CONVERTER" -i work/genus_projects.txt -d work/genus_input -o work
 
 The portable complete-project runner implements this filename-only staging and actually checks every genus abundance cell against the bundled archive. Always use fresh output locations: the original script directly opens output files for writing and can overwrite matching names.
 
-The specified source already reproduced all 38×33archived PRJEB81106 values, labels and order. Strict complete-GTDB-name grouping would produce40groups; that difference is explained by the adopted suffix folding, not by parameter tuning. Only the old `run_stage.py` archival entry retains `--allow-archived-genus-replay`. The new default `run_workflow.py` validates the bundle and runs the original converter directly; it does not introduce a second genus definition.
+The specified source already reproduced all 38×33archived PRJEB81106 values, labels and order. Strict complete-GTDB-name grouping would produce40groups; that difference is explained by the adopted suffix folding, not by parameter tuning. The new default `run_workflow.py` validates the bundle and runs the original converter directly; it does not introduce a second genus definition.
 
-The source SHA is in [GENUS_CONVERTER_SOURCE.tsv](GENUS_CONVERTER_SOURCE.tsv); its byte-identical file is included in the current 82-script candidate. Matching output is distinct from proving the exact original execution for every historical BioProject. No original source, matrix, paper or result was modified.
+The source SHA is in [GENUS_CONVERTER_SOURCE.tsv](GENUS_CONVERTER_SOURCE.tsv); its byte-identical file is included in the current candidate. Matching output is distinct from proving the exact original execution for every historical BioProject. No original source, matrix, paper or result was modified.
 
 See [core workflow](CORE_WORKFLOW.md), [matrix guide](../pipeline/abundance/README.md) and [PRJEB81106 example](../examples/real_bioproject/PRJEB81106/README.md).

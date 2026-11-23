@@ -1,6 +1,6 @@
 # PRJEB81106: complete BioProject matrix example
 
-Use this example to start from a **complete, bundled BioProject abundance matrix**, then run network inference, Zi-Pi, EPI v3 and fresh DKI training/scoring on a Linux server. No FASTQ download or private matrix path is needed. The default entry is [run_workflow.py](run_workflow.py); the earlier `run_stage.py` is retained only for explicitly archived replay.
+Use this example to start from a **complete, bundled BioProject abundance matrix**, then run network inference, Zi-Pi, EPI v3 and fresh DKI training/scoring on a Linux server. No FASTQ download or private matrix path is needed. The default entry is [run_workflow.py](run_workflow.py).
 
 The frozen cohort is **33 archived Run samples**, with a **53 × 33 species matrix** and a **38 × 33 historical genus-group matrix**. It is not the current, larger public BioProject cohort. The [bundled directory](bundled/README.md) contains 27 files totaling 161,081 bytes: matrices, exact taxon and sample mappings, ordered accessions, two minimal taxonomy references, small expected outputs and provenance/checksums. No saved neural predictions or model checkpoint is included.
 
@@ -125,8 +125,7 @@ The genus matrix uses the author-adopted historical name-token aggregation: the 
 ## 5. Separate entry points and limits
 
 - [ERR14036375 FASTQ example](../../real_fastq/ERR14036375/README.md) is a genuinely accepted single-Run upstream FASTQ→Sketch→Query→Profile test. This complete-project matrix example needs no FASTQ and does not claim that all 33 Runs have newly passed the upstream workflow.
-- [run_stage.py](run_stage.py) remains **ARCHIVED_REPLAY** compatibility code. Its [old templates](inputs.example.json) require external private input JSON and pinned historical hashes. In particular, `--stage dki-replay` scores saved matched predictions and does not train. It is not the default public matrix workflow and is not a substitute for fresh `dki-train`/`dki-score`.
 - This complete-project example does not rerun 1575 projects or reproduce every final manuscript result. Fourteen unrelated additional source files remain held for rights confirmation.
-- The author authorized local preparation of the complete-project matrix example. No upload or public release has occurred. Final source/data licensing and clean-server installation verification remain explicit release considerations; they do not prevent configuring and using this local example.
+- Source/data licensing and platform-specific installation limits are documented separately; consult the current [reproducibility scope](../../../REPRODUCIBILITY.md).
 
 See [the environment guide](../../../environments/portable-matrix/README.md), [bundled input provenance](bundled/SOURCE_PROVENANCE.tsv), [bundle SHA256](bundled/SHA256SUMS.tsv), [DATA_AVAILABILITY_GUIDE](../../../DATA_AVAILABILITY_GUIDE.md) and [the general pipeline](../../../PIPELINE.md).

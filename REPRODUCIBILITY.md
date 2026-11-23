@@ -21,8 +21,10 @@ The historical PRJEB81106 full run completed16 stages across both ranks with fre
 
 The paper checks on this branch use isolated output directories and real frozen inputs. Their outputs are compared to independently archived summaries and final plot-value tables. [The per-result record](docs/PAPER_REPRODUCTION.md#recorded-validation) distinguishes actual statistics, stored-result replay, artwork and prior evidence. Nine lightweight scientific groups test specified formulas/boundaries, not all1,575 projects or every historical production environment.
 
-## Access and exact version
+## Sources, data access and exact version
 
-The [data-package manifest](docs/paper/DATA_PACKAGE_MANIFEST.tsv) records proposed archive files, hashes and access status. Some inputs and individually held sources have no public download link. A reader cannot complete those routes from GitHub alone until access is supplied. No unavailable DOI, source license or public-data permission is implied.
+The [data-package manifest](docs/paper/DATA_PACKAGE_MANIFEST.tsv) records proposed archive files, hashes and access status. The six required Figure2/4 statistics/selection sources are now included with unchanged SHA256 and repository-relative defaults. The processed input packages still have no public download link, so a reader must obtain those separately. Other historical taxonomy helpers and optional final-artwork sources remain outside this migration. No unavailable DOI, source license or public-data permission is implied.
+
+On23November2026 the author confirmed that the final Figure2/4 axis-label and legend edits were manual presentation changes, with no change to the calculations. The original source labels are preserved; pixel-identical final typography is not the statistical reproduction criterion.
 
 Record `git rev-parse HEAD` with the input SHA256 manifests when using this version. The author must approve and archive the final submission commit; branch names are mutable. No formal Release or manuscript modification is performed by these checks.

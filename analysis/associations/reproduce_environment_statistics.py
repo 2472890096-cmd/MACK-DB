@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Run the archived Figure 2 statistics without its historical plotting paths.
 
-The original source is supplied separately while redistribution permission is
-pending. Its SHA256 is checked before importing its actual read_info(),
+The original source is included unchanged in original/. Its SHA256 is checked
+before importing its actual read_info(),
 summarize_env(), build_summaries() and global_summary() implementations. This
 adapter does not replace their scientific calculations or render final artwork.
 """
@@ -18,6 +18,7 @@ import time
 from pathlib import Path
 
 SOURCE_SHA256 = "48920f30e40f7212fb73c3394b6718a5634acd6d5d5f4554fa5d6f97f29dfb9c"
+DEFAULT_SOURCE = Path(__file__).resolve().parent / "original" / "plot_species_genus_coabundance_complete.py"
 
 
 def sha256(path: Path) -> str:
@@ -30,7 +31,8 @@ def sha256(path: Path) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--statistics-source", type=Path, required=True)
+    parser.add_argument("--statistics-source", type=Path, default=DEFAULT_SOURCE,
+                        help="Optional source override; the frozen SHA256 is still enforced")
     for name in ("species-fastspar", "genus-fastspar", "species-cclasso", "genus-cclasso"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True,
@@ -53,7 +55,7 @@ def main() -> None:
     output = args.output.resolve()
     if output.exists():
         parser.error("Refusing an existing output directory")
-    # Check all inputs before importing the held module; no import-time main().
+    # Check all inputs before importing the original module; no import-time main().
     input_manifest = []
     for (rank, method), directory in dirs.items():
         for path in sorted(directory.glob("*.info")):

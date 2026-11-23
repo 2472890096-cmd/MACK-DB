@@ -10,13 +10,19 @@ directories. Keep the project-support columns (`proj_ID`, `proj_corr`,
 
 ## Input and source availability
 
-The original statistics producer and final renderer have individually recorded
-SHA256 values, but redistribution permission remains pending. These adapters
-therefore take the actual original source files as explicit inputs and refuse
-other bytes. They do not bundle or reconstruct the held source. The large
-association inputs also remain a separate proposed supporting-data archive;
-there is no public download identifier yet. See
-[paper reproduction](../../docs/PAPER_REPRODUCTION.md) for current availability.
+The two original scientific sources are now included **byte-for-byte** under
+[`original/`](original/), following the author's 23 November 2026 authorization:
+
+| Source | SHA256 |
+|---|---|
+| [Statistics producer](original/plot_species_genus_coabundance_complete.py) | `48920f30e40f7212fb73c3394b6718a5634acd6d5d5f4554fa5d6f97f29dfb9c` |
+| [Final renderer and environment selection](original/plot_coabundance_panel_ABCDE_ARIAL.py) | `50dda8e6c2169aa7fd864a8d68f230ac77535529d4b79201a09ff1929956c14a` |
+
+Use the adapters below, which default to these repository-local files and retain
+all SHA256 checks. The originals preserve historical path defaults for provenance;
+do not run them directly against those paths. The large association inputs remain
+a separate proposed supporting-data archive with no public download identifier yet.
+See [paper reproduction](../../docs/PAPER_REPRODUCTION.md) for data access status.
 
 The local review archive is
 `Figure2_processed_environment_associations_20261112.tar.gz` (507,859,601 bytes;
@@ -43,19 +49,16 @@ validation does not load Arial font files or call the rendering entry point.
 
 ## Recompute from actual association tables
 
-After obtaining the listed sources and data, set paths appropriate to your
-machine. `FIGURE2_STATISTICS_SOURCE` denotes
-`plot_species_genus_coabundance_complete.py` (SHA256
-`48920f30e40f7212fb73c3394b6718a5634acd6d5d5f4554fa5d6f97f29dfb9c`).
-`FIGURE2_SELECTION_SOURCE` denotes
-`plot_coabundance_panel_ABCDE_ARIAL.py` (SHA256
-`50dda8e6c2169aa7fd864a8d68f230ac77535529d4b79201a09ff1929956c14a`).
+After obtaining the listed data, set the four input-directory paths for your
+machine. Source paths need no configuration: the adapters locate `original/`
+relative to their own files. Explicit `--statistics-source`, `--selection-source`
+and `--renderer-source` overrides remain available, and must match the same
+frozen source SHA256.
 
 Run from the repository root, using a new output directory:
 
 ```bash
 "$MACKDB_PAPER_PYTHON" analysis/associations/reproduce_environment_statistics.py \
-  --statistics-source "$FIGURE2_STATISTICS_SOURCE" \
   --species-fastspar "$FIGURE2_SPECIES_FASTSPAR" \
   --genus-fastspar "$FIGURE2_GENUS_FASTSPAR" \
   --species-cclasso "$FIGURE2_SPECIES_CCLASSO" \
@@ -85,7 +88,6 @@ can have different supporting BioProjects for the same association.
   --summary work/paper/figure2-statistics/environment_method_summary.tsv \
   --reference-summary "$FIGURE2_REFERENCE_SUMMARY" \
   --plot-values "$FIGURE2_PLOT_VALUES" \
-  --selection-source "$FIGURE2_SELECTION_SOURCE" \
   --output work/paper/figure2-validation
 ```
 
@@ -112,14 +114,13 @@ Spearman values before comparison.
 ## Redraw from a saved summary
 
 This separate entry only redraws the fixed summary; it does not recompute
-association statistics. The original final renderer and its four Arial TTF
-files must be obtained separately with appropriate source/font permissions.
+association statistics. The original final renderer is included; its four Arial TTF
+files must be obtained separately with appropriate font permissions.
 `FIGURE2_FONT_DIR` must contain `Arial.TTF`, `Arialbd.TTF`, `Ariali.TTF`
 and `Arialbi.TTF`.
 
 ```bash
 "$MACKDB_PAPER_PYTHON" analysis/associations/render_environment_figure.py \
-  --renderer-source "$FIGURE2_SELECTION_SOURCE" \
   --summary work/paper/figure2-statistics/environment_method_summary.tsv \
   --font-dir "$FIGURE2_FONT_DIR" \
   --output work/paper/figure2-render
@@ -130,3 +131,13 @@ original `--summary` argument. It retains the original layout/selection and
 numeric-coordinate assertions. Outputs are the four final image formats,
 `panel_plot_values.tsv`, `render_audit.json` and `RENDER_EXECUTION.json`.
 Compare the generated panel values independently from successful rendering.
+
+## Manuscript presentation edits
+
+The author confirmed that the manuscript's final axis wording and small legend
+changes were applied manually and did not change the original calculations.
+The included original sources therefore retain their original labels, including
+Figure 2E's `mean r` rather than the manuscript's `average r`. Statistical values
+and all five data-plot regions matched the current manuscript; exact final
+annotation/legend pixels are not promised by the original renderer. These
+presentation differences do not change source identity, formulas or thresholds.
