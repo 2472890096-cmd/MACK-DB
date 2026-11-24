@@ -12,7 +12,7 @@ import csv,datetime,hashlib,json,math,os,re,sys,traceback
 import numpy as np
 import openpyxl
 from scipy.stats import spearmanr
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=resolve_path('stage5b', '04_network_comparison')
 STAGE=ROOT.parent; BASE=STAGE.parent; EXT=resolve_path('literature'); PREP=STAGE/'02_prepare_fastspar_input'; FSROOT=STAGE/'03_fastspar_result'
 SPECROOT=Path(str(resolve_path('species_input')))
 GUOWB=EXT/'raw/guo2023/1-s2.0-S193131282300029X-mmc8.xlsx'

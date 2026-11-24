@@ -29,6 +29,6 @@ get_dic忽略输入project_count，保留ID列表、不检查唯一性；get_inf
 
 当前建议先把该入口标为条件历史流程，运行前检查所有输入及完整对齐；将来若授权改代码，应增加明确异常、精确tool choices、支持ID/edge/有限值/重复及environment检查，配套这些小fixture。舍入策略的改变需单独科学影响评估，不能作为“清理代码”偷偷改变。
 
-## 其他77脚本范围
+## 历史审查范围与当前导航
 
-复用此前93源码审计、Phase1调用/移除审计、Stage2实际运行证据。重点保留EPIcore兼容副本、同内容workflow依赖和DKI R定义，不重做无界筛选。其他现有风险：原始prevalence实现round(M*f)与数学ceil的边界差异；EPI原core有效值兼容行为依赖入口检查；DKI/R批处理exit0可能含项目FAILED，必须看status；部分外部main忽略CLI且需要14held辅助源；旧Stage5B main不等于终稿S9。已在模块README/索引记录，不修改公式或结果。
+复用此前93源码审计、Phase1调用/移除审计、Stage2实际运行证据。该历史审查时仍保留EPI兼容副本；当前版本已经共享核心和worker，DKI统一R定义不变。其他现有风险：原始prevalence实现round(M*f)与数学ceil的边界差异；EPI原core有效值兼容行为依赖入口检查；DKI/R批处理exit0可能含项目FAILED，必须看status；部分历史外部main忽略CLI且另需未纳入的分类映射辅助源；当前Figure4B使用原五组比较函数，已归入通用网络比较模块；当前完整项目比较对应Method S8。已在模块README/索引记录，不修改公式或结果。

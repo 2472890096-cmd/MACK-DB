@@ -1,6 +1,6 @@
 # Reproduce the paper
 
-This guide is bound to the author-confirmed final `MACKDB_Manuscript.docx` (the requested manuscript9), supplementary information8 and revised workbook. Their [identities](paper/MANUSCRIPT_BINDING.tsv) were recorded on12November2026. Current scope: Figures1–4/Table1, MethodsS1–S8, FiguresS1/S2 and TablesS1–S4. The manuscript's older code reference is9f4fce7; this branch has additional analysis adapters and evidence. Record the actual checkout with `git rev-parse HEAD`.
+This guide follows the current `MACKDB_Manuscript.docx`, `MACKDB_Supplementary.docx` and revised supplementary workbook. Their [identities](paper/MANUSCRIPT_BINDING.tsv) were recorded on24November2026; earlier identities remain in Git history. Current scope: Figures1–4/Table1, MethodsS1–S8, FiguresS1/S2 and TablesS1–S4. The manuscript's older code reference is9f4fce7; this branch has additional analysis adapters and evidence. Record the actual checkout with `git rev-parse HEAD`.
 
 Start from the **fixed processed inputs actually used for the paper**. Neither raw FASTQ nor fresh whole-cohort inference is required for these statistical checks. The separate [real matrix example](../examples/real_bioproject/PRJEB81106/README.md) demonstrates inference, including fresh DKI training. This guide does not substitute saved predictions for training.
 
@@ -80,7 +80,7 @@ It calls the unchanged accepted `concordance_release.calc()`. The historical `co
 
 ## Figure 4: fixed-order and corresponding-project comparisons
 
-See [the runnable module guide](../analysis/paper_network_comparison/README.md) for the exact A/B/C/D commands, JSON template, bundled original-source SHA pins, path rebasing, input layout and40-value validator. Existing source directories still say `Figure7`. No new FastSpar inference or simulations are launched by these entries.
+See [the runnable module guide](../analysis/paper_network_comparison/README.md) for the exact A/B/C/D commands, JSON template, bundled original-source SHA pins, path rebasing, input layout and40-value validator. The server archive retains the old `Figure7` name. Current subgroup code is grouped under `analysis/paper_network_comparison/original/matched_subgroups/`, alongside the complete-project and genus-group sources. No new FastSpar inference or simulations are launched by these entries.
 
 | Panel | Processed starting input and entry | Check |
 |---|---|---|

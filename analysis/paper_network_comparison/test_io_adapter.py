@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Small path/source-safety tests; no scientific data or analysis is executed."""
+import ast
 import hashlib
+import importlib.util
+import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from run_original_statistics import PINS, default_source, digest, install_io_rebase, load_functions
 from validate_statistics import unique_index
@@ -19,6 +24,31 @@ class AdapterTests(unittest.TestCase):
             self.assertEqual(digest(source), PINS[mode])
             if mode != "b":
                 self.assertEqual(digest(source.with_name("common.py")), PINS[mode + "_common"])
+
+    def test_matched_subgroup_data_root_survives_source_relocation(self):
+        """Moving scientific source must not redirect data IO into its code folder."""
+        root = Path(__file__).resolve().parents[2]
+        spec = importlib.util.spec_from_file_location("matched_subgroup_paths", root / "lib/mackdb_paths.py")
+        paths = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(paths)
+        sources = default_source("b").parent
+        self.assertEqual(sources, root / "analysis/paper_network_comparison/original/matched_subgroups")
+        with tempfile.TemporaryDirectory() as folder:
+            data = Path(folder) / "separate-inputs"
+            config = Path(folder) / "paths.json"
+            config.write_text(json.dumps({"stage5b": str(data)}))
+            with patch.dict(os.environ, {"MACKDB_PATHS_CONFIG": str(config)}):
+                for name in ["stage5b2_analysis.py", "build_reference.py",
+                             "independent_recalculation.py", "run_degree_null.py"]:
+                    source = sources / name
+                    tree = ast.parse(source.read_text())
+                    value = next(n.value for n in tree.body if isinstance(n, ast.Assign)
+                                 and any(isinstance(t, ast.Name) and t.id == "ROOT" for t in n.targets))
+                    expression = compile(ast.Expression(value), str(source), "eval")
+                    for code_path in [source, Path(folder) / "relocated-code" / name]:
+                        actual = eval(expression, {"resolve_path": paths.resolve_path,
+                                                   "Path": Path, "__file__": str(code_path)})
+                        self.assertEqual(actual, data / "04_network_comparison")
 
     def test_duplicate_archived_position_is_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -47,6 +77,27 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(translate("/old/database/x.tsv"), "/old/database/x.tsv")
         self.assertEqual(ns["read"]("/old/data/file.tsv")[0],
                          {"path": "/new/data/x.tsv", "sha256": "abc123", "name": "Genus_A species"})
+
+    def test_broad_project_rebase_preserves_exact_source_but_relocates_data(self):
+        with tempfile.TemporaryDirectory() as folder:
+            project = Path(folder) / "project"
+            source = project / "checkout/analysis/source.py"
+            source.parent.mkdir(parents=True)
+            source.write_text("def value(): return 3\n")
+            seen = []
+            ns = {"ROOT": Path(folder) / "output", "__file__": str(source),
+                  "register": lambda path: seen.append(Path(path))}
+            local_data = Path(folder) / "relocated-data"
+            translate = install_io_rebase(ns, {str(project): str(local_data)})
+            ns["register"](source)
+            self.assertEqual(seen, [source])
+            self.assertTrue(seen[0].is_file())
+            self.assertEqual(translate(project / "cohort/abundance.tsv"),
+                             str(local_data / "cohort/abundance.tsv"))
+            # Even a neighboring file in the checkout is not exempted merely
+            # because it is under the repository directory.
+            self.assertEqual(translate(source.with_name("saved_data.tsv")),
+                             str(local_data / "checkout/analysis/saved_data.tsv"))
 
     def test_wrong_source_rejected_before_execution(self):
         with tempfile.TemporaryDirectory() as folder:

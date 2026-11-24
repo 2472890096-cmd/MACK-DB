@@ -7,7 +7,7 @@ _path_sys.path.insert(0, str(_repo_root / "lib"))
 from mackdb_paths import resolve_path
 from pathlib import Path
 import csv,gzip,hashlib,json,time
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=resolve_path('stage5b', '04_network_comparison')
 REF=Path(str(resolve_path('gtdb_r226')))
 prior=Path(str(resolve_path('literature', 'stage4a_recurrence/qc/04a_input_manifest.tsv')))
 with prior.open() as f: expected={r['input_file']:r['sha256'] for r in csv.DictReader(f,delimiter='\t')}

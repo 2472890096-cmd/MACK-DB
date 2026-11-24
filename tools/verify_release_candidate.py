@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Read-only, versioned source/data-boundary guard for the phase-one candidate.
+"""Read-only, versioned source/data-boundary guard for the paper release.
 The original84 manifest remains immutable historical evidence; the current
 manifest protects every released script, including helpers and this guard.
 """
 from pathlib import Path
+import ast
 import collections
 import csv
 import hashlib
@@ -30,6 +31,17 @@ def require(ok, message):
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def function_fingerprint(path, names):
+    """Check approved function bodies independently of path-only initializers."""
+    tree = ast.parse(path.read_text(), filename=str(path))
+    functions = {n.name: n for n in tree.body
+                 if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))}
+    require(set(names) <= set(functions), 'Preserved function missing: '+str(path))
+    value = '\n'.join(name+'\n'+ast.dump(functions[name], include_attributes=False)
+                      for name in sorted(names))
+    return hashlib.sha256(value.encode()).hexdigest()
 
 
 def included_file(path):
@@ -59,8 +71,11 @@ def main():
     base = {r['path']:r for r in read(ROOT/'docs/provenance/BASELINE_93_SCRIPTS.tsv')}
     require(len(disposition) == 93 and {r['original_path'] for r in disposition} == set(base),
             'Original93 coverage')
-    require(sum(r['action'] == 'REMOVED_FROM_DEFAULT' for r in disposition) == 17,
+    require(sum(r['action'] == 'REMOVED_FROM_DEFAULT' for r in disposition) ==
+            release['removed_default_script_count'],
             'Reviewed removal count')
+    migrations = {r['previous_path']: r for r in
+                  read(ROOT/'docs/provenance/SOURCE_RESTRUCTURE_20261124.tsv')}
     for row in disposition:
         require(row['original_sha256'] == base[row['original_path']]['sha256'],
                 'Original source hash mismatch: '+row['original_path'])
@@ -68,11 +83,28 @@ def main():
             require(not (ROOT/row['original_path']).exists(),
                     'Removed default script unexpectedly present: '+row['original_path'])
         else:
+            require(row['action'] in {'RETAINED', 'RELOCATED', 'PATH_ADAPTED', 'SHARED_IMPLEMENTATION'},
+                    'Unknown original-source disposition: '+row['action'])
             require((ROOT/row['candidate_path']).is_file(),
                     'Kept original script missing: '+row['candidate_path'])
-            # Phase1 authorizes a test import literal and the version guard;
-            # every other retained original script must keep its original bytes.
-            if row['original_path'] not in {
+            if row['action'] in {'PATH_ADAPTED', 'SHARED_IMPLEMENTATION'}:
+                migration = migrations.get(row['original_path'])
+                require(migration is not None, 'Missing approved path migration: '+row['original_path'])
+                require(migration['current_path'] == row['candidate_path'],
+                        'Migration destination mismatch: '+row['original_path'])
+                require(migration['before_sha256'] == row['original_sha256'],
+                        'Migration original-source hash mismatch: '+row['original_path'])
+                require(sha(ROOT/row['candidate_path']) == migration['after_sha256'],
+                        'Migrated source changed: '+row['candidate_path'])
+                names = json.loads(migration['preserved_functions'])
+                if names:
+                    require(function_fingerprint(ROOT/row['candidate_path'], names) ==
+                            migration['function_ast_sha256'],
+                            'Scientific/source function body changed: '+row['candidate_path'])
+                if row['original_path'] != row['candidate_path']:
+                    require(not (ROOT/row['original_path']).exists(),
+                            'Retired source alias unexpectedly present: '+row['original_path'])
+            elif row['original_path'] not in {
                 'tests/run_small_tests.py', 'tools/verify_private_checkout.py'
             }:
                 require(sha(ROOT/row['candidate_path']) == base[row['original_path']]['sha256'],
@@ -82,14 +114,22 @@ def main():
             'Current file manifest count/duplicates')
     for row in files:
         require(sha(ROOT/row['path']) == row['sha256'], 'Release file changed: '+row['path'])
-    aliases = [
-        ('pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R',
-         'pipeline/epi_v3/genus/scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R'),
-        ('pipeline/epi_v3/species/scripts/workflow.py',
-         'pipeline/epi_v3/genus/scripts/species_production_workflow.py'),
-    ]
-    for left, right in aliases:
-        require(sha(ROOT/left) == sha(ROOT/right), 'EPI compatibility copies disagree')
+    epi = ROOT/'pipeline/epi_v3'
+    core = epi/'core/get_keystone_EPI_single_safe_qecdf_v3_fast.R'
+    require(sha(core) == '98d832663fea152e0d63c481106ff24fb5faca4e34ce332d0187814cbead5cc2',
+            'Accepted EPI v3 mathematical core changed')
+    require((epi/'scripts/workflow.py').is_file(), 'Shared EPI worker missing')
+    for retired in ['species/scripts/workflow.py',
+                    'genus/scripts/species_production_workflow.py',
+                    'genus/scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R',
+                    'genus/audit/species_reference_config.json']:
+        require(not (epi/retired).exists(), 'Retired EPI duplicate unexpectedly present: '+retired)
+    for level in ['species', 'genus']:
+        run_root = epi/level
+        cfg = json.loads((run_root/'audit/config.json').read_text())
+        require((run_root/cfg['core_script']).resolve() == core.resolve(),
+                'EPI template does not reference shared core: '+level)
+        require(cfg['core_sha256'] == sha(core), 'EPI template core identity: '+level)
     availability = read(ROOT/'docs/FIGURE3_INPUT_AVAILABILITY.tsv')
     require(len(availability) == 70, 'Frozen input availability count')
     supplied = [r for r in availability if r['decision'] == 'INCLUDE_PRIVATE']
@@ -118,14 +158,15 @@ def main():
                  'tests/run_small_tests.py', 'tests/unit/epi.R', 'tests/unit/dki.R',
                  'tests/unit/zipi.R', 'pipeline/epi_v3/species/audit/config.json',
                  'pipeline/epi_v3/genus/audit/config.json',
-                 'pipeline/epi_v3/genus/audit/species_reference_config.json']:
+                 'pipeline/epi_v3/scripts/workflow.py']:
         require((ROOT/name).is_file(), 'Runtime/test helper missing: '+name)
     for row in read(ROOT/'tests/fixtures/FIXTURE_MANIFEST.tsv'):
         require(sha(ROOT/row['path']) == row['sha256'], 'Synthetic fixture changed')
     print(json.dumps(dict(status='PASS', release=release['release_id'],
                           historical84_verified=True, original93_accounted=True,
                           scripts=len(scripts), protected_files=len(files),
-                          removed_default_scripts=17, approved_frozen_files=6,
+                          removed_default_scripts=release['removed_default_script_count'],
+                          shared_epi_implementations=True, approved_frozen_files=6,
                           held_frozen_files=64, scientific_computation_executed=False), indent=2))
 
 

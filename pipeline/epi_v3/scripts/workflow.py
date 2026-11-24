@@ -18,7 +18,11 @@ import time
 import traceback
 import tempfile
 
-ROOT = Path(os.environ.get("MACKDB_EPI_RUN_ROOT", str(Path(__file__).resolve().parent.parent))).resolve()
+# The repository has one shared worker; isolated copies retain their own root.
+_DEFAULT_ROOT = Path(__file__).resolve().parent.parent
+if (_DEFAULT_ROOT / 'species/audit/config.json').is_file():
+    _DEFAULT_ROOT = _DEFAULT_ROOT / 'species'
+ROOT = Path(os.environ.get("MACKDB_EPI_RUN_ROOT", str(_DEFAULT_ROOT))).resolve()
 STATUS_FIELDS = ['project', 'sample_count', 'taxa_count', 'start_time', 'end_time',
                  'runtime_seconds', 'exit_code', 'status', 'D1_count', 'D2_count',
                  'Q_count', 'error_message', 'worker_pid', 'r_pid', 'attempt']

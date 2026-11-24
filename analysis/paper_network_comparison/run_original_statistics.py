@@ -4,7 +4,8 @@
 Scientific functions are compiled unchanged from SHA-pinned source files. Only
 module-level path/state initialization is supplied here. No inference, training,
 or null simulation is invoked. The accepted original sources are bundled under
-original/ and are checked against their unchanged SHA256 identities.
+original/ and are checked against their approved SHA256 identities.
+The B source location/data-root initializer was adapted without changing its functions.
 """
 import argparse
 import ast
@@ -19,7 +20,7 @@ from collections import defaultdict
 from pathlib import Path
 
 PINS = {
-    "b": "7933be5048f19d771a757af7863dd498038bfb126b06108c30eb4d694af626b8",
+    "b": "1ccc1687dfaeb7bea2faa8c3c3c8f61899c29f9d35b1c99212ed4d026d58b30b",
     "c": "2b704d1fc35d16411995f904e03a8312a6cef100d4c889c9b779ea6eb02e8c86",
     "d": "c4e898425a991c429100002e83e6d0c41f128dbc9a8abc9522f02bdb6f718d25",
     "c_common": "aa33e14b18bb89e23626f352c0d0de7bf8aee520321d3a851237d9669366b10c",
@@ -31,7 +32,7 @@ def default_source(mode):
     """Resolve the bundled producer without using author-server paths."""
     here = Path(__file__).resolve().parent
     return {
-        "b": here.parents[1] / "analysis/external_validation/stage5B/04_network_comparison/logs/stage5b2_analysis.py",
+        "b": here / "original/matched_subgroups/stage5b2_analysis.py",
         "c": here / "original/complete_project/compare_networks.py",
         "d": here / "original/genus_groups/genus_overlap.py",
     }[mode]
@@ -91,9 +92,16 @@ def install_io_rebase(namespace, mappings):
     ordered = sorted(mappings.items(), key=lambda item: len(item[0]), reverse=True)
     already_local = {new for _, new in ordered}
     already_local.update(str(namespace[key]) for key in ["ROOT", "OUT"] if key in namespace)
+    # Source provenance is already a real local file. A broad archived data
+    # prefix (for example the author's project directory) may also contain the
+    # checkout; do not redirect this one explicitly known code file into data.
+    # This is an exact-file exception, never an exemption for the whole repo.
+    code_files = {str(Path(namespace["__file__"]).resolve())} if "__file__" in namespace else set()
 
     def translate(value):
         value = str(value)
+        if value in code_files:
+            return value
         if any(value == root or value.startswith(root + "/") for root in already_local):
             return value
         for old, new in ordered:

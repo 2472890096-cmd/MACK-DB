@@ -125,7 +125,7 @@ The genus matrix uses the author-adopted historical name-token aggregation: the 
 ## 5. Separate entry points and limits
 
 - [ERR14036375 FASTQ example](../../real_fastq/ERR14036375/README.md) is a genuinely accepted single-Run upstream FASTQ→Sketch→Query→Profile test. This complete-project matrix example needs no FASTQ and does not claim that all 33 Runs have newly passed the upstream workflow.
-- This complete-project example does not rerun 1575 projects or reproduce every final manuscript result. Fourteen unrelated additional source files remain held for rights confirmation.
+- This complete-project example does not rerun 1575 projects or reproduce every final manuscript result. The required Figure2/4 statistics sources are included; unrelated taxonomy helpers and optional final-artwork chains retain their individual access records.
 - Source/data licensing and platform-specific installation limits are documented separately; consult the current [reproducibility scope](../../../REPRODUCIBILITY.md).
 
 See [the environment guide](../../../environments/portable-matrix/README.md), [bundled input provenance](bundled/SOURCE_PROVENANCE.tsv), [bundle SHA256](bundled/SHA256SUMS.tsv), [DATA_AVAILABILITY_GUIDE](../../../DATA_AVAILABILITY_GUIDE.md) and [the general pipeline](../../../PIPELINE.md).

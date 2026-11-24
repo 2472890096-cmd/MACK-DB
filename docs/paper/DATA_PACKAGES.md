@@ -7,7 +7,7 @@ These local review candidates contain processed research results. **None has bee
 | `Figure2_processed_environment_associations_20261112.tar.gz` |180 associations plus90-row summary and120-row display reference;182 files|1724945736|507859601|Extracted and SHA-verified; data-release review pending|
 | `MACKDB_PAPER_FIGURE3_FINAL_INPUTS_20261112.tar.gz` |Six FINAL unified-R candidates,61-row assertion,scopes,aggregate/support references;15 files|2748328|480745|Extracted and SHA-verified; held row-level data not authorized for Git upload|
 | `MACKDB_PAPER_EXTERNAL_NULL_SUPPORT_INPUTS_20261112.tar.gz` |22 stored1000-iteration outcomes,configs,source-filtered pair records,tested sets,653071-pair rank reference,summary oracles;53 files|242351521|49184060|Local prepared candidate; internal provenance fields need review; no new simulations|
-| `MACKDB_PAPER_FIGURE4_REVIEW_INPUTS_20261112.tar.gz` |149 data/provenance files for Figure4 statistics;4 source/provenance scripts deliberately excluded|360433995|276474987|**Partial review package**; third-party workbooks and metadata need review; source access remains required|
+| `MACKDB_PAPER_FIGURE4_REVIEW_INPUTS_20261112.tar.gz` |149 data/provenance files for Figure4 statistics;4 source/provenance scripts deliberately excluded|360433995|276474987|**Partial review package**; third-party workbooks and metadata need review; remaining source/data access must be checked individually|
 
 Archive SHA256 values:
 
@@ -24,7 +24,7 @@ Archive SHA256 values:
 
 Figure2 extracts with `figure2/` below the selected data root; see [its input manifest](../../analysis/associations/INPUT_DATA_MANIFEST.tsv). Figure3 extracts with `figure3/`; see [FIGURE3_INPUT_MANIFEST.tsv](FIGURE3_INPUT_MANIFEST.tsv). The external package has `literature/`, `chen_wallen/` and `rank_reference/` directly at its root; extract it **into** `data/paper-inputs/`; see [its manifest](../../analysis/paper_support/INPUT_ARCHIVE_MANIFEST.tsv). These layouts match the implemented replay commands in [PAPER_REPRODUCTION](../PAPER_REPRODUCTION.md).
 
-Figure4 extracts below `figure4/analysis_inputs` and `figure4/project_inputs`. Its runtime configuration must map the original frozen path prefixes to those local roots. The local149-file archive preserves original provenance bytes; it is **not a sanitized ready-to-publish replacement** for all153 dependencies. The validated relocated144-file input setup and complete local source manifest are retained outside Git. Before distribution, review the three publication workbooks, sample/participant-named mapping records and frozen metadata, and provide the excluded source dependencies through authorized channels. Public Run accession identifiers are separately provided in [Figure4B_sequencing_runs.tsv](../../analysis/paper_network_comparison/reference/Figure4B_sequencing_runs.tsv).
+Figure4 extracts below `figure4/analysis_inputs` and `figure4/project_inputs`. Its runtime configuration must map the original frozen path prefixes to those local roots. The local149-file archive preserves original provenance bytes; it is **not a sanitized ready-to-publish replacement** for all153 dependencies. The validated relocated144-file input setup and complete local source manifest are retained outside Git. Before distribution, review the three publication workbooks, sample/participant-named mapping records and frozen metadata, and resolve the remaining source/data dependencies individually. The required Figure4 statistics sources are now included in the code tree; they are not hidden inside the data archive. Public Run accession identifiers are separately provided in [Figure4B_sequencing_runs.tsv](../../analysis/paper_network_comparison/reference/Figure4B_sequencing_runs.tsv).
 
 Small code-repository references and synthetic tests do not replace these real input packages. Original third-party tables should be obtained from their cited publishers when redistribution permission is absent; a freely downloadable paper is not automatically a data redistribution license. Arial fonts and held original source code remain outside all four packages.
 
@@ -37,7 +37,7 @@ tar -xzf "$PAPER_PACKAGE_DIR/MACKDB_PAPER_FIGURE3_FINAL_INPUTS_20261112.tar.gz" 
 tar -xzf "$PAPER_PACKAGE_DIR/MACKDB_PAPER_EXTERNAL_NULL_SUPPORT_INPUTS_20261112.tar.gz" -C data/paper-inputs
 ```
 
-The Figure4 partial review archive is not advertised as a ready-to-run download: excluded sources, metadata review and finalized prefix mapping must first be resolved. No example here downloads an unpublished URL.
+The Figure4 partial review archive is not advertised as a ready-to-run download: metadata review, third-party redistribution and finalized input-prefix mapping must first be resolved. The required B/C/D statistics sources are now bundled with the code. No example here downloads an unpublished URL.
 
 ## Submission next step
 

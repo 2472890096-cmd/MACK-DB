@@ -2,8 +2,8 @@
 
 These entries recheck existing processed data. They never infer a network, run
 FastSpar/bootstrap, train a model, or regenerate the historical 720 orders.
-Figure 4 is still named **Figure7** in the source archive. Original scientific
-producer files remain unchanged.
+Figure 4 is still named **Figure7** in the input archive. Scientific functions
+and thresholds are unchanged; source-layout adaptations are recorded separately.
 
 ## What is available
 
@@ -15,18 +15,46 @@ producer files remain unchanged.
 | `run_original_statistics.py --mode d` | Existing complete-side species edge sets and frozen species-label mapping | Original SHA-pinned producer executed; genus-group statistics reproduced |
 | `validate_statistics.py` | Those four freshly computed outputs | All 40 final display values and their relevant numerators/denominators match, maximum difference 0 |
 
-The accepted C/D producers and their separate `common.py` helpers are included
-byte-identically under `original/complete_project/` and `original/genus_groups/`.
+The Figure 4B producers and helpers now live under `original/matched_subgroups/`,
+alongside the C/D sources under `original/complete_project/` and
+`original/genus_groups/`. The B files were relocated from a historical `logs/`
+directory: they are scientific code, not log files. Their data-root initialization
+now uses the existing `stage5b` path configuration rather than source-file parents;
+their scientific functions and constants are unchanged. The C/D producers and
+their separate `common.py` helpers remain byte-identical.
 The author approved their integration on 23 November 2026 and confirmed that
 manual axis-label changes in the manuscript did not alter their calculations.
-The adapter selects these bundled sources by default and checks their original
-SHA256 before execution. `--source` remains an optional override accepting only
-the same pinned bytes.
+The adapter selects these bundled sources by default and checks the approved
+source SHA256 before execution. `--source` remains an optional override accepting
+only the same pinned bytes for the current release.
 
 The actual input archive still has **no public download identifier**. Code is
 included, but the checkout is not a self-contained Figure 4 data distribution.
 Original source files retain historical path defaults/import-time IO; use the
 adapter below rather than running `original/*.py` files directly.
+
+### Source layout and historical Stage names
+
+| Location | Role |
+|---|---|
+| `original/matched_subgroups/stage5b2_analysis.py` | Figure 4B: five matched-Run groups, common taxa and threshold-specific overlap |
+| `original/matched_subgroups/build_reference.py` | Build the frozen R226 vocabulary used by those comparisons |
+| `original/matched_subgroups/run_degree_null.py` | Optional formal 1,000-replicate degree-preserving null generation; not run by the statistics adapter |
+| `original/matched_subgroups/independent_recalculation.py` | Independent readback of subgroup statistics and existing null graph archives |
+| `original/complete_project/` | Figure 4C complete-project species comparison |
+| `original/genus_groups/` | Figure 4D and B genus-group comparison |
+
+The four matched-subgroup sources use `resolve_path('stage5b',
+'04_network_comparison')` for their historical data workspace. Configure `stage5b`
+through `MACKDB_PATHS_CONFIG` only when deliberately using those historical
+preparation/validation entries. The recommended `run_original_statistics.py`
+adapter instead supplies isolated input/output roots through its explicit JSON.
+Neither route infers a scientific data directory from the moved source location.
+
+The separate `external_validation/literature_networks/stage4b_recurrence_recovery/`
+module performs publication-pair source exclusion and recovery. Its **Stage 4B**
+is a historical processing label, not the current **Figure 4B** panel; it remains
+part of the literature-support chain for Supplementary Figure S2/Table S4.
 
 ## Inputs and paths
 
@@ -173,7 +201,7 @@ averaging or additional sign-concordance condition is applied.
 On 2026-11-12, B/C/D were executed in isolated destinations using original
 scientific functions, then repeated against separately copied, relocated input
 roots with path rebasing. Both validations matched **40/40** final values with
-maximum absolute difference **0**. The existing six adapter safety tests passed. A further source-location test now checks all three bundled producer paths and both C/D helper hashes:
+maximum absolute difference **0**. The original adapter safety tests passed. Current tests also check all three bundled producer paths, both C/D helper hashes, and the configured data roots of all four relocated B sources:
 
 ```bash
 "$MACKDB_PAPER_PYTHON" analysis/paper_network_comparison/test_io_adapter.py

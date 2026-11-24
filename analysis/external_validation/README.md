@@ -7,8 +7,13 @@ Use the current [paper reproduction guide](../../docs/PAPER_REPRODUCTION.md) for
 - `literature_networks/scripts/01_parse_external_networks.py`, `02_harmonize_external_taxonomy.py`, stage2b and stage2c parse and map external names to GTDB R226. Their original publication tables and some mapping helpers remain access/rights dependencies.
 - stage3c and the shared Chen/Wallen protocol generate the two1,000-replicate nulls for11 association sets. [The stored-result replay](../paper_support/README.md) now reuses their exact summary function to reproduce Table1/TableS2/FigureS1 without generating new graphs. Null seeds are unique within each historical run family; the two families have different master seeds.
 - stage4a–d implement publication membership, source exclusion, recurrence and support statistics. `04d_literature_recurrence_support_rank.py` and its independent recalculator underpin MethodS7/FigureS2/TableS4. Ranks use all653,071 original pre-exclusion pairs, while counts and support-fraction denominators exclude the relevant sources. The current workbook and MethodS7 now agree on this distinction.
-- Stage5B provides actual subgroup preparation/comparison and degree-preserving rewiring functions. [Figure4 adapters](../paper_network_comparison/README.md) reuse the original B/C/D functions. B includes Guo Common runs pooled **before** FastSpar. C and D use complete-project and common-species scopes with explicit threshold/denominator differences.
+- The retained Stage5B directories prepare exact Run groups and FastSpar inputs. Their former comparison sources have moved out of `logs/` into [matched-subgroup sources](../paper_network_comparison/original/matched_subgroups/), beside the other [Figure4 comparison entries](../paper_network_comparison/README.md). Figure4B includes Guo Common runs pooled **before** FastSpar. C and D use complete-project and common-species scopes with explicit threshold/denominator differences. Historical Stage numbers are not manuscript panel numbers: `stage4b_recurrence_recovery/` performs source-excluded literature-pair recovery, not Figure4B.
 - Figure4A now uses the stated six-study order and fixed nine-source exclusion. Its dedicated small set check compares every step with the historical order22 archive; it neither enumerates720 orders nor averages them.
+
+The unused Stage5A 30-direction complementarity and Stage4C logistic-recovery
+extension are omitted from the current release tree; their code remains in Git
+history. The Stage3C null functions supporting Supplementary Figure S1 and the
+Stage4A/4B/4D support chain for Supplementary Figure S2 are retained.
 
 ## Running and access
 

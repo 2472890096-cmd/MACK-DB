@@ -8,12 +8,12 @@ Real six-table candidate snapshots, the accepted61-row R replacement, support de
 
 The six required Figure2/4 statistics/selection sources and helpers are included under author authorization dated23November2026, with unchanged original SHA256 and repository-relative adapters. Other historical taxonomy helpers and optional final-artwork chains remain outside this migration, as distinguished in [source access](docs/paper/SOURCE_ACCESS.tsv). Full external validation also requires original study networks, taxonomy resources, frozen manifests and input identities; public accession availability does not automatically confer data redistribution rights.
 
-Nothing was uploaded in phase1. Project LICENSE, persistent research-data deposition and website-source publication remain separate author decisions. Preserve upstream copyright notices independently of the eventual project license.
+The phase-one archive predates the uploaded `paper-reproducibility` branch; its original preparation statements are historical. Project LICENSE, persistent research-data deposition and website-source publication remain separate author decisions. Preserve upstream copyright notices independently of the eventual project license.
 
 The default [PRJEB81106 example](examples/real_bioproject/PRJEB81106/README.md) now supplies a complete small real-project matrix bundle:27files/161081bytes, including53×33species and38×33genus matrices, taxon/Run mappings, minimal GTDB-derived taxonomy and small processed references. The author authorized local preparation of this example; final public data/source licensing remains an author decision. It contains only public Run identifiers, no patient clinical attributes, no original reads or saved neural predictions. Its [provenance](examples/real_bioproject/PRJEB81106/bundled/SOURCE_PROVENANCE.tsv) and [checksums](examples/real_bioproject/PRJEB81106/bundled/SHA256SUMS.tsv) identify each file. The original full project collections remain unchanged.
 
 The genus dataset uses the author-adopted species-name token grouping; see the exact rule below. Fresh DKI training/prediction is part of the new matrix runner; saved-prediction replay is distinct from that training route and is not the default example.
 
-## Stage3 source clarification
+## Adopted genus input rule
 
 The author has adopted the original species-name token aggregation, which reproduces all38archived genus rows and folds some GTDB suffix genera. This is not strict complete-GTDB-name grouping. No original matrix or scientific code was changed; no genus rescan or recalculation is requested. See [genus provenance and scope](docs/GENUS_AGGREGATION_STATUS.md). The default runner checks the bundled inputs and original converter directly.

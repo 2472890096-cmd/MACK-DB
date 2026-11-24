@@ -4,24 +4,22 @@ owner	dependency_type	dependency	status	evidence_or_action
 004	RETAINED_REPOSITORY_CODE	analysis/external_validation/literature_networks/stage2b/02b_taxonomy_rescue.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 010	RETAINED_REPOSITORY_CODE	analysis/external_validation/shared_protocol/chen_wallen_null_models_final_v1.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 014	RETAINED_REPOSITORY_CODE	analysis/external_validation/literature_networks/stage4b_recurrence_recovery/scripts/04b_independent_validate.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-016	RETAINED_REPOSITORY_CODE	analysis/external_validation/literature_networks/stage4c_recurrence_statistics/scripts/04c_independent_recalculation.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 018	RETAINED_REPOSITORY_CODE	analysis/external_validation/literature_networks/stage4d_support_rank/scripts/04d_independent_recalculation.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 032	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/01_sample_rescue/rescue_io.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 033	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/01_sample_rescue/rescue_io.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 034	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/01_sample_rescue/rescue_io.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 044	RETAINED_REPOSITORY_CODE	analysis/external_validation/stage5B/02_prepare_fastspar_input/prepare_inputs.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 053	RETAINED_REPOSITORY_CODE	pipeline/abundance/shape_sparcc_format.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-065	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-067	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/species_production_workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
+065	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
+067	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 067	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/capture_v3.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-069	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/species/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
+069	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 069	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-071	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/species_production_workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-072	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
+071	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
+072	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 072	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/genus/scripts/timed_rscript.sh	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 080	RETAINED_REPOSITORY_CODE	pipeline/dki/calculate_structural_keystoneness_rk4_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-084	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
-108	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/species/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
+108	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/scripts/workflow.py	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 109	RETAINED_REPOSITORY_CODE	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	PRESENT	Declared edge from second review; configuration/conditional invocation may be needed; does not imply full scientific execution
 069	REPOSITORY_IO_OR_CODE	pipeline/epi_v3/species/audit/config.json	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
 067	REPOSITORY_IO_OR_CODE	pipeline/epi_v3/genus/scripts/capture_v3.R	PRESENT	Explicit new relative binding verified; run-root configs are generated in isolated workspaces
@@ -37,10 +35,10 @@ owner	dependency_type	dependency	status	evidence_or_action
 062	ENTRY_PORTABILITY	pipeline/associations/fastcclasso/run_fastcclasso_parallel.R	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 063	ENTRY_PORTABILITY	pipeline/associations/fastcclasso/run_fastcclasso_parallel_genus.R	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 067	ENTRY_PORTABILITY	pipeline/epi_v3/genus/scripts/genus_workflow.py	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
-068	ENTRY_PORTABILITY	pipeline/epi_v3/genus/scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
+068	ENTRY_PORTABILITY	pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 069	ENTRY_PORTABILITY	pipeline/epi_v3/genus/scripts/prepare_inputs.py	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 071	ENTRY_PORTABILITY	pipeline/epi_v3/genus/scripts/run_one_project.sh	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
-072	ENTRY_PORTABILITY	pipeline/epi_v3/genus/scripts/species_production_workflow.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
+072	ENTRY_PORTABILITY	pipeline/epi_v3/scripts/workflow.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 073	ENTRY_PORTABILITY	pipeline/epi_v3/genus/scripts/timed_rscript.sh	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 074	ENTRY_PORTABILITY	pipeline/zipi/FastSpar_signed_spinglass_network.R	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 075	ENTRY_PORTABILITY	pipeline/zipi/extract_signed_zipi_keys_by_environment.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
@@ -63,7 +61,7 @@ owner	dependency_type	dependency	status	evidence_or_action
 101	ENTRY_PORTABILITY	pipeline/abundance/shape_sparcc_format.py	PORTED_NOT_FULLY_EXECUTED	CLI/static path verification; complete scientific execution was not requested or lacks real input
 102	ENTRY_PORTABILITY	pipeline/associations/fastspar/sparcc_corr_pvalue.R	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 108	ENTRY_PORTABILITY	pipeline/epi_v3/species/scripts/run_one_project.sh	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
-109	ENTRY_PORTABILITY	pipeline/epi_v3/species/scripts/workflow.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
+109	ENTRY_PORTABILITY	pipeline/epi_v3/scripts/workflow.py	SMALL_EXECUTION_COVERAGE	Actual tiny science or associated worker/export/launcher test
 054	EXTERNAL_INPUT_OR_SOFTWARE	GTDB R226 marker database + sample Sketch	BLOCKED_FOR_FULL_EXECUTION	Inputs not bundled; executable is present on host but Query was not reexecuted
 100	EXTERNAL_INPUT_OR_SOFTWARE	fastspar / fastspar_bootstrap / fastspar_pvalues	BLOCKED_FOR_FULL_EXECUTION	Not on current PATH; explicit environment variables supported; no installation attempted
 062;063	EXTERNAL_INPUT_OR_SOFTWARE	official fastCCLasso.R	BLOCKED_FOR_FULL_EXECUTION	Official source/commit/hash/license and installation instructions supplied; core not vendored/configured; no inference executed

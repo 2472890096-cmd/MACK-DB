@@ -13,7 +13,7 @@ The paper describes **264,767 shotgun metagenomic sequencing runs**,1,575 BioPro
 
 Scientific definitions remain EPI v3 and DKI **MACKDB_DKI_R_20261012_v1**. Genus abundance uses the author-adopted [species-label token rule](docs/GENUS_AGGREGATION_STATUS.md). Figure4 genus groups coarsen existing species association sets; they are not new genus FastSpar networks.
 
-Current numbering is main Figures1–4/Table1, MethodsS1–S8, FiguresS1/S2 and TablesS1–S4. Legacy paths named Figure5/6/7 retain historical names. MethodS7 concerns publication recurrence/support; S8 concerns matched-subgroup and complete-project comparisons. Figure4A uses a fixed six-study order, not a fresh720-order experiment.
+Current numbering is main Figures1–4/Table1, MethodsS1–S8, FiguresS1/S2 and TablesS1–S4. Historical Stage numbers are development stages, not manuscript figure labels. Legacy paths named Figure5/6/7 retain historical names. MethodS7 concerns publication recurrence/support; S8 concerns matched-subgroup and complete-project comparisons. Figure4A uses a fixed six-study order, not a fresh720-order experiment.
 
 ## What execution evidence establishes
 
@@ -23,7 +23,7 @@ The paper checks on this branch use isolated output directories and real frozen 
 
 ## Sources, data access and exact version
 
-The [data-package manifest](docs/paper/DATA_PACKAGE_MANIFEST.tsv) records proposed archive files, hashes and access status. The six required Figure2/4 statistics/selection sources are now included with unchanged SHA256 and repository-relative defaults. The processed input packages still have no public download link, so a reader must obtain those separately. Other historical taxonomy helpers and optional final-artwork sources remain outside this migration. No unavailable DOI, source license or public-data permission is implied.
+The [data-package manifest](docs/paper/DATA_PACKAGE_MANIFEST.tsv) records proposed archive files, hashes and access status. The required Figure2/4 statistics/selection sources are included with source identities and repository-relative defaults. The Figure4B subgroup sources now share the network-comparison directory; their scientific functions retain the accepted definitions. The processed input packages still have no public download link, so a reader must obtain those separately. Other historical taxonomy helpers and optional final-artwork sources remain outside this migration. No unavailable DOI, source license or public-data permission is implied.
 
 On23November2026 the author confirmed that the final Figure2/4 axis-label and legend edits were manual presentation changes, with no change to the calculations. The original source labels are preserved; pixel-identical final typography is not the statistical reproduction criterion.
 

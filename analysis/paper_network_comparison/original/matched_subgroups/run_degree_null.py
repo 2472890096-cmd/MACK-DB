@@ -1,9 +1,16 @@
 """Independent-seed degree-preserving double-edge swaps, restarted from observed graph."""
+
+# Repository-local data roots are explicit configuration, independent of this source location.
+import sys as _path_sys
+from pathlib import Path as _RepoPath
+_repo_root = next(p for p in _RepoPath(__file__).resolve().parents if (p / "lib/mackdb_paths.py").is_file())
+_path_sys.path.insert(0, str(_repo_root / "lib"))
+from mackdb_paths import resolve_path
 from pathlib import Path
 import csv,datetime,hashlib,json,os,time
 import numpy as np
 from numba import njit
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=resolve_path('stage5b', '04_network_comparison')
 REPS=1000;BASE_SEED=20260930
 
 def read(p):

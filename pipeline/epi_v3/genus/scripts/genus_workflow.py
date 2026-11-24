@@ -13,9 +13,18 @@ import subprocess
 import sys
 import time
 import traceback
-import species_production_workflow as w
+import importlib.util
 
 ROOT = Path(os.environ.get("MACKDB_EPI_RUN_ROOT", str(Path(__file__).resolve().parent.parent))).resolve()
+# Use the runtime snapshot when prepared, otherwise the single repository worker.
+os.environ.setdefault('MACKDB_EPI_RUN_ROOT', str(ROOT))
+WORKFLOW = ROOT / 'scripts/workflow.py'
+if not WORKFLOW.is_file():
+    WORKFLOW = Path(__file__).resolve().parents[2] / 'scripts/workflow.py'
+_spec = importlib.util.spec_from_file_location('mackdb_epi_shared_worker', WORKFLOW)
+w = importlib.util.module_from_spec(_spec)
+sys.modules[_spec.name] = w
+_spec.loader.exec_module(w)
 METRICS=['D1','D2','Q']
 
 def load(p):return json.loads(Path(p).read_text())

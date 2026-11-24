@@ -40,11 +40,16 @@ def main():
  if root.exists() and not a.resume:p.error('run-root exists; explicitly use --resume after inspecting status')
  for d in ['scripts','audit','manifests','status/projects','logs/projects','logs/master','keys','summaries','tmp','final_2of3']: (root/d).mkdir(parents=True,exist_ok=True)
  origin=REPO/'pipeline/epi_v3'/a.level/'scripts'
- workername='workflow.py' if a.level=='species' else 'species_production_workflow.py'
+ workername='workflow.py'
+ # Old isolated genus workspaces keep their immutable setup on --resume.
+ if a.resume and a.level=='genus' and not (root/'scripts'/workername).exists() and (root/'scripts/species_production_workflow.py').is_file():
+  workername='species_production_workflow.py'
+ shared_worker=REPO/'pipeline/epi_v3/scripts/workflow.py'
  core=REPO/'pipeline/epi_v3/core/get_keystone_EPI_single_safe_qecdf_v3_fast.R'
  assert digest(core)==CORE_SHA,'Frozen EPI core hash mismatch'
  if not a.resume:
-  for name in [workername,'run_one_project.sh']:shutil.copy2(origin/name,root/'scripts'/name)
+  shutil.copy2(shared_worker,root/'scripts'/workername)
+  shutil.copy2(origin/'run_one_project.sh',root/'scripts/run_one_project.sh')
   destcore=root/'scripts'/core.name;shutil.copy2(core,destcore)
   row=dict(project=a.project,sample_count=n,taxa_count=t,abundance_path=str(abundance),species_path=str(mapping))
   for kind,file in [('abundance',abundance),('species',mapping)]:row.update({kind+'_sha256':digest(file),kind+'_bytes':file.stat().st_size,kind+'_mtime_ns':file.stat().st_mtime_ns})

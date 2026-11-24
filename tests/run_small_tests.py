@@ -131,7 +131,7 @@ def main():
  def test_epi_votes(out):
   # An explicitly synthetic committed-output fixture tests the real postprocess() function; no scientific-success claim for this fixture.
   os.environ['MACKDB_EPI_RUN_ROOT']=str(out)
-  w=load('pipeline/epi_v3/species/scripts/workflow.py','test_epi_votes')
+  w=load('pipeline/epi_v3/scripts/workflow.py','test_epi_votes')
   for d in ['audit','keys','summaries','status/projects','tmp/PRJTOYVOTES/synthetic','final_2of3']:(out/d).mkdir(parents=True,exist_ok=True)
   row=dict(project='PRJTOYVOTES',sample_count=8,taxa_count=5,status='SUCCESS',attempt='synthetic',D1_count=3,D2_count=3,Q_count=2,exit_code=0)
   w.write_tsv(w.status_path(row['project']),[row],w.STATUS_FIELDS)

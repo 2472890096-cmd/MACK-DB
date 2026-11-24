@@ -29,7 +29,7 @@ For the upstream FASTQ→Sketch→Query→Profile route, use the separately vali
 
 [Paper reproduction](docs/PAPER_REPRODUCTION.md) provides inputs, commands, outputs and checks for **Figures 2–4, Supplementary Figures S1/S2 and related tables**. The main candidate comparison uses **1,571 BioProjects**, with Strict All3 support for **25 species and 19 genus groups**.
 
-Real-input statistical checks passed on the server. The six required Figure 2/4 sources are included and used by default. Paper-wide processed-data packages still need separate access; the checkout alone does not yet supply those inputs. See [data access](docs/paper/DATA_PACKAGES.md) and [validation scope](REPRODUCIBILITY.md). Large research data stay outside GitHub.
+Recorded real-input statistical checks passed on the server; their dates and scope are listed in the linked guide. The required Figure 2/4 statistics are included and used by default; Figure 4B subgroup code is grouped with the other network comparisons. Paper-wide processed-data packages still need separate access; the checkout alone does not yet supply those inputs. See [data access](docs/paper/DATA_PACKAGES.md) and [validation scope](REPRODUCIBILITY.md). Large research data stay outside GitHub.
 
 ## Repository guide
 

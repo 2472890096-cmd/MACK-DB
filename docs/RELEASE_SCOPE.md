@@ -1,12 +1,11 @@
-# Phase-one scientific release candidate
+# Current scientific release scope
 
-This is an independent local clone on release-candidate/phase1-20261020 with the original two-commit history preserved. Original main and its151 tracked files are untouched. The candidate has no new commit or remote push.
+This working version follows the current manuscript: main Figures 1–4 and Table 1; Supplementary Methods S1–S8, Figures S1/S2 and Tables S1–S4. Its active inventory is [RELEASE_SCRIPT_MANIFEST.tsv](RELEASE_SCRIPT_MANIFEST.tsv); the historical 84/93/151 manifests remain immutable provenance.
 
-All93 original scripts are accounted for:76 retained (31required,19validation,26test/runtime dependencies),17 reviewed optional scripts moved outside the candidate default tree. A retained concordance source and the guard changed paths. The numeric concordance file is byte-identical; the test driver changed one import literal. EPI duplicates, R-scoring definitions and scientific parameters remain unchanged.
+- The real examples are the paired-FASTQ ERR14036375 upstream route and the complete archived 33-Run PRJEB81106 matrix workflow.
+- EPI v3 has one shared R core, one shared Python worker and one species reference configuration; species/genus launchers select inputs and isolated output roots. Per-run frozen copies and configuration records are execution artifacts, not duplicate scientific implementations in the repository.
+- Figure 4B subgroup calculations and their preparation/validation helpers are under `analysis/paper_network_comparison/original/matched_subgroups/`; the old `logs/` source location is retired. The different `stage4b_recurrence_recovery` task remains part of literature-support analysis.
+- Six optional historical/extension scripts were removed from the active tree: Stage5A's directed complementarity builder, the two 04c logistic/recovery-extension scripts, the old Query forwarding helper and the two fixed-three-project EPI diagnostics. Their original bytes remain in Git history and the separate local preparation archive. This does not remove the null or support calculations used in Supplementary Figures S1/S2.
+- EPI v3, unified-R DKI `MACKDB_DKI_R_20261012_v1`, accepted scientific parameters, synthetic expected values and real input/reference data are unchanged. The genus matrix follows the author-adopted species-label token rule.
 
-Current manifests cover all active scripts/files, while historical84/93/151 records remain pinned. Retired whole-cohort wrappers are not current entry points. Production overrides, especially DKI1000updates/80patience and FastSpar10000bootstrap, are documented explicitly in PIPELINE/PARAMETERS rather than inferred from algorithm defaults.
-
-Final external-source additions are held at the author's explicit request. Do not describe retained old subgroup/provenance code as the complete finalS9 generator. Full real statistics and examples remain conditional on separately approved code/data dependencies. No website, database or scientific production artifacts were modified.
-
-
-Stage2 adds one bounded real-matrix orchestrator (77current scripts:76retained+1new). Original76script bytes remain unchanged. Localformal-parameter downstream acceptance is separate from synthetic tests and from publication rights. Canonicalgenus input acceptance is blocked by Pseudomonas/Dorea grouping discrepancies; only archive replay is offered. Fourteen proposed source additions remain held. See examples/real_bioproject/PRJEB81106/README.md.
+This is a local structure revision on `paper-reproducibility`; no new commit, push, main merge or formal Release is implied. [TESTING](../TESTING.md) distinguishes recorded execution evidence from the checks performed for this revision. Large processed paper inputs, third-party source/data rights, licensing and persistent download links remain separate access decisions; see [paper reproduction](PAPER_REPRODUCTION.md).

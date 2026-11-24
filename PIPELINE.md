@@ -1,6 +1,6 @@
 # MACK-DB processing workflow
 
-Core entry/function guide: [CORE_WORKFLOW](docs/CORE_WORKFLOW.md). Database scope:264,767 processed samples from1,575BioProjects; primary keystone comparison:1,571BioProjects.
+Core entry/function guide: [CORE_WORKFLOW](docs/CORE_WORKFLOW.md). Database scope:264,767 shotgun metagenomic sequencing runs from1,575BioProjects; primary keystone comparison:1,571BioProjects.
 
 Start with the [bundled complete PRJEB81106 project](examples/real_bioproject/PRJEB81106/README.md) and [portable environments](environments/portable-matrix/README.md). Its `run_workflow.py --steps all` runs independent matrix branches, including new DKI training and unified-R scoring, in a fresh output directory. The single-Run FASTQ route is separate.
 
@@ -181,9 +181,9 @@ For genus, change level, input paths and run root. The adapter checks matrix ori
 
 Outputs: three `keys/{project}_EPI-{D1,D2,Q}.key`, summary, status, raw logs, committed hashes and `final_2of3/{project}_EPI-2of3.key`. Zero-byte key files are accepted only with successful exit+summary+hash evidence. Resume the exact same command with `--resume`; it verifies the frozen setup and inputs and avoids rerunning successful projects. The production worker's per-file hard-link commits are unchanged; status/committed hashes determine complete success after an interruption.
 
-The original workflow names remain in both rank paths. Their `ROOT` can be supplied by `MACKDB_EPI_RUN_ROOT`; config-relative core paths and PATH-resolved Rscript work without Dell paths. The separate full-genus adapter (`genus/scripts/prepare_inputs.py`) still requires the exact1575 formal list and historical pilot gates; it now initializes only an explicit isolated run root. It is not used as a toy-test shortcut and was not run on the full cohort.
+The repository has one shared `pipeline/epi_v3/scripts/workflow.py` and one R core; both rank launchers use them. Isolated run roots contain their own frozen runtime copies. Their `ROOT` can be supplied by `MACKDB_EPI_RUN_ROOT`; config-relative core paths and PATH-resolved Rscript work without Dell paths. The separate full-genus adapter (`genus/scripts/prepare_inputs.py`) still requires the exact1575 formal list and historical pilot gates; it now initializes only an explicit isolated run root. It is not used as a toy-test shortcut and was not run on the full cohort.
 
-For direct score diagnostics use the retained capture wrapper with `EPI_CAPTURE_CORE` set to the repository core and the same R CLI flags. `compare_saved_diagnostic_scores.R` now takes `REPRODUCED_ROOT AUDIT_DIR REFERENCE_VALIDATION_DIR`; its three named-project assertions are deliberately retained.
+For direct score diagnostics, the retained genus capture wrapper can use `EPI_CAPTURE_CORE` set to the shared repository core and the same R CLI flags. The retired fixed-three-project comparison remains in Git history.
 
 ## DKI: accepted R scoring entry
 
@@ -231,7 +231,7 @@ The [paper reproduction guide](docs/PAPER_REPRODUCTION.md) is the current comman
 - `analysis/paper_network_comparison/` supports fixed-order Figure4A and the exact original B/C/D statistics with explicit paths. The full-project and genus producers and their helpers are included under `original/`, selected by default and still SHA-pinned.
 - `analysis/paper_support/` summarizes the stored11×2×1,000 random outcomes and recomputes the support/rank tests from their actual processed inputs. Historical simulation entries remain available under `analysis/external_validation/` and require full inputs; no new simulations were run for this check.
 
-Large inputs are separate [archive candidates](docs/paper/DATA_PACKAGES.md). Missing inputs must stop a run. The14-source rights record is not an instruction to restore every old analysis. TableS3 remains authored literature curation; no TableS7/S8 generator is required. See the [external validation guide](analysis/external_validation/README.md).
+Large inputs are separate [archive candidates](docs/paper/DATA_PACKAGES.md). Missing inputs must stop a run. The historical-source register is not an instruction to restore every old analysis. TableS3 remains authored literature curation; no TableS7/S8 generator is required. See the [external validation guide](analysis/external_validation/README.md).
 
 ## PRJEB81106 complete-project matrix example
 

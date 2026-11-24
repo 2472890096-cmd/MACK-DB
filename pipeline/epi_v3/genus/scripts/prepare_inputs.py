@@ -13,6 +13,7 @@ import numpy as np
 
 ROOT = Path(os.environ.get("MACKDB_EPI_RUN_ROOT", str(Path(__file__).resolve().parent.parent))).resolve()
 REFERENCE = Path(os.environ.get('MACKDB_EPI_SPECIES_REFERENCE', str(Path(__file__).resolve().parents[2] / 'species'))).resolve()
+WORKFLOW = Path(__file__).resolve().parents[2] / 'scripts/workflow.py'
 INPUT = Path(os.environ.get('MACKDB_GENUS_INPUT', 'data/genus')).resolve()
 FORMAL = Path(os.environ.get('MACKDB_PROJECT_LIST', str(Path(__file__).resolve().parents[4] / 'docs/scopes/mackdb_1575_bioprojects.txt'))).resolve()
 ENVDIR = Path(os.environ.get('MACKDB_ENV_DIR', 'data/env')).resolve()
@@ -109,12 +110,12 @@ def main():
     if cfg['core_sha256']!=EXPECTED or sha(core)!=EXPECTED:raise RuntimeError('Cannot establish verified V3 source')
     frozen=ROOT/'scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R'
     shutil.copy2(core,frozen)
-    shutil.copy2(REFERENCE/'scripts/workflow.py',ROOT/'scripts/species_production_workflow.py')
+    shutil.copy2(WORKFLOW,ROOT/'scripts/workflow.py')
     (ROOT/'audit/species_reference_config.json').write_text(json.dumps(cfg,indent=2)+'\n')
     protected=[dict(role='source_v3_core',path=str(core),sha256=sha(core)),
         dict(role='frozen_v3_core',path=str(frozen),sha256=sha(frozen)),
-        dict(role='source_production_workflow',path=str(REFERENCE/'scripts/workflow.py'),sha256=sha(REFERENCE/'scripts/workflow.py')),
-        dict(role='copied_production_workflow',path=str(ROOT/'scripts/species_production_workflow.py'),sha256=sha(ROOT/'scripts/species_production_workflow.py')),
+        dict(role='source_production_workflow',path=str(WORKFLOW),sha256=sha(WORKFLOW)),
+        dict(role='copied_production_workflow',path=str(ROOT/'scripts/workflow.py'),sha256=sha(ROOT/'scripts/workflow.py')),
         dict(role='formal_project_list',path=str(FORMAL),sha256=sha(FORMAL))]
     env={}
     for p in sorted(ENVDIR.glob('*.list')):
@@ -158,7 +159,7 @@ def main():
 
 正式项目 {len(formal)}；原始 abundance {len(aids)}、genus mapping {len(gids)}。正式有效输入 {len(valid)}；缺失/无效 {len(invalid)}。排除非正式项目：{', '.join(r['project'] for r in extras)}。
 
-核心来源为 species production audit/config.json 指向的脚本，SHA256 `{EXPECTED}`。本目录核心副本逐字节相同；完整 production workflow.py 同样原样保存为 species_production_workflow.py。核心没有硬编码 species 路径或要求 `_species.matrix` 后缀，`-s` 读取两列映射的第二列。因此 genus 输入通过 `-s <project>_genus.matrix` 使用同一读取函数；仅参数名及原始 summary 中 species_total/species_scored 字段保留旧称，实际代表 genus。
+核心来源为 species production audit/config.json 指向的脚本，SHA256 `{EXPECTED}`。本目录核心副本逐字节相同；共享 production worker 从 scripts/workflow.py 保存为运行目录内的 scripts/workflow.py；参考配置只在运行目录冻结快照。核心没有硬编码 species 路径或要求 `_species.matrix` 后缀，`-s` 读取两列映射的第二列。因此 genus 输入通过 `-s <project>_genus.matrix` 使用同一读取函数；仅参数名及原始 summary 中 species_total/species_scored 字段保留旧称，实际代表 genus。
 
 逐文件验证的实际方向为 genus 行 × sample 列：首行为 sample 列名，第一列 OTU_id；abundance 行号和 genus 映射号为从 0 开始连续编号，维度、唯一性和逐行对应关系均检查。没有自动转置。检查覆盖空文件、缺失/重复编号、重复 genus 名、非数值/非有限/负值；每个项目详细结果见 input_compatibility.tsv。必要映射重排仅写新目录，本次重排数量 {result['mapping_reorders']}。
 

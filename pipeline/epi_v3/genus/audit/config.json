@@ -1,7 +1,7 @@
 {
   "created_at": "2026-10-10T11:25:30+08:00",
   "production_root": ".",
-  "core_script": "scripts/get_keystone_EPI_single_safe_qecdf_v3_fast.R",
+  "core_script": "../core/get_keystone_EPI_single_safe_qecdf_v3_fast.R",
   "core_sha256": "98d832663fea152e0d63c481106ff24fb5faca4e34ce332d0187814cbead5cc2",
   "rscript": "Rscript",
   "real_rscript": "Rscript",
